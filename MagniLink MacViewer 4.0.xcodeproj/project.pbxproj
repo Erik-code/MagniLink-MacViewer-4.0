@@ -1,0 +1,794 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8AC1F1F22A40749C0011CE3F /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F1F12A40749C0011CE3F /* CameraManager.swift */; };
+		8AC1F1F42A4074D10011CE3F /* CameraBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F1F32A4074D10011CE3F /* CameraBaseViewController.swift */; };
+		8AC1F1F82A4075270011CE3F /* TwigaCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F1F72A4075270011CE3F /* TwigaCameraViewController.swift */; };
+		8AC1F1FB2A4075810011CE3F /* LVICameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F1F92A4075810011CE3F /* LVICameraViewController.swift */; };
+		8AC1F1FF2A4076290011CE3F /* CameraAirViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F1FD2A4076290011CE3F /* CameraAirViewController.swift */; };
+		8AC1F2032A4076820011CE3F /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F2022A4076820011CE3F /* VideoCapture.swift */; };
+		8AC1F2062A4078990011CE3F /* CameraAirDistanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F2042A4078990011CE3F /* CameraAirDistanceViewController.swift */; };
+		8AC1F2092A4078B40011CE3F /* CameraAirReadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F2082A4078B40011CE3F /* CameraAirReadingViewController.swift */; };
+		8AC1F20B2A407A630011CE3F /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F20A2A407A630011CE3F /* Enums.swift */; };
+		8AC1F20D2A407D530011CE3F /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F20C2A407D530011CE3F /* Extension.swift */; };
+		8AC1F2112A407E8E0011CE3F /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F2102A407E8E0011CE3F /* Preferences.swift */; };
+		8AC1F2142A4086480011CE3F /* Onvif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F2132A4086480011CE3F /* Onvif.swift */; };
+		8AC1F2402A4086750011CE3F /* VideoResolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F2182A4086750011CE3F /* VideoResolution.swift */; };
+		8AC1F2412A4086750011CE3F /* VideoRateControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F2192A4086750011CE3F /* VideoRateControl.swift */; };
+		8AC1F2422A4086750011CE3F /* Space1DDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F21A2A4086750011CE3F /* Space1DDescription.swift */; };
+		8AC1F2432A4086750011CE3F /* H264Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F21B2A4086750011CE3F /* H264Profile.swift */; };
+		8AC1F2442A4086750011CE3F /* Bounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F21C2A4086750011CE3F /* Bounds.swift */; };
+		8AC1F2452A4086750011CE3F /* FocusOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F21D2A4086750011CE3F /* FocusOptions.swift */; };
+		8AC1F2462A4086750011CE3F /* Vector1D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F21E2A4086750011CE3F /* Vector1D.swift */; };
+		8AC1F2472A4086750011CE3F /* H264Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F21F2A4086750011CE3F /* H264Options.swift */; };
+		8AC1F2482A4086750011CE3F /* H264Options2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F2202A4086750011CE3F /* H264Options2.swift */; };
+		8AC1F2492A4086750011CE3F /* VideoEncoderOptionsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F2212A4086750011CE3F /* VideoEncoderOptionsExtension.swift */; };
+		8AC1F24A2A4086750011CE3F /* PTZPreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F2222A4086750011CE3F /* PTZPreset.swift */; };
+		8AC1F24B2A4086750011CE3F /* Space2DDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F2232A4086750011CE3F /* Space2DDescription.swift */; };
+		8AC1F24C2A4086750011CE3F /* FloatRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F2242A4086750011CE3F /* FloatRange.swift */; };
+		8AC1F24D2A4086750011CE3F /* VideoEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F2252A4086750011CE3F /* VideoEncoding.swift */; };
+		8AC1F24E2A4086750011CE3F /* Vector2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F2262A4086750011CE3F /* Vector2D.swift */; };
+		8AC1F24F2A4086750011CE3F /* IntRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F2272A4086750011CE3F /* IntRange.swift */; };
+		8AC1F2502A4086750011CE3F /* PTZMoveStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F2282A4086750011CE3F /* PTZMoveStatus.swift */; };
+		8AC1F2512A4086750011CE3F /* PTZVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F2292A4086750011CE3F /* PTZVector.swift */; };
+		8AC1F2522A4086750011CE3F /* H264Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F22A2A4086750011CE3F /* H264Configuration.swift */; };
+		8AC1F2532A4086750011CE3F /* FocusConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F22B2A4086750011CE3F /* FocusConfiguration.swift */; };
+		8AC1F2542A4086750011CE3F /* ImagingSettingsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F22C2A4086750011CE3F /* ImagingSettingsExtension.swift */; };
+		8AC1F2552A4086750011CE3F /* PTZNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F22D2A4086750011CE3F /* PTZNode.swift */; };
+		8AC1F2562A4086750011CE3F /* MoveOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F22F2A4086750011CE3F /* MoveOptions.swift */; };
+		8AC1F2572A4086750011CE3F /* ImagingSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F2302A4086750011CE3F /* ImagingSettings.swift */; };
+		8AC1F2582A4086750011CE3F /* ImagingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F2312A4086750011CE3F /* ImagingOptions.swift */; };
+		8AC1F2592A4086750011CE3F /* PTZStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F2332A4086750011CE3F /* PTZStatus.swift */; };
+		8AC1F25A2A4086750011CE3F /* Capabilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F2352A4086750011CE3F /* Capabilities.swift */; };
+		8AC1F25B2A4086750011CE3F /* BasicInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F2362A4086750011CE3F /* BasicInformation.swift */; };
+		8AC1F25C2A4086750011CE3F /* SoapFault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F2382A4086750011CE3F /* SoapFault.swift */; };
+		8AC1F25D2A4086750011CE3F /* VideoEncoderConfigurationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F23A2A4086750011CE3F /* VideoEncoderConfigurationOptions.swift */; };
+		8AC1F25E2A4086750011CE3F /* VideoSourceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F23B2A4086750011CE3F /* VideoSourceConfiguration.swift */; };
+		8AC1F25F2A4086750011CE3F /* MediaUri.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F23C2A4086750011CE3F /* MediaUri.swift */; };
+		8AC1F2602A4086750011CE3F /* VideoEncoderConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F23D2A4086750011CE3F /* VideoEncoderConfiguration.swift */; };
+		8AC1F2612A4086750011CE3F /* MediaProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F23E2A4086750011CE3F /* MediaProfile.swift */; };
+		8AC1F2622A4086750011CE3F /* PTZConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F23F2A4086750011CE3F /* PTZConfiguration.swift */; };
+		8AC1F2682A4086800011CE3F /* Result+success.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F2642A4086800011CE3F /* Result+success.swift */; };
+		8AC1F2692A4086800011CE3F /* OSLog+Onvif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F2652A4086800011CE3F /* OSLog+Onvif.swift */; };
+		8AC1F26A2A4086800011CE3F /* MediaProfile+isConfiguredProperly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F2662A4086800011CE3F /* MediaProfile+isConfiguredProperly.swift */; };
+		8AC1F26B2A4086800011CE3F /* Comparable+clamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F2672A4086800011CE3F /* Comparable+clamp.swift */; };
+		8AC1F26E2A4086860011CE3F /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F26D2A4086860011CE3F /* Errors.swift */; };
+		8AC1F2722A4089210011CE3F /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 8AC1F2712A4089210011CE3F /* Podfile */; };
+		8AC1F2792A40943C0011CE3F /* Shortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F2782A40943C0011CE3F /* Shortcut.swift */; };
+		8AC1F27B2A4094440011CE3F /* KeyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F27A2A4094440011CE3F /* KeyHandler.swift */; };
+		8AD21B9A2A405BA60040BC64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD21B992A405BA60040BC64 /* AppDelegate.swift */; };
+		8AD21B9C2A405BA60040BC64 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD21B9B2A405BA60040BC64 /* MainViewController.swift */; };
+		8AD21B9E2A405BA70040BC64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AD21B9D2A405BA70040BC64 /* Assets.xcassets */; };
+		8AD21BA12A405BA70040BC64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AD21B9F2A405BA70040BC64 /* Main.storyboard */; };
+		8AD21BAA2A405DDF0040BC64 /* CamerasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD21BA92A405DDF0040BC64 /* CamerasViewController.swift */; };
+		8AD21BAD2A405E7F0040BC64 /* CameraFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD21BAC2A405E7F0040BC64 /* CameraFinder.swift */; };
+		8AD21BAF2A405F6A0040BC64 /* ToDo.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8AD21BAE2A405F6A0040BC64 /* ToDo.rtf */; };
+		C0C7270C82F564EAC08A7E7D /* Pods_MagniLink_MacViewer_4_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C6B1818EEBBC5B1A1C823D /* Pods_MagniLink_MacViewer_4_0.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8AC1F1F12A40749C0011CE3F /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		8AC1F1F32A4074D10011CE3F /* CameraBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraBaseViewController.swift; sourceTree = "<group>"; };
+		8AC1F1F72A4075270011CE3F /* TwigaCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwigaCameraViewController.swift; sourceTree = "<group>"; };
+		8AC1F1F92A4075810011CE3F /* LVICameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVICameraViewController.swift; sourceTree = "<group>"; };
+		8AC1F1FD2A4076290011CE3F /* CameraAirViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraAirViewController.swift; sourceTree = "<group>"; };
+		8AC1F2022A4076820011CE3F /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
+		8AC1F2042A4078990011CE3F /* CameraAirDistanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraAirDistanceViewController.swift; sourceTree = "<group>"; };
+		8AC1F2082A4078B40011CE3F /* CameraAirReadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraAirReadingViewController.swift; sourceTree = "<group>"; };
+		8AC1F20A2A407A630011CE3F /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		8AC1F20C2A407D530011CE3F /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		8AC1F2102A407E8E0011CE3F /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		8AC1F2132A4086480011CE3F /* Onvif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onvif.swift; sourceTree = "<group>"; };
+		8AC1F2182A4086750011CE3F /* VideoResolution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoResolution.swift; sourceTree = "<group>"; };
+		8AC1F2192A4086750011CE3F /* VideoRateControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoRateControl.swift; sourceTree = "<group>"; };
+		8AC1F21A2A4086750011CE3F /* Space1DDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Space1DDescription.swift; sourceTree = "<group>"; };
+		8AC1F21B2A4086750011CE3F /* H264Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = H264Profile.swift; sourceTree = "<group>"; };
+		8AC1F21C2A4086750011CE3F /* Bounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bounds.swift; sourceTree = "<group>"; };
+		8AC1F21D2A4086750011CE3F /* FocusOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusOptions.swift; sourceTree = "<group>"; };
+		8AC1F21E2A4086750011CE3F /* Vector1D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector1D.swift; sourceTree = "<group>"; };
+		8AC1F21F2A4086750011CE3F /* H264Options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = H264Options.swift; sourceTree = "<group>"; };
+		8AC1F2202A4086750011CE3F /* H264Options2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = H264Options2.swift; sourceTree = "<group>"; };
+		8AC1F2212A4086750011CE3F /* VideoEncoderOptionsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoEncoderOptionsExtension.swift; sourceTree = "<group>"; };
+		8AC1F2222A4086750011CE3F /* PTZPreset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTZPreset.swift; sourceTree = "<group>"; };
+		8AC1F2232A4086750011CE3F /* Space2DDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Space2DDescription.swift; sourceTree = "<group>"; };
+		8AC1F2242A4086750011CE3F /* FloatRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatRange.swift; sourceTree = "<group>"; };
+		8AC1F2252A4086750011CE3F /* VideoEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoEncoding.swift; sourceTree = "<group>"; };
+		8AC1F2262A4086750011CE3F /* Vector2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector2D.swift; sourceTree = "<group>"; };
+		8AC1F2272A4086750011CE3F /* IntRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntRange.swift; sourceTree = "<group>"; };
+		8AC1F2282A4086750011CE3F /* PTZMoveStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTZMoveStatus.swift; sourceTree = "<group>"; };
+		8AC1F2292A4086750011CE3F /* PTZVector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTZVector.swift; sourceTree = "<group>"; };
+		8AC1F22A2A4086750011CE3F /* H264Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = H264Configuration.swift; sourceTree = "<group>"; };
+		8AC1F22B2A4086750011CE3F /* FocusConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusConfiguration.swift; sourceTree = "<group>"; };
+		8AC1F22C2A4086750011CE3F /* ImagingSettingsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagingSettingsExtension.swift; sourceTree = "<group>"; };
+		8AC1F22D2A4086750011CE3F /* PTZNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTZNode.swift; sourceTree = "<group>"; };
+		8AC1F22F2A4086750011CE3F /* MoveOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveOptions.swift; sourceTree = "<group>"; };
+		8AC1F2302A4086750011CE3F /* ImagingSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagingSettings.swift; sourceTree = "<group>"; };
+		8AC1F2312A4086750011CE3F /* ImagingOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagingOptions.swift; sourceTree = "<group>"; };
+		8AC1F2332A4086750011CE3F /* PTZStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTZStatus.swift; sourceTree = "<group>"; };
+		8AC1F2352A4086750011CE3F /* Capabilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Capabilities.swift; sourceTree = "<group>"; };
+		8AC1F2362A4086750011CE3F /* BasicInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicInformation.swift; sourceTree = "<group>"; };
+		8AC1F2382A4086750011CE3F /* SoapFault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoapFault.swift; sourceTree = "<group>"; };
+		8AC1F23A2A4086750011CE3F /* VideoEncoderConfigurationOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoEncoderConfigurationOptions.swift; sourceTree = "<group>"; };
+		8AC1F23B2A4086750011CE3F /* VideoSourceConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoSourceConfiguration.swift; sourceTree = "<group>"; };
+		8AC1F23C2A4086750011CE3F /* MediaUri.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaUri.swift; sourceTree = "<group>"; };
+		8AC1F23D2A4086750011CE3F /* VideoEncoderConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoEncoderConfiguration.swift; sourceTree = "<group>"; };
+		8AC1F23E2A4086750011CE3F /* MediaProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaProfile.swift; sourceTree = "<group>"; };
+		8AC1F23F2A4086750011CE3F /* PTZConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTZConfiguration.swift; sourceTree = "<group>"; };
+		8AC1F2642A4086800011CE3F /* Result+success.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Result+success.swift"; sourceTree = "<group>"; };
+		8AC1F2652A4086800011CE3F /* OSLog+Onvif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OSLog+Onvif.swift"; sourceTree = "<group>"; };
+		8AC1F2662A4086800011CE3F /* MediaProfile+isConfiguredProperly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MediaProfile+isConfiguredProperly.swift"; sourceTree = "<group>"; };
+		8AC1F2672A4086800011CE3F /* Comparable+clamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Comparable+clamp.swift"; sourceTree = "<group>"; };
+		8AC1F26D2A4086860011CE3F /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		8AC1F2712A4089210011CE3F /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		8AC1F2782A40943C0011CE3F /* Shortcut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shortcut.swift; sourceTree = "<group>"; };
+		8AC1F27A2A4094440011CE3F /* KeyHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyHandler.swift; sourceTree = "<group>"; };
+		8AD21B962A405BA60040BC64 /* MagniLink MacViewer 4.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MagniLink MacViewer 4.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AD21B992A405BA60040BC64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8AD21B9B2A405BA60040BC64 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		8AD21B9D2A405BA70040BC64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8AD21BA02A405BA70040BC64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8AD21BA22A405BA70040BC64 /* MagniLink_MacViewer_4_0.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MagniLink_MacViewer_4_0.entitlements; sourceTree = "<group>"; };
+		8AD21BA92A405DDF0040BC64 /* CamerasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamerasViewController.swift; sourceTree = "<group>"; };
+		8AD21BAC2A405E7F0040BC64 /* CameraFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFinder.swift; sourceTree = "<group>"; };
+		8AD21BAE2A405F6A0040BC64 /* ToDo.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = ToDo.rtf; sourceTree = "<group>"; };
+		B2C6B1818EEBBC5B1A1C823D /* Pods_MagniLink_MacViewer_4_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MagniLink_MacViewer_4_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3C7EC9C8FF1422E0CF875B0 /* Pods-MagniLink MacViewer 4.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagniLink MacViewer 4.0.debug.xcconfig"; path = "Target Support Files/Pods-MagniLink MacViewer 4.0/Pods-MagniLink MacViewer 4.0.debug.xcconfig"; sourceTree = "<group>"; };
+		CBD8FCBBA90F7A999E8DCC86 /* Pods-MagniLink MacViewer 4.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagniLink MacViewer 4.0.release.xcconfig"; path = "Target Support Files/Pods-MagniLink MacViewer 4.0/Pods-MagniLink MacViewer 4.0.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8AD21B932A405BA60040BC64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0C7270C82F564EAC08A7E7D /* Pods_MagniLink_MacViewer_4_0.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5EFE228E518C4FB57097C943 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2C6B1818EEBBC5B1A1C823D /* Pods_MagniLink_MacViewer_4_0.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8AC1F1F52A4074E10011CE3F /* UsbCamera */ = {
+			isa = PBXGroup;
+			children = (
+				8AC1F1F72A4075270011CE3F /* TwigaCameraViewController.swift */,
+				8AC1F1F92A4075810011CE3F /* LVICameraViewController.swift */,
+			);
+			path = UsbCamera;
+			sourceTree = "<group>";
+		};
+		8AC1F1F62A4074EE0011CE3F /* AirCamera */ = {
+			isa = PBXGroup;
+			children = (
+				8AC1F1FD2A4076290011CE3F /* CameraAirViewController.swift */,
+				8AC1F2042A4078990011CE3F /* CameraAirDistanceViewController.swift */,
+				8AC1F2082A4078B40011CE3F /* CameraAirReadingViewController.swift */,
+			);
+			path = AirCamera;
+			sourceTree = "<group>";
+		};
+		8AC1F2012A40765A0011CE3F /* USB */ = {
+			isa = PBXGroup;
+			children = (
+				8AC1F2022A4076820011CE3F /* VideoCapture.swift */,
+			);
+			path = USB;
+			sourceTree = "<group>";
+		};
+		8AC1F20F2A407E770011CE3F /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				8AC1F2102A407E8E0011CE3F /* Preferences.swift */,
+			);
+			path = Preferences;
+			sourceTree = "<group>";
+		};
+		8AC1F2122A4083A70011CE3F /* Onvif */ = {
+			isa = PBXGroup;
+			children = (
+				8AC1F2712A4089210011CE3F /* Podfile */,
+				8AC1F26C2A4086860011CE3F /* Errors */,
+				8AC1F2632A4086800011CE3F /* Extensions */,
+				8AC1F2162A4086750011CE3F /* Models */,
+				8AC1F2132A4086480011CE3F /* Onvif.swift */,
+			);
+			path = Onvif;
+			sourceTree = "<group>";
+		};
+		8AC1F2162A4086750011CE3F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8AC1F2172A4086750011CE3F /* Types */,
+				8AC1F22E2A4086750011CE3F /* Imaging */,
+				8AC1F2322A4086750011CE3F /* PTZ */,
+				8AC1F2342A4086750011CE3F /* Device */,
+				8AC1F2372A4086750011CE3F /* Error */,
+				8AC1F2392A4086750011CE3F /* Media */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8AC1F2172A4086750011CE3F /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				8AC1F2182A4086750011CE3F /* VideoResolution.swift */,
+				8AC1F2192A4086750011CE3F /* VideoRateControl.swift */,
+				8AC1F21A2A4086750011CE3F /* Space1DDescription.swift */,
+				8AC1F21B2A4086750011CE3F /* H264Profile.swift */,
+				8AC1F21C2A4086750011CE3F /* Bounds.swift */,
+				8AC1F21D2A4086750011CE3F /* FocusOptions.swift */,
+				8AC1F21E2A4086750011CE3F /* Vector1D.swift */,
+				8AC1F21F2A4086750011CE3F /* H264Options.swift */,
+				8AC1F2202A4086750011CE3F /* H264Options2.swift */,
+				8AC1F2212A4086750011CE3F /* VideoEncoderOptionsExtension.swift */,
+				8AC1F2222A4086750011CE3F /* PTZPreset.swift */,
+				8AC1F2232A4086750011CE3F /* Space2DDescription.swift */,
+				8AC1F2242A4086750011CE3F /* FloatRange.swift */,
+				8AC1F2252A4086750011CE3F /* VideoEncoding.swift */,
+				8AC1F2262A4086750011CE3F /* Vector2D.swift */,
+				8AC1F2272A4086750011CE3F /* IntRange.swift */,
+				8AC1F2282A4086750011CE3F /* PTZMoveStatus.swift */,
+				8AC1F2292A4086750011CE3F /* PTZVector.swift */,
+				8AC1F22A2A4086750011CE3F /* H264Configuration.swift */,
+				8AC1F22B2A4086750011CE3F /* FocusConfiguration.swift */,
+				8AC1F22C2A4086750011CE3F /* ImagingSettingsExtension.swift */,
+				8AC1F22D2A4086750011CE3F /* PTZNode.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		8AC1F22E2A4086750011CE3F /* Imaging */ = {
+			isa = PBXGroup;
+			children = (
+				8AC1F22F2A4086750011CE3F /* MoveOptions.swift */,
+				8AC1F2302A4086750011CE3F /* ImagingSettings.swift */,
+				8AC1F2312A4086750011CE3F /* ImagingOptions.swift */,
+			);
+			path = Imaging;
+			sourceTree = "<group>";
+		};
+		8AC1F2322A4086750011CE3F /* PTZ */ = {
+			isa = PBXGroup;
+			children = (
+				8AC1F2332A4086750011CE3F /* PTZStatus.swift */,
+			);
+			path = PTZ;
+			sourceTree = "<group>";
+		};
+		8AC1F2342A4086750011CE3F /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				8AC1F2352A4086750011CE3F /* Capabilities.swift */,
+				8AC1F2362A4086750011CE3F /* BasicInformation.swift */,
+			);
+			path = Device;
+			sourceTree = "<group>";
+		};
+		8AC1F2372A4086750011CE3F /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				8AC1F2382A4086750011CE3F /* SoapFault.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		8AC1F2392A4086750011CE3F /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				8AC1F23A2A4086750011CE3F /* VideoEncoderConfigurationOptions.swift */,
+				8AC1F23B2A4086750011CE3F /* VideoSourceConfiguration.swift */,
+				8AC1F23C2A4086750011CE3F /* MediaUri.swift */,
+				8AC1F23D2A4086750011CE3F /* VideoEncoderConfiguration.swift */,
+				8AC1F23E2A4086750011CE3F /* MediaProfile.swift */,
+				8AC1F23F2A4086750011CE3F /* PTZConfiguration.swift */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
+		8AC1F2632A4086800011CE3F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8AC1F2642A4086800011CE3F /* Result+success.swift */,
+				8AC1F2652A4086800011CE3F /* OSLog+Onvif.swift */,
+				8AC1F2662A4086800011CE3F /* MediaProfile+isConfiguredProperly.swift */,
+				8AC1F2672A4086800011CE3F /* Comparable+clamp.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8AC1F26C2A4086860011CE3F /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				8AC1F26D2A4086860011CE3F /* Errors.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		8AC1F2772A40942E0011CE3F /* KeyHandler */ = {
+			isa = PBXGroup;
+			children = (
+				8AC1F2782A40943C0011CE3F /* Shortcut.swift */,
+				8AC1F27A2A4094440011CE3F /* KeyHandler.swift */,
+			);
+			path = KeyHandler;
+			sourceTree = "<group>";
+		};
+		8AD21B8D2A405BA60040BC64 = {
+			isa = PBXGroup;
+			children = (
+				8AC1F2122A4083A70011CE3F /* Onvif */,
+				8AD21BAE2A405F6A0040BC64 /* ToDo.rtf */,
+				8AD21B982A405BA60040BC64 /* MagniLink MacViewer 4.0 */,
+				8AD21B972A405BA60040BC64 /* Products */,
+				F7237ADD12CBD1074B3526C1 /* Pods */,
+				5EFE228E518C4FB57097C943 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8AD21B972A405BA60040BC64 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8AD21B962A405BA60040BC64 /* MagniLink MacViewer 4.0.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8AD21B982A405BA60040BC64 /* MagniLink MacViewer 4.0 */ = {
+			isa = PBXGroup;
+			children = (
+				8AC1F2772A40942E0011CE3F /* KeyHandler */,
+				8AC1F20F2A407E770011CE3F /* Preferences */,
+				8AD21BB02A406AF20040BC64 /* Video */,
+				8AD21BAB2A405DEF0040BC64 /* Cameras */,
+				8AD21BA82A405DB20040BC64 /* MainViews */,
+				8AD21B992A405BA60040BC64 /* AppDelegate.swift */,
+				8AD21B9B2A405BA60040BC64 /* MainViewController.swift */,
+				8AC1F20A2A407A630011CE3F /* Enums.swift */,
+				8AC1F20C2A407D530011CE3F /* Extension.swift */,
+				8AD21B9D2A405BA70040BC64 /* Assets.xcassets */,
+				8AD21B9F2A405BA70040BC64 /* Main.storyboard */,
+				8AD21BA22A405BA70040BC64 /* MagniLink_MacViewer_4_0.entitlements */,
+			);
+			path = "MagniLink MacViewer 4.0";
+			sourceTree = "<group>";
+		};
+		8AD21BA82A405DB20040BC64 /* MainViews */ = {
+			isa = PBXGroup;
+			children = (
+				8AD21BA92A405DDF0040BC64 /* CamerasViewController.swift */,
+			);
+			path = MainViews;
+			sourceTree = "<group>";
+		};
+		8AD21BAB2A405DEF0040BC64 /* Cameras */ = {
+			isa = PBXGroup;
+			children = (
+				8AC1F1F62A4074EE0011CE3F /* AirCamera */,
+				8AC1F1F52A4074E10011CE3F /* UsbCamera */,
+				8AC1F1F12A40749C0011CE3F /* CameraManager.swift */,
+				8AD21BAC2A405E7F0040BC64 /* CameraFinder.swift */,
+				8AC1F1F32A4074D10011CE3F /* CameraBaseViewController.swift */,
+			);
+			path = Cameras;
+			sourceTree = "<group>";
+		};
+		8AD21BB02A406AF20040BC64 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				8AC1F2012A40765A0011CE3F /* USB */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		F7237ADD12CBD1074B3526C1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C3C7EC9C8FF1422E0CF875B0 /* Pods-MagniLink MacViewer 4.0.debug.xcconfig */,
+				CBD8FCBBA90F7A999E8DCC86 /* Pods-MagniLink MacViewer 4.0.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8AD21B952A405BA60040BC64 /* MagniLink MacViewer 4.0 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AD21BA52A405BA70040BC64 /* Build configuration list for PBXNativeTarget "MagniLink MacViewer 4.0" */;
+			buildPhases = (
+				AFBC6152D40EE3FF27629475 /* [CP] Check Pods Manifest.lock */,
+				8AD21B922A405BA60040BC64 /* Sources */,
+				8AD21B932A405BA60040BC64 /* Frameworks */,
+				8AD21B942A405BA60040BC64 /* Resources */,
+				DDBF78A67899530D45C6EEAD /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MagniLink MacViewer 4.0";
+			productName = "MagniLink MacViewer 4.0";
+			productReference = 8AD21B962A405BA60040BC64 /* MagniLink MacViewer 4.0.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8AD21B8E2A405BA60040BC64 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					8AD21B952A405BA60040BC64 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 8AD21B912A405BA60040BC64 /* Build configuration list for PBXProject "MagniLink MacViewer 4.0" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8AD21B8D2A405BA60040BC64;
+			productRefGroup = 8AD21B972A405BA60040BC64 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8AD21B952A405BA60040BC64 /* MagniLink MacViewer 4.0 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8AD21B942A405BA60040BC64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AD21B9E2A405BA70040BC64 /* Assets.xcassets in Resources */,
+				8AD21BA12A405BA70040BC64 /* Main.storyboard in Resources */,
+				8AC1F2722A4089210011CE3F /* Podfile in Resources */,
+				8AD21BAF2A405F6A0040BC64 /* ToDo.rtf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AFBC6152D40EE3FF27629475 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MagniLink MacViewer 4.0-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDBF78A67899530D45C6EEAD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MagniLink MacViewer 4.0/Pods-MagniLink MacViewer 4.0-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MagniLink MacViewer 4.0/Pods-MagniLink MacViewer 4.0-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MagniLink MacViewer 4.0/Pods-MagniLink MacViewer 4.0-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8AD21B922A405BA60040BC64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AC1F2592A4086750011CE3F /* PTZStatus.swift in Sources */,
+				8AD21B9C2A405BA60040BC64 /* MainViewController.swift in Sources */,
+				8AC1F24F2A4086750011CE3F /* IntRange.swift in Sources */,
+				8AC1F2422A4086750011CE3F /* Space1DDescription.swift in Sources */,
+				8AC1F27B2A4094440011CE3F /* KeyHandler.swift in Sources */,
+				8AC1F24A2A4086750011CE3F /* PTZPreset.swift in Sources */,
+				8AD21BAD2A405E7F0040BC64 /* CameraFinder.swift in Sources */,
+				8AC1F2482A4086750011CE3F /* H264Options2.swift in Sources */,
+				8AC1F2112A407E8E0011CE3F /* Preferences.swift in Sources */,
+				8AC1F2472A4086750011CE3F /* H264Options.swift in Sources */,
+				8AC1F25F2A4086750011CE3F /* MediaUri.swift in Sources */,
+				8AC1F2612A4086750011CE3F /* MediaProfile.swift in Sources */,
+				8AC1F2062A4078990011CE3F /* CameraAirDistanceViewController.swift in Sources */,
+				8AC1F1FF2A4076290011CE3F /* CameraAirViewController.swift in Sources */,
+				8AC1F2582A4086750011CE3F /* ImagingOptions.swift in Sources */,
+				8AC1F24B2A4086750011CE3F /* Space2DDescription.swift in Sources */,
+				8AC1F2512A4086750011CE3F /* PTZVector.swift in Sources */,
+				8AD21B9A2A405BA60040BC64 /* AppDelegate.swift in Sources */,
+				8AC1F24C2A4086750011CE3F /* FloatRange.swift in Sources */,
+				8AC1F2602A4086750011CE3F /* VideoEncoderConfiguration.swift in Sources */,
+				8AC1F2092A4078B40011CE3F /* CameraAirReadingViewController.swift in Sources */,
+				8AC1F26E2A4086860011CE3F /* Errors.swift in Sources */,
+				8AC1F2532A4086750011CE3F /* FocusConfiguration.swift in Sources */,
+				8AC1F26A2A4086800011CE3F /* MediaProfile+isConfiguredProperly.swift in Sources */,
+				8AC1F1FB2A4075810011CE3F /* LVICameraViewController.swift in Sources */,
+				8AC1F2142A4086480011CE3F /* Onvif.swift in Sources */,
+				8AC1F2552A4086750011CE3F /* PTZNode.swift in Sources */,
+				8AC1F25A2A4086750011CE3F /* Capabilities.swift in Sources */,
+				8AC1F20B2A407A630011CE3F /* Enums.swift in Sources */,
+				8AC1F2492A4086750011CE3F /* VideoEncoderOptionsExtension.swift in Sources */,
+				8AC1F2402A4086750011CE3F /* VideoResolution.swift in Sources */,
+				8AC1F1F82A4075270011CE3F /* TwigaCameraViewController.swift in Sources */,
+				8AC1F20D2A407D530011CE3F /* Extension.swift in Sources */,
+				8AC1F25C2A4086750011CE3F /* SoapFault.swift in Sources */,
+				8AC1F2562A4086750011CE3F /* MoveOptions.swift in Sources */,
+				8AC1F2542A4086750011CE3F /* ImagingSettingsExtension.swift in Sources */,
+				8AC1F24D2A4086750011CE3F /* VideoEncoding.swift in Sources */,
+				8AC1F2032A4076820011CE3F /* VideoCapture.swift in Sources */,
+				8AC1F2622A4086750011CE3F /* PTZConfiguration.swift in Sources */,
+				8AC1F2792A40943C0011CE3F /* Shortcut.swift in Sources */,
+				8AC1F2442A4086750011CE3F /* Bounds.swift in Sources */,
+				8AC1F2572A4086750011CE3F /* ImagingSettings.swift in Sources */,
+				8AC1F2522A4086750011CE3F /* H264Configuration.swift in Sources */,
+				8AD21BAA2A405DDF0040BC64 /* CamerasViewController.swift in Sources */,
+				8AC1F2412A4086750011CE3F /* VideoRateControl.swift in Sources */,
+				8AC1F2462A4086750011CE3F /* Vector1D.swift in Sources */,
+				8AC1F2682A4086800011CE3F /* Result+success.swift in Sources */,
+				8AC1F25B2A4086750011CE3F /* BasicInformation.swift in Sources */,
+				8AC1F2432A4086750011CE3F /* H264Profile.swift in Sources */,
+				8AC1F1F42A4074D10011CE3F /* CameraBaseViewController.swift in Sources */,
+				8AC1F1F22A40749C0011CE3F /* CameraManager.swift in Sources */,
+				8AC1F25D2A4086750011CE3F /* VideoEncoderConfigurationOptions.swift in Sources */,
+				8AC1F24E2A4086750011CE3F /* Vector2D.swift in Sources */,
+				8AC1F25E2A4086750011CE3F /* VideoSourceConfiguration.swift in Sources */,
+				8AC1F2452A4086750011CE3F /* FocusOptions.swift in Sources */,
+				8AC1F2502A4086750011CE3F /* PTZMoveStatus.swift in Sources */,
+				8AC1F2692A4086800011CE3F /* OSLog+Onvif.swift in Sources */,
+				8AC1F26B2A4086800011CE3F /* Comparable+clamp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8AD21B9F2A405BA70040BC64 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AD21BA02A405BA70040BC64 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8AD21BA32A405BA70040BC64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8AD21BA42A405BA70040BC64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		8AD21BA62A405BA70040BC64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3C7EC9C8FF1422E0CF875B0 /* Pods-MagniLink MacViewer 4.0.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "MagniLink MacViewer 4.0/MagniLink_MacViewer_4_0.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7W8GH4FC3N;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "se.lvi.MagniLink-MacViewer-4-0";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		8AD21BA72A405BA70040BC64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBD8FCBBA90F7A999E8DCC86 /* Pods-MagniLink MacViewer 4.0.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "MagniLink MacViewer 4.0/MagniLink_MacViewer_4_0.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7W8GH4FC3N;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "se.lvi.MagniLink-MacViewer-4-0";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8AD21B912A405BA60040BC64 /* Build configuration list for PBXProject "MagniLink MacViewer 4.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AD21BA32A405BA70040BC64 /* Debug */,
+				8AD21BA42A405BA70040BC64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8AD21BA52A405BA70040BC64 /* Build configuration list for PBXNativeTarget "MagniLink MacViewer 4.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AD21BA62A405BA70040BC64 /* Debug */,
+				8AD21BA72A405BA70040BC64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8AD21B8E2A405BA60040BC64 /* Project object */;
+}
