@@ -62,6 +62,11 @@
 		8AC1F2722A4089210011CE3F /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 8AC1F2712A4089210011CE3F /* Podfile */; };
 		8AC1F2792A40943C0011CE3F /* Shortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F2782A40943C0011CE3F /* Shortcut.swift */; };
 		8AC1F27B2A4094440011CE3F /* KeyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F27A2A4094440011CE3F /* KeyHandler.swift */; };
+		8AC1F27F2A41A4F70011CE3F /* CameraUSBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F27E2A41A4F70011CE3F /* CameraUSBViewController.swift */; };
+		8AC1F2822A41A7B00011CE3F /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F2812A41A7B00011CE3F /* MetalView.swift */; };
+		8AC1F2842A41A7C10011CE3F /* Shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F2832A41A7C10011CE3F /* Shader.metal */; };
+		8AC1F2862A41A9590011CE3F /* MetalViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F2852A41A9590011CE3F /* MetalViewHelper.swift */; };
+		8AC1F2882A41AAAB0011CE3F /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1F2872A41AAAB0011CE3F /* Utility.swift */; };
 		8AD21B9A2A405BA60040BC64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD21B992A405BA60040BC64 /* AppDelegate.swift */; };
 		8AD21B9C2A405BA60040BC64 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD21B9B2A405BA60040BC64 /* MainViewController.swift */; };
 		8AD21B9E2A405BA70040BC64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AD21B9D2A405BA70040BC64 /* Assets.xcassets */; };
@@ -69,7 +74,26 @@
 		8AD21BAA2A405DDF0040BC64 /* CamerasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD21BA92A405DDF0040BC64 /* CamerasViewController.swift */; };
 		8AD21BAD2A405E7F0040BC64 /* CameraFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD21BAC2A405E7F0040BC64 /* CameraFinder.swift */; };
 		8AD21BAF2A405F6A0040BC64 /* ToDo.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8AD21BAE2A405F6A0040BC64 /* ToDo.rtf */; };
-		C0C7270C82F564EAC08A7E7D /* Pods_MagniLink_MacViewer_4_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C6B1818EEBBC5B1A1C823D /* Pods_MagniLink_MacViewer_4_0.framework */; };
+		8AFFD2422A6014ED0058829C /* GStreamerBackend.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFD2412A6014ED0058829C /* GStreamerBackend.m */; };
+		8AFFD2452A60165E0058829C /* GStreamer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AFFD2442A60165E0058829C /* GStreamer.framework */; };
+		8AFFD2482A601D5B0058829C /* Pods_MagniLink_MacViewer_4_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C6B1818EEBBC5B1A1C823D /* Pods_MagniLink_MacViewer_4_0.framework */; };
+		8AFFD2602A6027C90058829C /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFD24D2A6027C90058829C /* CameraController.swift */; };
+		8AFFD2612A6027C90058829C /* FloatSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFD24F2A6027C90058829C /* FloatSetting.swift */; };
+		8AFFD2622A6027C90058829C /* IntSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFD2502A6027C90058829C /* IntSetting.swift */; };
+		8AFFD2632A6027C90058829C /* PanDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFD2512A6027C90058829C /* PanDirection.swift */; };
+		8AFFD2642A6027C90058829C /* ZoomDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFD2522A6027C90058829C /* ZoomDirection.swift */; };
+		8AFFD2652A6027C90058829C /* PanTiltZoomDirections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFD2532A6027C90058829C /* PanTiltZoomDirections.swift */; };
+		8AFFD2662A6027C90058829C /* PanTiltZoomStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFD2542A6027C90058829C /* PanTiltZoomStatus.swift */; };
+		8AFFD2672A6027C90058829C /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFD2552A6027C90058829C /* License.swift */; };
+		8AFFD2682A6027C90058829C /* StreamSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFD2562A6027C90058829C /* StreamSettings.swift */; };
+		8AFFD2692A6027C90058829C /* FocusDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFD2572A6027C90058829C /* FocusDirection.swift */; };
+		8AFFD26A2A6027C90058829C /* TiltDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFD2582A6027C90058829C /* TiltDirection.swift */; };
+		8AFFD26B2A6027C90058829C /* CameraSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFD2592A6027C90058829C /* CameraSettings.swift */; };
+		8AFFD26C2A6027C90058829C /* String+CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFD25B2A6027C90058829C /* String+CameraController.swift */; };
+		8AFFD26D2A6027C90058829C /* VideoEncoderConfigurationOptions+toStreamSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFD25C2A6027C90058829C /* VideoEncoderConfigurationOptions+toStreamSettings.swift */; };
+		8AFFD26E2A6027C90058829C /* PTZStatus+toPanTiltZoomStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFD25D2A6027C90058829C /* PTZStatus+toPanTiltZoomStatus.swift */; };
+		8AFFD26F2A6027C90058829C /* ImagingOptions+toCameraSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFD25E2A6027C90058829C /* ImagingOptions+toCameraSettings.swift */; };
+		8AFFD2712A6027FC0058829C /* AirCameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFD2702A6027FC0058829C /* AirCameraController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -125,9 +149,14 @@
 		8AC1F2662A4086800011CE3F /* MediaProfile+isConfiguredProperly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MediaProfile+isConfiguredProperly.swift"; sourceTree = "<group>"; };
 		8AC1F2672A4086800011CE3F /* Comparable+clamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Comparable+clamp.swift"; sourceTree = "<group>"; };
 		8AC1F26D2A4086860011CE3F /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
-		8AC1F2712A4089210011CE3F /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		8AC1F2712A4089210011CE3F /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		8AC1F2782A40943C0011CE3F /* Shortcut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shortcut.swift; sourceTree = "<group>"; };
 		8AC1F27A2A4094440011CE3F /* KeyHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyHandler.swift; sourceTree = "<group>"; };
+		8AC1F27E2A41A4F70011CE3F /* CameraUSBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraUSBViewController.swift; sourceTree = "<group>"; };
+		8AC1F2812A41A7B00011CE3F /* MetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
+		8AC1F2832A41A7C10011CE3F /* Shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shader.metal; sourceTree = "<group>"; };
+		8AC1F2852A41A9590011CE3F /* MetalViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalViewHelper.swift; sourceTree = "<group>"; };
+		8AC1F2872A41AAAB0011CE3F /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		8AD21B962A405BA60040BC64 /* MagniLink MacViewer 4.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MagniLink MacViewer 4.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AD21B992A405BA60040BC64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AD21B9B2A405BA60040BC64 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +166,28 @@
 		8AD21BA92A405DDF0040BC64 /* CamerasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamerasViewController.swift; sourceTree = "<group>"; };
 		8AD21BAC2A405E7F0040BC64 /* CameraFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFinder.swift; sourceTree = "<group>"; };
 		8AD21BAE2A405F6A0040BC64 /* ToDo.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = ToDo.rtf; sourceTree = "<group>"; };
+		8AFFD23F2A6014ED0058829C /* MagniLink MacViewer 4.0-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MagniLink MacViewer 4.0-Bridging-Header.h"; sourceTree = "<group>"; };
+		8AFFD2402A6014ED0058829C /* GStreamerBackend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GStreamerBackend.h; sourceTree = "<group>"; };
+		8AFFD2412A6014ED0058829C /* GStreamerBackend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GStreamerBackend.m; sourceTree = "<group>"; };
+		8AFFD2432A6015270058829C /* GStreamerBackendDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GStreamerBackendDelegate.h; sourceTree = "<group>"; };
+		8AFFD2442A60165E0058829C /* GStreamer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GStreamer.framework; path = ../../../../Library/Frameworks/GStreamer.framework; sourceTree = "<group>"; };
+		8AFFD24D2A6027C90058829C /* CameraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
+		8AFFD24F2A6027C90058829C /* FloatSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatSetting.swift; sourceTree = "<group>"; };
+		8AFFD2502A6027C90058829C /* IntSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntSetting.swift; sourceTree = "<group>"; };
+		8AFFD2512A6027C90058829C /* PanDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanDirection.swift; sourceTree = "<group>"; };
+		8AFFD2522A6027C90058829C /* ZoomDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomDirection.swift; sourceTree = "<group>"; };
+		8AFFD2532A6027C90058829C /* PanTiltZoomDirections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanTiltZoomDirections.swift; sourceTree = "<group>"; };
+		8AFFD2542A6027C90058829C /* PanTiltZoomStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanTiltZoomStatus.swift; sourceTree = "<group>"; };
+		8AFFD2552A6027C90058829C /* License.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
+		8AFFD2562A6027C90058829C /* StreamSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamSettings.swift; sourceTree = "<group>"; };
+		8AFFD2572A6027C90058829C /* FocusDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusDirection.swift; sourceTree = "<group>"; };
+		8AFFD2582A6027C90058829C /* TiltDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TiltDirection.swift; sourceTree = "<group>"; };
+		8AFFD2592A6027C90058829C /* CameraSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraSettings.swift; sourceTree = "<group>"; };
+		8AFFD25B2A6027C90058829C /* String+CameraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+CameraController.swift"; sourceTree = "<group>"; };
+		8AFFD25C2A6027C90058829C /* VideoEncoderConfigurationOptions+toStreamSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VideoEncoderConfigurationOptions+toStreamSettings.swift"; sourceTree = "<group>"; };
+		8AFFD25D2A6027C90058829C /* PTZStatus+toPanTiltZoomStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PTZStatus+toPanTiltZoomStatus.swift"; sourceTree = "<group>"; };
+		8AFFD25E2A6027C90058829C /* ImagingOptions+toCameraSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ImagingOptions+toCameraSettings.swift"; sourceTree = "<group>"; };
+		8AFFD2702A6027FC0058829C /* AirCameraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirCameraController.swift; sourceTree = "<group>"; };
 		B2C6B1818EEBBC5B1A1C823D /* Pods_MagniLink_MacViewer_4_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MagniLink_MacViewer_4_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C7EC9C8FF1422E0CF875B0 /* Pods-MagniLink MacViewer 4.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagniLink MacViewer 4.0.debug.xcconfig"; path = "Target Support Files/Pods-MagniLink MacViewer 4.0/Pods-MagniLink MacViewer 4.0.debug.xcconfig"; sourceTree = "<group>"; };
 		CBD8FCBBA90F7A999E8DCC86 /* Pods-MagniLink MacViewer 4.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagniLink MacViewer 4.0.release.xcconfig"; path = "Target Support Files/Pods-MagniLink MacViewer 4.0/Pods-MagniLink MacViewer 4.0.release.xcconfig"; sourceTree = "<group>"; };
@@ -147,7 +198,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0C7270C82F564EAC08A7E7D /* Pods_MagniLink_MacViewer_4_0.framework in Frameworks */,
+				8AFFD2452A60165E0058829C /* GStreamer.framework in Frameworks */,
+				8AFFD2482A601D5B0058829C /* Pods_MagniLink_MacViewer_4_0.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +209,7 @@
 		5EFE228E518C4FB57097C943 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8AFFD2442A60165E0058829C /* GStreamer.framework */,
 				B2C6B1818EEBBC5B1A1C823D /* Pods_MagniLink_MacViewer_4_0.framework */,
 			);
 			name = Frameworks;
@@ -167,6 +220,7 @@
 			children = (
 				8AC1F1F72A4075270011CE3F /* TwigaCameraViewController.swift */,
 				8AC1F1F92A4075810011CE3F /* LVICameraViewController.swift */,
+				8AC1F27E2A41A4F70011CE3F /* CameraUSBViewController.swift */,
 			);
 			path = UsbCamera;
 			sourceTree = "<group>";
@@ -177,6 +231,7 @@
 				8AC1F1FD2A4076290011CE3F /* CameraAirViewController.swift */,
 				8AC1F2042A4078990011CE3F /* CameraAirDistanceViewController.swift */,
 				8AC1F2082A4078B40011CE3F /* CameraAirReadingViewController.swift */,
+				8AFFD2702A6027FC0058829C /* AirCameraController.swift */,
 			);
 			path = AirCamera;
 			sourceTree = "<group>";
@@ -327,9 +382,20 @@
 			path = KeyHandler;
 			sourceTree = "<group>";
 		};
+		8AC1F2802A41A7950011CE3F /* Metal */ = {
+			isa = PBXGroup;
+			children = (
+				8AC1F2832A41A7C10011CE3F /* Shader.metal */,
+				8AC1F2812A41A7B00011CE3F /* MetalView.swift */,
+				8AC1F2852A41A9590011CE3F /* MetalViewHelper.swift */,
+			);
+			path = Metal;
+			sourceTree = "<group>";
+		};
 		8AD21B8D2A405BA60040BC64 = {
 			isa = PBXGroup;
 			children = (
+				8AFFD24C2A6027C90058829C /* CameraController */,
 				8AC1F2122A4083A70011CE3F /* Onvif */,
 				8AD21BAE2A405F6A0040BC64 /* ToDo.rtf */,
 				8AD21B982A405BA60040BC64 /* MagniLink MacViewer 4.0 */,
@@ -350,6 +416,7 @@
 		8AD21B982A405BA60040BC64 /* MagniLink MacViewer 4.0 */ = {
 			isa = PBXGroup;
 			children = (
+				8AC1F2802A41A7950011CE3F /* Metal */,
 				8AC1F2772A40942E0011CE3F /* KeyHandler */,
 				8AC1F20F2A407E770011CE3F /* Preferences */,
 				8AD21BB02A406AF20040BC64 /* Video */,
@@ -359,6 +426,7 @@
 				8AD21B9B2A405BA60040BC64 /* MainViewController.swift */,
 				8AC1F20A2A407A630011CE3F /* Enums.swift */,
 				8AC1F20C2A407D530011CE3F /* Extension.swift */,
+				8AC1F2872A41AAAB0011CE3F /* Utility.swift */,
 				8AD21B9D2A405BA70040BC64 /* Assets.xcassets */,
 				8AD21B9F2A405BA70040BC64 /* Main.storyboard */,
 				8AD21BA22A405BA70040BC64 /* MagniLink_MacViewer_4_0.entitlements */,
@@ -389,9 +457,68 @@
 		8AD21BB02A406AF20040BC64 /* Video */ = {
 			isa = PBXGroup;
 			children = (
+				8AFFD23E2A6013AF0058829C /* GStreamer */,
 				8AC1F2012A40765A0011CE3F /* USB */,
 			);
 			path = Video;
+			sourceTree = "<group>";
+		};
+		8AFFD23E2A6013AF0058829C /* GStreamer */ = {
+			isa = PBXGroup;
+			children = (
+				8AFFD2402A6014ED0058829C /* GStreamerBackend.h */,
+				8AFFD2412A6014ED0058829C /* GStreamerBackend.m */,
+				8AFFD23F2A6014ED0058829C /* MagniLink MacViewer 4.0-Bridging-Header.h */,
+				8AFFD2432A6015270058829C /* GStreamerBackendDelegate.h */,
+			);
+			path = GStreamer;
+			sourceTree = "<group>";
+		};
+		8AFFD24C2A6027C90058829C /* CameraController */ = {
+			isa = PBXGroup;
+			children = (
+				8AFFD24D2A6027C90058829C /* CameraController.swift */,
+				8AFFD24E2A6027C90058829C /* Models */,
+				8AFFD25A2A6027C90058829C /* Extensions */,
+				8AFFD25F2A6027C90058829C /* Errors */,
+			);
+			path = CameraController;
+			sourceTree = "<group>";
+		};
+		8AFFD24E2A6027C90058829C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8AFFD24F2A6027C90058829C /* FloatSetting.swift */,
+				8AFFD2502A6027C90058829C /* IntSetting.swift */,
+				8AFFD2512A6027C90058829C /* PanDirection.swift */,
+				8AFFD2522A6027C90058829C /* ZoomDirection.swift */,
+				8AFFD2532A6027C90058829C /* PanTiltZoomDirections.swift */,
+				8AFFD2542A6027C90058829C /* PanTiltZoomStatus.swift */,
+				8AFFD2552A6027C90058829C /* License.swift */,
+				8AFFD2562A6027C90058829C /* StreamSettings.swift */,
+				8AFFD2572A6027C90058829C /* FocusDirection.swift */,
+				8AFFD2582A6027C90058829C /* TiltDirection.swift */,
+				8AFFD2592A6027C90058829C /* CameraSettings.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8AFFD25A2A6027C90058829C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8AFFD25B2A6027C90058829C /* String+CameraController.swift */,
+				8AFFD25C2A6027C90058829C /* VideoEncoderConfigurationOptions+toStreamSettings.swift */,
+				8AFFD25D2A6027C90058829C /* PTZStatus+toPanTiltZoomStatus.swift */,
+				8AFFD25E2A6027C90058829C /* ImagingOptions+toCameraSettings.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8AFFD25F2A6027C90058829C /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 		F7237ADD12CBD1074B3526C1 /* Pods */ = {
@@ -437,6 +564,7 @@
 				TargetAttributes = {
 					8AD21B952A405BA60040BC64 = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 				};
 			};
@@ -522,38 +650,55 @@
 				8AC1F2592A4086750011CE3F /* PTZStatus.swift in Sources */,
 				8AD21B9C2A405BA60040BC64 /* MainViewController.swift in Sources */,
 				8AC1F24F2A4086750011CE3F /* IntRange.swift in Sources */,
+				8AFFD2662A6027C90058829C /* PanTiltZoomStatus.swift in Sources */,
+				8AFFD2692A6027C90058829C /* FocusDirection.swift in Sources */,
+				8AFFD26B2A6027C90058829C /* CameraSettings.swift in Sources */,
 				8AC1F2422A4086750011CE3F /* Space1DDescription.swift in Sources */,
 				8AC1F27B2A4094440011CE3F /* KeyHandler.swift in Sources */,
 				8AC1F24A2A4086750011CE3F /* PTZPreset.swift in Sources */,
 				8AD21BAD2A405E7F0040BC64 /* CameraFinder.swift in Sources */,
+				8AFFD2612A6027C90058829C /* FloatSetting.swift in Sources */,
 				8AC1F2482A4086750011CE3F /* H264Options2.swift in Sources */,
 				8AC1F2112A407E8E0011CE3F /* Preferences.swift in Sources */,
 				8AC1F2472A4086750011CE3F /* H264Options.swift in Sources */,
 				8AC1F25F2A4086750011CE3F /* MediaUri.swift in Sources */,
 				8AC1F2612A4086750011CE3F /* MediaProfile.swift in Sources */,
+				8AC1F2822A41A7B00011CE3F /* MetalView.swift in Sources */,
 				8AC1F2062A4078990011CE3F /* CameraAirDistanceViewController.swift in Sources */,
 				8AC1F1FF2A4076290011CE3F /* CameraAirViewController.swift in Sources */,
 				8AC1F2582A4086750011CE3F /* ImagingOptions.swift in Sources */,
+				8AC1F2862A41A9590011CE3F /* MetalViewHelper.swift in Sources */,
 				8AC1F24B2A4086750011CE3F /* Space2DDescription.swift in Sources */,
 				8AC1F2512A4086750011CE3F /* PTZVector.swift in Sources */,
+				8AC1F27F2A41A4F70011CE3F /* CameraUSBViewController.swift in Sources */,
 				8AD21B9A2A405BA60040BC64 /* AppDelegate.swift in Sources */,
+				8AFFD2642A6027C90058829C /* ZoomDirection.swift in Sources */,
 				8AC1F24C2A4086750011CE3F /* FloatRange.swift in Sources */,
+				8AFFD2712A6027FC0058829C /* AirCameraController.swift in Sources */,
 				8AC1F2602A4086750011CE3F /* VideoEncoderConfiguration.swift in Sources */,
 				8AC1F2092A4078B40011CE3F /* CameraAirReadingViewController.swift in Sources */,
+				8AFFD2602A6027C90058829C /* CameraController.swift in Sources */,
 				8AC1F26E2A4086860011CE3F /* Errors.swift in Sources */,
 				8AC1F2532A4086750011CE3F /* FocusConfiguration.swift in Sources */,
+				8AFFD26E2A6027C90058829C /* PTZStatus+toPanTiltZoomStatus.swift in Sources */,
+				8AFFD2652A6027C90058829C /* PanTiltZoomDirections.swift in Sources */,
 				8AC1F26A2A4086800011CE3F /* MediaProfile+isConfiguredProperly.swift in Sources */,
 				8AC1F1FB2A4075810011CE3F /* LVICameraViewController.swift in Sources */,
 				8AC1F2142A4086480011CE3F /* Onvif.swift in Sources */,
 				8AC1F2552A4086750011CE3F /* PTZNode.swift in Sources */,
+				8AFFD2672A6027C90058829C /* License.swift in Sources */,
 				8AC1F25A2A4086750011CE3F /* Capabilities.swift in Sources */,
+				8AFFD2422A6014ED0058829C /* GStreamerBackend.m in Sources */,
 				8AC1F20B2A407A630011CE3F /* Enums.swift in Sources */,
 				8AC1F2492A4086750011CE3F /* VideoEncoderOptionsExtension.swift in Sources */,
 				8AC1F2402A4086750011CE3F /* VideoResolution.swift in Sources */,
 				8AC1F1F82A4075270011CE3F /* TwigaCameraViewController.swift in Sources */,
+				8AFFD26D2A6027C90058829C /* VideoEncoderConfigurationOptions+toStreamSettings.swift in Sources */,
 				8AC1F20D2A407D530011CE3F /* Extension.swift in Sources */,
 				8AC1F25C2A4086750011CE3F /* SoapFault.swift in Sources */,
 				8AC1F2562A4086750011CE3F /* MoveOptions.swift in Sources */,
+				8AFFD2632A6027C90058829C /* PanDirection.swift in Sources */,
+				8AFFD26C2A6027C90058829C /* String+CameraController.swift in Sources */,
 				8AC1F2542A4086750011CE3F /* ImagingSettingsExtension.swift in Sources */,
 				8AC1F24D2A4086750011CE3F /* VideoEncoding.swift in Sources */,
 				8AC1F2032A4076820011CE3F /* VideoCapture.swift in Sources */,
@@ -564,19 +709,25 @@
 				8AC1F2522A4086750011CE3F /* H264Configuration.swift in Sources */,
 				8AD21BAA2A405DDF0040BC64 /* CamerasViewController.swift in Sources */,
 				8AC1F2412A4086750011CE3F /* VideoRateControl.swift in Sources */,
+				8AFFD26A2A6027C90058829C /* TiltDirection.swift in Sources */,
 				8AC1F2462A4086750011CE3F /* Vector1D.swift in Sources */,
 				8AC1F2682A4086800011CE3F /* Result+success.swift in Sources */,
+				8AFFD26F2A6027C90058829C /* ImagingOptions+toCameraSettings.swift in Sources */,
 				8AC1F25B2A4086750011CE3F /* BasicInformation.swift in Sources */,
+				8AFFD2682A6027C90058829C /* StreamSettings.swift in Sources */,
 				8AC1F2432A4086750011CE3F /* H264Profile.swift in Sources */,
 				8AC1F1F42A4074D10011CE3F /* CameraBaseViewController.swift in Sources */,
 				8AC1F1F22A40749C0011CE3F /* CameraManager.swift in Sources */,
 				8AC1F25D2A4086750011CE3F /* VideoEncoderConfigurationOptions.swift in Sources */,
+				8AFFD2622A6027C90058829C /* IntSetting.swift in Sources */,
 				8AC1F24E2A4086750011CE3F /* Vector2D.swift in Sources */,
+				8AC1F2882A41AAAB0011CE3F /* Utility.swift in Sources */,
 				8AC1F25E2A4086750011CE3F /* VideoSourceConfiguration.swift in Sources */,
 				8AC1F2452A4086750011CE3F /* FocusOptions.swift in Sources */,
 				8AC1F2502A4086750011CE3F /* PTZMoveStatus.swift in Sources */,
 				8AC1F2692A4086800011CE3F /* OSLog+Onvif.swift in Sources */,
 				8AC1F26B2A4086800011CE3F /* Comparable+clamp.swift in Sources */,
+				8AC1F2842A41A7C10011CE3F /* Shader.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -713,6 +864,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "MagniLink MacViewer 4.0/MagniLink_MacViewer_4_0.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -720,19 +872,40 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7W8GH4FC3N;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SWXMLHash/SWXMLHash.framework/Headers\"",
+					/Library/Frameworks/GStreamer.framework/Versions/1.0/Headers,
+				);
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera usage";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
+					"$(CONFIGURATION_BUILD_DIR)",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${DT_TOOLCHAIN_DIR}/usr/lib/swift/${PLATFORM_NAME}\"",
+					/usr/lib/swift,
+					/Library/Frameworks/GStreamer.framework/Libraries,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "se.lvi.MagniLink-MacViewer-4-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MagniLink MacViewer 4.0/Video/GStreamer/MagniLink MacViewer 4.0-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -743,6 +916,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "MagniLink MacViewer 4.0/MagniLink_MacViewer_4_0.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -750,7 +924,18 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7W8GH4FC3N;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SWXMLHash/SWXMLHash.framework/Headers\"",
+					/Library/Frameworks/GStreamer.framework/Versions/1.0/Headers,
+				);
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera usage";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -758,11 +943,19 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${DT_TOOLCHAIN_DIR}/usr/lib/swift/${PLATFORM_NAME}\"",
+					/usr/lib/swift,
+					/Library/Frameworks/GStreamer.framework/Libraries,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "se.lvi.MagniLink-MacViewer-4-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MagniLink MacViewer 4.0/Video/GStreamer/MagniLink MacViewer 4.0-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

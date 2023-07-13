@@ -7,7 +7,7 @@
 
 import Cocoa
 
-class LVICameraViewController: NSViewController {
+class LVICameraViewController: CameraUSBViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -57,6 +57,7 @@ class MainViewController: NSViewController, KeyHandlerDelegate {
     
     override func keyDown(with event: NSEvent) {
         mKeyhandler.handleKeyDown(key: event)
+        //mCameraViewController?.mCameraManager.currentCamera.mMetalView.updateUniformsRender()
     }
     
     override func keyUp(with event: NSEvent) {

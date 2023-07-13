@@ -109,7 +109,7 @@ class CameraFinder: NSObject {
         for dev in session.devices {
             print("Device found \(dev.localizedName)")
             
-            if ["USB3Neo 00000"].contains(dev.localizedName) {
+            if ["USB3Neo 00000", "USB Camera3"].contains(dev.localizedName) {
                 delegate?.cameraFinderDidFindTwigaCamera(self, delay: 1.0)
             }
         }

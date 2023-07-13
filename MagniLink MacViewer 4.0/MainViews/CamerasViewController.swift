@@ -14,6 +14,7 @@ class CamerasViewController: NSViewController, CameraFinderDelegate {
     var mCameraViewController : CamerasViewController?
     var mCameraFinder : CameraFinder?
     var mCameraManager = CameraManager()
+    var mVideoCapture : VideoCapture?
     
     override func loadView() {
         self.view = NSView()
@@ -22,6 +23,7 @@ class CamerasViewController: NSViewController, CameraFinderDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        GStreamerBackend.init_gstreamer()
         
         view.wantsLayer = true
         view.layer?.backgroundColor = NSColor.blue.cgColor
@@ -83,7 +85,8 @@ class CamerasViewController: NSViewController, CameraFinderDelegate {
     
     func cameraFinder(_ cameraFinder: CameraFinder, didFindReadingCamera readingCamera: ReadingCamera) {
         let cameraController = CameraAirReadingViewController()
-//        cameraController.setup(videoCapture: mVideoCapture!, manufacturer: readingCamera.manufacturer)
+
+        cameraController.setup(videoCapture: mVideoCapture!, manufacturer: readingCamera.manufacturer)
 //        cameraController.delegate = self
 //        cameraController.loadSettings()
         
@@ -92,9 +95,9 @@ class CamerasViewController: NSViewController, CameraFinderDelegate {
     
     func cameraFinder(_ cameraFinder: CameraFinder, didFindDistanceCamera distanceCamera: DistanceCamera) {
         let cameraController = CameraAirDistanceViewController()
-//        cameraController.setup(videoCapture: mVideoCapture!, manufacturer: readingCamera.manufacturer)
+        
+        cameraController.setup(videoCapture: mVideoCapture!, manufacturer: distanceCamera.manufacturer)
 //        cameraController.delegate = self
-//        cameraController.loadSettings()
         
         addCameraView(cameraView: cameraController)
     }
@@ -111,11 +114,23 @@ class CamerasViewController: NSViewController, CameraFinderDelegate {
     func cameraFinderDidFindTwigaCamera(_ cameraFinder: CameraFinder, delay: Double)
     {
         let cameraController = TwigaCameraViewController()
+        
+        mVideoCapture = VideoCapture()
+        cameraController.setup(videoCapture: mVideoCapture!);
+        
+        addCameraView(cameraView: cameraController)
+        
+        mVideoCapture?.setup(){ success in
+            if success {
+                self.mVideoCapture?.start()
+            }
+        }
+        
 //        cameraController.setup(videoCapture: mVideoCapture!, manufacturer: readingCamera.manufacturer)
 //        cameraController.delegate = self
 //        cameraController.loadSettings()
         
-        addCameraView(cameraView: cameraController)
+        
     }
     
     private func addCameraView(cameraView : CameraBaseViewController)
@@ -375,18 +390,19 @@ class CamerasViewController: NSViewController, CameraFinderDelegate {
             }
         }
 
-//        DispatchQueue.main.async {
-//            for videoController in self.mCameraManager.mVideoControllers {
-//
-//                //videoController.startVideo(start: videoController.view.isHidden == false)
-//                
-//                guard let metalView = videoController.view as? MetalView else { break }
-//                    if updateScale {
-//                        metalView.updateScale()
-//                    }
-//                    metalView.updateUniforms()
-//            }
-//        }
+        DispatchQueue.main.async {
+            for videoController in self.mCameraManager.mVideoControllers {
+                //
+                //                //videoController.startVideo(start: videoController.view.isHidden == false)
+                //
+                guard let metalView = videoController.view as? MetalView else { break }
+                //                    if updateScale {
+                //                        metalView.updateScale()
+                //                    }
+                metalView.updateUniforms()
+                //            }
+            }
+        }
     }
     
     func hideAll(hide : Bool)

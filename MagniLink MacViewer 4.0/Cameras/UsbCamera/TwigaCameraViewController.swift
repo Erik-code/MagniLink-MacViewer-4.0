@@ -7,7 +7,7 @@
 
 import Cocoa
 
-class TwigaCameraViewController: CameraBaseViewController {
+class TwigaCameraViewController: CameraUSBViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

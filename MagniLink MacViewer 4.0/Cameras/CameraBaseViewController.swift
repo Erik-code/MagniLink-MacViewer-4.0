@@ -9,13 +9,20 @@ import Cocoa
 
 class CameraBaseViewController: NSViewController {
 
+    var mMetalView : MetalView!
+    
+    override func loadView() {
+        view = MetalView()
+        guard let mv = view as? MetalView else {
+            return
+        }
+        mv.setup()
+        mMetalView = view as? MetalView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-    }
-    
-    override func loadView() {
-        self.view = NSView()
     }
     
 }
