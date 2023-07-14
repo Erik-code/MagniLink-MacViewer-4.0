@@ -14,11 +14,6 @@ class CameraUSBViewController: CameraBaseViewController {
     var mVideoCapture : VideoCapture?
     
     
-    func setup(videoCapture : VideoCapture)
-    {
-        mVideoCapture = videoCapture
-        mVideoCapture?.mCameraVideoController = self
-    }
      
     
     func setSampleBuffer(sampleBuffer : CMSampleBuffer!)

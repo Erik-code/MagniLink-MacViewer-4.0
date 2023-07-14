@@ -102,9 +102,14 @@ class KeyHandler
         let shift = key.modifierFlags.contains(.shift)
         let cmd = key.modifierFlags.contains(.command)
 
-        let characters = key.charactersIgnoringModifiers?.lowercased() ?? ""
         
-        return KeyCombo(ctrl: ctrl, option: option, cmd: cmd, shift: shift, characters: characters)
+        let characters = key.charactersIgnoringModifiers?.lowercased() ?? ""
+        let keyCode = key.keyCode
+        
+        //let index = characters!.index(characters!.startIndex, offsetBy: 0)
+        //let character = characters![index]
+        
+        return KeyCombo(ctrl: ctrl, option: option, cmd: cmd, shift: shift, characters: characters, keyCode: keyCode)
     }
     
     var GeneralShortcuts : [Shortcut]
@@ -166,20 +171,20 @@ class KeyHandler
     {
         var result = [Shortcut]()
         
-        createShortcut(array: &result, action: Actions.nextNatural, character: "UIKeyInputF1")
-        createShortcut(array: &result, action: Actions.nextPositive, character: "UIKeyInputF2")
-        createShortcut(array: &result, action: Actions.previousPositive, character: "UIKeyInputF2", shift: true)
-        createShortcut(array: &result, action: Actions.nextNegative, character: "UIKeyInputF3")
-        createShortcut(array: &result, action: Actions.previousNegative, character: "UIKeyInputF3", shift: true)
+        createShortcut(array: &result, action: Actions.nextNatural, string: "NSF1FunctionKey")
+        createShortcut(array: &result, action: Actions.nextPositive, string: "NSF2FunctionKey")
+        createShortcut(array: &result, action: Actions.previousPositive, string: "NSF2FunctionKey", shift: true)
+        createShortcut(array: &result, action: Actions.nextNegative, string: "NSF3FunctionKey")
+        createShortcut(array: &result, action: Actions.previousNegative, string: "NSF3FunctionKey", shift: true)
 
-        createShortcut(array: &result, action: .zoomIn, character: "UIKeyInputUpArrow")
-        createShortcut(array: &result, action: .zoomOut, character: "UIKeyInputDownArrow")
+        createShortcut(array: &result, action: .zoomIn, string: "NSUpArrowFunctionKey")
+        createShortcut(array: &result, action: .zoomOut, string: "NSUpArrowFunctionKey")
 
-        createShortcut(array: &result, action: .startDecreaseContrast, character: "UIKeyInputLeftArrow")
-        createShortcut(array: &result, action: .startIncreaseContrast, character: "UIKeyInputRightArrow")
+        createShortcut(array: &result, action: .startDecreaseContrast, string: "NSLeftArrowFunctionKey")
+        createShortcut(array: &result, action: .startIncreaseContrast, string: "NSRightArrowFunctionKey")
 
-        createShortcut(array: &result, action: .openSettings, character: ",", cmd: true)
-        createShortcut(array: &result, action: .hideMenu, character: "h", alt: true)
+        //createShortcut(array: &result, action: .openSettings, string: ",", cmd: true)
+        //createShortcut(array: &result, action: .hideMenu, string: "h", alt: true)
         
         return result
     }
@@ -188,16 +193,16 @@ class KeyHandler
     {
         var result = [Shortcut]()
         
-        createShortcut(array: &result, action: Actions.reflineLeft, character: "UIKeyInputLeftArrow", alt: true, scope: .camera)
-        createShortcut(array: &result, action: Actions.reflineRight, character: "UIKeyInputRightArrow", alt: true, scope: .camera)
+        createShortcut(array: &result, action: Actions.reflineLeft, string: "NSLeftArrowFunctionKey", alt: true, scope: .camera)
+        createShortcut(array: &result, action: Actions.reflineRight, string: "NSRightArrowFunctionKey", alt: true, scope: .camera)
 
-        createShortcut(array: &result, action: Actions.rotateClockwise, character: "r", alt: true , scope: .camera)
-        createShortcut(array: &result, action: Actions.rotateCounterClockwise, character: "r", alt: true, shift: true, scope: .camera)
+        createShortcut(array: &result, action: Actions.rotateClockwise, string: "r", alt: true , scope: .camera)
+        createShortcut(array: &result, action: Actions.rotateCounterClockwise, string: "r", alt: true, shift: true, scope: .camera)
 
-        createShortcut(array: &result, action: Actions.startRotateClockwise, character: "r", scope: .camera)
-        createShortcut(array: &result, action: Actions.startRotateCounterClockwise, character: "r", shift: true, scope: .camera)
+        createShortcut(array: &result, action: Actions.startRotateClockwise, string: "r", scope: .camera)
+        createShortcut(array: &result, action: Actions.startRotateCounterClockwise, string: "r", shift: true, scope: .camera)
 
-        createShortcut(array: &result, action: Actions.mirror, character: "i", alt: true, scope: .camera)
+        createShortcut(array: &result, action: Actions.mirror, string: "i", alt: true, scope: .camera)
         
         return result
     }
@@ -206,7 +211,7 @@ class KeyHandler
     {
         var result = [Shortcut]()
 
-        createShortcut(array: &result, action: Actions.switchView, character: "v")
+        createShortcut(array: &result, action: Actions.switchView, string: "v")
         
         return result
     }
@@ -215,24 +220,24 @@ class KeyHandler
     {
         var result = [Shortcut]()
 
-        createShortcut(array: &result, action: Actions.panLeft, character: "a")
-        createShortcut(array: &result, action: Actions.panRight, character: "d")
-        createShortcut(array: &result, action: Actions.panUp, character: "w")
-        createShortcut(array: &result, action: Actions.panDown, character: "s")
+        createShortcut(array: &result, action: Actions.panLeft, string: "a")
+        createShortcut(array: &result, action: Actions.panRight, string: "d")
+        createShortcut(array: &result, action: Actions.panUp, string: "w")
+        createShortcut(array: &result, action: Actions.panDown, string: "s")
 
-        createShortcut(array: &result, action: Actions.setPresetOne , character: "1", ctrl: true, scope: .camera)
-        createShortcut(array: &result, action: Actions.setPresetTwo , character: "2", ctrl: true, scope: .camera)
-        createShortcut(array: &result, action: Actions.setPresetThree , character: "3", ctrl: true, scope: .camera)
-        createShortcut(array: &result, action: Actions.setPresetFour , character: "4", ctrl: true, scope: .camera)
-        createShortcut(array: &result, action: Actions.setPresetFive , character: "5", ctrl: true, scope: .camera)
-        createShortcut(array: &result, action: Actions.setPresetSix , character: "6", ctrl: true, scope: .camera)
+        createShortcut(array: &result, action: Actions.setPresetOne , string: "1", ctrl: true, scope: .camera)
+        createShortcut(array: &result, action: Actions.setPresetTwo , string: "2", ctrl: true, scope: .camera)
+        createShortcut(array: &result, action: Actions.setPresetThree , string: "3", ctrl: true, scope: .camera)
+        createShortcut(array: &result, action: Actions.setPresetFour , string: "4", ctrl: true, scope: .camera)
+        createShortcut(array: &result, action: Actions.setPresetFive , string: "5", ctrl: true, scope: .camera)
+        createShortcut(array: &result, action: Actions.setPresetSix , string: "6", ctrl: true, scope: .camera)
 
-        createShortcut(array: &result, action: Actions.gotoPresetOne , character: "1", alt: true, scope: .camera)
-        createShortcut(array: &result, action: Actions.gotoPresetTwo , character: "2", alt: true, scope: .camera)
-        createShortcut(array: &result, action: Actions.gotoPresetThree , character: "3", alt: true, scope: .camera)
-        createShortcut(array: &result, action: Actions.gotoPresetFour , character: "4", alt: true, scope: .camera)
-        createShortcut(array: &result, action: Actions.gotoPresetFive , character: "5", alt: true, scope: .camera)
-        createShortcut(array: &result, action: Actions.gotoPresetSix , character: "6", alt: true, scope: .camera)
+        createShortcut(array: &result, action: Actions.gotoPresetOne , string: "1", alt: true, scope: .camera)
+        createShortcut(array: &result, action: Actions.gotoPresetTwo , string: "2", alt: true, scope: .camera)
+        createShortcut(array: &result, action: Actions.gotoPresetThree , string: "3", alt: true, scope: .camera)
+        createShortcut(array: &result, action: Actions.gotoPresetFour , string: "4", alt: true, scope: .camera)
+        createShortcut(array: &result, action: Actions.gotoPresetFive , string: "5", alt: true, scope: .camera)
+        createShortcut(array: &result, action: Actions.gotoPresetSix , string: "6", alt: true, scope: .camera)
 
         return result
     }
@@ -241,11 +246,11 @@ class KeyHandler
     {
         var result = [Shortcut]()
         
-        createShortcut(array: &result, action: Actions.switchCamera , character: "c", scope: .camera)
-        createShortcut(array: &result, action: Actions.switchSources , character: "z", scope: .camera)
-        createShortcut(array: &result, action: Actions.switchSplit , character: "x", scope: .camera)
-        createShortcut(array: &result, action: Actions.splitLeft , character: "UIKeyInputLeftArrow", shift: true, scope: .camera)
-        createShortcut(array: &result, action: Actions.splitRight , character: "UIKeyInputRightArrow", shift: true, scope: .camera)
+        createShortcut(array: &result, action: Actions.switchCamera , string: "c", scope: .camera)
+        createShortcut(array: &result, action: Actions.switchSources , string: "z", scope: .camera)
+        createShortcut(array: &result, action: Actions.switchSplit , string: "x", scope: .camera)
+        createShortcut(array: &result, action: Actions.splitLeft , string: "NSLeftArrowFunctionKey", shift: true, scope: .camera)
+        createShortcut(array: &result, action: Actions.splitRight , string: "NSRightArrowFunctionKey", shift: true, scope: .camera)
 
         return result
     }
@@ -254,8 +259,8 @@ class KeyHandler
     {
         var result = [Shortcut]()
         
-        createShortcut(array: &result, action: Actions.takePicture , character: "UIKeyInputF5", scope: .camera)
-        createShortcut(array: &result, action: Actions.record , character: "UIKeyInputF5", alt: true, scope: .camera)
+        createShortcut(array: &result, action: Actions.takePicture , string: "NSF5FunctionKey", scope: .camera)
+        createShortcut(array: &result, action: Actions.record , string: "NSF5FunctionKey", alt: true, scope: .camera)
         
         return result
     }
@@ -264,7 +269,7 @@ class KeyHandler
     {
         var result = [Shortcut]()
         
-        createShortcut(array: &result, action: Actions.light , character: "i", shift: true, scope: .camera)
+        createShortcut(array: &result, action: Actions.light , string: "i", shift: true, scope: .camera)
         
         return result
     }
@@ -273,23 +278,23 @@ class KeyHandler
     {
         var result = [Shortcut]()
         
-        createShortcut(array: &result, action: Actions.takeInkPicture, character: "UIKeyInputF7")
+        createShortcut(array: &result, action: Actions.takeInkPicture, string: "NSF7FunctionKey")
         
-        createShortcut(array: &result, action: Actions.new, character: "n", alt: true, scope: .ink)
-        createShortcut(array: &result, action: Actions.load, character: "o", alt: true, scope: .ink)
-        createShortcut(array: &result, action: Actions.save, character: "s", alt: true, scope: .ink)
+        createShortcut(array: &result, action: Actions.new, string: "n", alt: true, scope: .ink)
+        createShortcut(array: &result, action: Actions.load, string: "o", alt: true, scope: .ink)
+        createShortcut(array: &result, action: Actions.save, string: "s", alt: true, scope: .ink)
 
-        createShortcut(array: &result, action: Actions.undo, character: "z", cmd: true, scope: .ink)
-        createShortcut(array: &result, action: Actions.redo, character: "z", cmd: true, shift: true, scope: .ink)
+        createShortcut(array: &result, action: Actions.undo, string: "z", cmd: true, scope: .ink)
+        createShortcut(array: &result, action: Actions.redo, string: "z", cmd: true, shift: true, scope: .ink)
 
-        createShortcut(array: &result, action: Actions.rotateClockwise, character: "r", alt: true, scope: .ink)
-        createShortcut(array: &result, action: Actions.rotateCounterClockwise, character: "r", alt: true, shift: true, scope: .ink)
+        createShortcut(array: &result, action: Actions.rotateClockwise, string: "r", alt: true, scope: .ink)
+        createShortcut(array: &result, action: Actions.rotateCounterClockwise, string: "r", alt: true, shift: true, scope: .ink)
         
-        createShortcut(array: &result, action: Actions.setPen, character: "p", alt: true, scope: .ink)
-        createShortcut(array: &result, action: Actions.setMarker, character: "l", alt: true, scope: .ink)
-        createShortcut(array: &result, action: Actions.setText, character: "t", alt: true, scope: .ink)
-        createShortcut(array: &result, action: Actions.erase, character: "e", alt: true, scope: .ink)
-        createShortcut(array: &result, action: Actions.zoom, character: "f", alt: true, scope: .ink)
+        createShortcut(array: &result, action: Actions.setPen, string: "p", alt: true, scope: .ink)
+        createShortcut(array: &result, action: Actions.setMarker, string: "l", alt: true, scope: .ink)
+        createShortcut(array: &result, action: Actions.setText, string: "t", alt: true, scope: .ink)
+        createShortcut(array: &result, action: Actions.erase, string: "e", alt: true, scope: .ink)
+        createShortcut(array: &result, action: Actions.zoom, string: "f", alt: true, scope: .ink)
 
         return result
     }
@@ -298,35 +303,39 @@ class KeyHandler
     {
         var result = [Shortcut]()
 
-        createShortcut(array: &result, action: Actions.ocr, character: "UIKeyInputF4", scope: .camera)
+        createShortcut(array: &result, action: Actions.ocr, string: "NSF4FunctionKey", scope: .camera)
         
-        createShortcut(array: &result, action: Actions.increaseFontSize, character: "UIKeyInputUpArrow", alt: true, scope: .ocr)
-        createShortcut(array: &result, action: Actions.decreaseFontSize, character: "UIKeyInputDownArrow", alt: true, scope: .ocr)
+        createShortcut(array: &result, action: Actions.increaseFontSize, string: "NSUpArrowFunctionKey", alt: true, scope: .ocr)
+        createShortcut(array: &result, action: Actions.decreaseFontSize, string: "NSDownArrowFunctionKey", alt: true, scope: .ocr)
 
-        createShortcut(array: &result, action: Actions.playpause, character: "1")
-        createShortcut(array: &result, action: Actions.stopSpeech , character: "2")
+        createShortcut(array: &result, action: Actions.playpause, string: "1")
+        createShortcut(array: &result, action: Actions.stopSpeech , string: "2")
 
-        createShortcut(array: &result, action: Actions.readPrevious , character: "3", scope: .ocr)
-        createShortcut(array: &result, action: Actions.readNext , character: "4", scope: .ocr)
+        createShortcut(array: &result, action: Actions.readPrevious , string: "3", scope: .ocr)
+        createShortcut(array: &result, action: Actions.readNext , string: "4", scope: .ocr)
 
-        createShortcut(array: &result, action: Actions.changeReadmode , character: "5", scope: .ocr)
-        createShortcut(array: &result, action: Actions.changeScrollmode , character: "b", scope: .ocr)
+        createShortcut(array: &result, action: Actions.changeReadmode , string: "5", scope: .ocr)
+        createShortcut(array: &result, action: Actions.changeScrollmode , string: "b", scope: .ocr)
 
         return result
     }
     
-    private func createShortcut(array : inout [Shortcut], action : Actions, character : String, ctrl : Bool = false, alt : Bool = false, cmd : Bool = false, shift : Bool = false , scope : ShortcutScope = .app)
+    private func createShortcut(array : inout [Shortcut], action : Actions, string : String, ctrl : Bool = false, alt : Bool = false, cmd : Bool = false, shift : Bool = false , scope : ShortcutScope = .app)
     {
-        let kc = KeyCombo(ctrl: ctrl, option: alt, cmd: cmd, shift: shift, characters: character)
+        return
+        let kc = KeyCombo(ctrl: ctrl, option: alt, cmd: cmd, shift: shift, characters: string, keyCode: 0)
         let sc = Shortcut(action: action, combo: kc, scope: scope)
         array.append(sc)
     }
+    
     
 //MARK: handle
     
     func handleKeyDown(key: NSEvent)
     {
         let kc = toKeyCombo(key: key)
+        
+        print("KEY \(kc.toString())")
         
         if handleKeyDownHelper(shortcuts: mShortcutsStandard, combo: kc) {
             return

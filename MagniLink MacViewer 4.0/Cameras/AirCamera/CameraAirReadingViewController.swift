@@ -11,7 +11,8 @@ import Cocoa
 class CameraAirReadingViewController: CameraAirViewController {
 
     private var mManufacturer : String = ""
-
+    override var name : String { return "Air Reading" }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

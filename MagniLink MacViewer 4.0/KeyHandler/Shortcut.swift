@@ -15,7 +15,8 @@ struct KeyCombo : Equatable
     var option : Bool = false
     var cmd : Bool = false
     var shift : Bool = false
-    var characters = ""
+    var characters : String = ""
+    var keyCode : UInt16 = 0
     
     func toString() -> String
     {
@@ -23,15 +24,16 @@ struct KeyCombo : Equatable
         let shift = shift ? "1" : "0"
         let alt = option ? "1" : "0"
         let cmd = cmd ? "1" : "0"
-        return "\(ctrl)\(shift)\(alt)\(cmd)\(characters)"
+        return "\(ctrl)\(shift)\(alt)\(cmd)\(characters) \(keyCode)"
     }
     
-    init(ctrl: Bool, option: Bool, cmd: Bool, shift: Bool, characters: String = "") {
+    init(ctrl: Bool, option: Bool, cmd: Bool, shift: Bool, characters: String = "", keyCode: UInt16) {
         self.ctrl = ctrl
         self.option = option
         self.cmd = cmd
         self.shift = shift
         self.characters = characters
+        self.keyCode = keyCode
     }
     
     init(string : String)
@@ -43,7 +45,7 @@ struct KeyCombo : Equatable
         option = string[2] == "1"
         cmd = string[3] == "1"
 //
-        characters = string.substring(from: 4)
+        characters = string.substring(from: 4) ?? ""
     }
 }
 
@@ -96,41 +98,41 @@ class Shortcut
         guard let kc = keyCombo else {return ""}
         
         switch kc.characters {
-        case "UIKeyInputF1":
+        case "NSF1FunctionKey":
             return NSLocalizedString("F1", comment: "")
-        case "UIKeyInputF2":
+        case "NSF2FunctionKey":
             return NSLocalizedString("F2", comment: "")
-        case "UIKeyInputF3":
+        case "NSF3FunctionKey":
             return NSLocalizedString("F3", comment: "")
-        case "UIKeyInputF4":
+        case "NSF4FunctionKey":
             return NSLocalizedString("F4", comment: "")
-        case "UIKeyInputF5":
+        case "NSF5FunctionKey":
             return NSLocalizedString("F5", comment: "")
-        case "UIKeyInputF6":
+        case "NSF6FunctionKey":
             return NSLocalizedString("F6", comment: "")
-        case "UIKeyInputF7":
+        case "NSF7FunctionKey":
             return NSLocalizedString("F7", comment: "")
-        case "UIKeyInputF8":
+        case "NSF8FunctionKey":
             return NSLocalizedString("F8", comment: "")
-        case "UIKeyInputF9":
+        case "NSF9FunctionKey":
             return NSLocalizedString("F9", comment: "")
-        case "UIKeyInputF10":
+        case "NSF10FunctionKey":
             return NSLocalizedString("F10", comment: "")
-        case "UIKeyInputF11":
+        case "NSF11FunctionKey":
             return NSLocalizedString("F11", comment: "")
-        case "UIKeyInputF12":
+        case "NSF12FunctionKey":
             return NSLocalizedString("F12", comment: "")
-        case "UIKeyInputUpArrow":
+        case "NSUpArrowFunctionKey":
             return NSLocalizedString("UpArrow", comment: "")
-        case "UIKeyInputDownArrow":
+        case "NSDownArrowFunctionKey":
             return NSLocalizedString("DownArrow", comment: "")
-        case "UIKeyInputLeftArrow":
+        case "NSLeftArrowFunctionKey":
             return NSLocalizedString("LeftArrow", comment: "")
-        case "UIKeyInputRightArrow":
+        case "NSRightArrowFunctionKey":
             return NSLocalizedString("RightArrow", comment: "")
 
         default:
-            return kc.characters.uppercased()
+            return kc.characters
         }
     }
 }

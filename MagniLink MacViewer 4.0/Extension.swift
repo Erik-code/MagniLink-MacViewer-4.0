@@ -9,6 +9,7 @@ import Foundation
 import simd
 import Cocoa
 import GLKit
+import SwiftUI
 
 extension NSView {
     typealias AnimationCompletion = () -> Void
@@ -86,5 +87,69 @@ extension simd_float4x4 {
                             float4(x: matrix.m10, y: matrix.m11, z: matrix.m12, w: matrix.m13),
                             float4(x: matrix.m20, y: matrix.m21, z: matrix.m22, w: matrix.m23),
                             float4(x: matrix.m30, y: matrix.m31, z: matrix.m32, w: matrix.m33)))
+    }
+}
+
+extension Color {
+
+    /// Returns the element at the specified index if it is within bounds, otherwise nil.
+    init(color : Int){
+        
+        let blue : Double = Double(color & 0xFF) / 0xFF
+        let green : Double = Double((color >> 8) & 0xFF) / 0xFF
+        let red : Double = Double((color >> 16) & 0xFF) / 0xFF
+
+        self.init(red: red, green: green, blue: blue)
+    }
+    
+    init(fromMagnilink : UInt32){
+        
+        let blue : Double = Double(fromMagnilink >> 24) / 0xFF
+        let green : Double = Double((fromMagnilink >> 16) & 0xFF) / 0xFF
+        let red : Double = Double((fromMagnilink >> 8) & 0xFF) / 0xFF
+
+        self.init(red: red, green: green, blue: blue)
+    }
+    
+    var components: (red: CGFloat, green: CGFloat, blue: CGFloat, opacity: CGFloat) {
+
+        #if canImport(UIKit)
+        typealias NativeColor = UIColor
+        #elseif canImport(AppKit)
+        typealias NativeColor = NSColor
+        #endif
+
+        var r: CGFloat = 0
+        var g: CGFloat = 0
+        var b: CGFloat = 0
+        var o: CGFloat = 0
+
+        NativeColor(self).getRed(&r, green: &g, blue: &b, alpha: &o)
+        
+        return (r, g, b, o)
+    }
+    
+    var intValue : Int
+    {
+        get
+        {
+            let blue = Int(components.blue * 255)
+            let green = Int(components.green * 255)
+            let red = Int(components.red * 255)
+
+            return red << 16 | green << 8 | blue
+        }
+    }
+    
+    var magiLinkValue : UInt32
+    {
+        get
+        {
+            let blue = Int(components.blue * 255)
+            let green = Int(components.green * 255)
+            let red = Int(components.red * 255)
+
+            return UInt32(blue << 24 | green << 16 | red << 8)
+        }
     }
 }

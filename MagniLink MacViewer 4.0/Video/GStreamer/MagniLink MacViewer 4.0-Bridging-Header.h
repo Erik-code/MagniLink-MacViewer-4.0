@@ -6,5 +6,6 @@
 #define MagniLink_MacViewer_Bridging_Header_h
 
 #import "GStreamerBackend.h"
+#import "LVICameraControl.h"
 
 #endif /* MagniLink_MacViewer_Bridging_Header_h */

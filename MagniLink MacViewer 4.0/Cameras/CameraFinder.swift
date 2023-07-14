@@ -112,8 +112,10 @@ class CameraFinder: NSObject {
             if ["USB3Neo 00000", "USB Camera3"].contains(dev.localizedName) {
                 delegate?.cameraFinderDidFindTwigaCamera(self, delay: 1.0)
             }
+            else if ["LVI CAMERA"].contains(dev.localizedName) {
+                delegate?.cameraFinderDidFindLVICamera(self, delay: 1.0)
+            }
         }
-        
     }
     
     private func searchForAirCamera()

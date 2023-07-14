@@ -73,11 +73,107 @@ struct SplitTwo
     }
 }
 
+struct Preset
+{
+    var rotation : Float = 0
+    var mirror : Bool = false
+    var refline : ReflineCurtainInfo
+    var color : ColorManager
+    var brightness : Float = 0
+    
+    init() {
+        color = ColorManager.init(aValue: 0)
+        refline = ReflineCurtainInfo()
+    }
+}
+
+enum ReflineCommand
+{
+    case stop
+    case left
+    case right
+}
+
+
+enum DrawMode : CaseIterable
+{
+    case pen
+    case marker
+    case text
+    case eraser
+    case zoom
+    
+    init(value : Int)
+    {
+        let allCases = type(of: self).allCases
+        self = allCases[value]
+    }
+    
+    func intValue() -> Int
+    {
+        let allCases = type(of: self).allCases
+        return allCases.firstIndex(of: self)!
+    }
+}
+
+enum CameraType : CaseIterable
+{
+    case airReading
+    case airDistance
+    case airEthernet
+    case airGrabber
+    case MagniLink
+    case Twiga
+    
+    func intValue() -> Int
+    {
+        let allCases = type(of: self).allCases
+        return allCases.firstIndex(of: self)!
+    }
+    
+    func stringValue() -> String
+    {
+        return "\(intValue())"
+    }
+}
+
 enum ShortcutScope{
     case app
     case camera
     case ocr
     case ink
+}
+
+enum ScrollMode : CaseIterable
+{
+    case page
+    case line
+    case word
+    case image
+    case imageLine
+    case imageWord
+
+    init(value : Int)
+    {
+        let allCases = type(of: self).allCases
+        self = allCases[value]
+    }
+    
+    func intValue() -> Int
+    {
+        let allCases = type(of: self).allCases
+        return allCases.firstIndex(of: self)!
+    }
+    
+    mutating func next() {
+        let allCases = type(of: self).allCases
+        self = allCases[(allCases.firstIndex(of: self)! + 1) % allCases.count]
+    }
+    
+    mutating func previous() {
+        let allCases = type(of: self).allCases
+        self = allCases[(allCases.firstIndex(of: self)! + allCases.count - 1) % allCases.count]
+    }
 }
 
 enum Actions : CaseIterable

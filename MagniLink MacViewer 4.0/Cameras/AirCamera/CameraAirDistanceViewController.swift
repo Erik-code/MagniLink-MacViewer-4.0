@@ -10,6 +10,7 @@ import Cocoa
 class CameraAirDistanceViewController: CameraAirViewController {
     
     private var mManufacturer : String = ""
+    override var name : String { return "Air Distance" }
     
     override func viewDidLoad() {
         super.viewDidLoad()

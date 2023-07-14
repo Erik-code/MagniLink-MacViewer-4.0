@@ -42,17 +42,14 @@ class VideoCapture: NSObject, AVCaptureAudioDataOutputSampleBufferDelegate, AVCa
         self.mPreviewLayer?.connection?.videoOrientation = .landscapeLeft
         self.mPreviewLayer?.videoGravity = .resizeAspectFill
         
-//        let discoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [.externalUnknown],
-//                                                                mediaType: .video, position: .unspecified)
-//
-//        guard let device = discoverySession.devices.first else {
-//            return false
-//        }
+        let discoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [.externalUnknown],
+                                                                mediaType: .video, position: .unspecified)
+
+        guard let device = discoverySession.devices.first else {
+            return false
+        }
         
-        let devices = AVCaptureDevice.devices()
-        
-        mCameraDevice = devices.filter { $0.hasMediaType(.video) }.compactMap { $0 }.first
-        
+        mCameraDevice = device
         
         do {
             let cameraInput = try AVCaptureDeviceInput(device: mCameraDevice)

@@ -94,7 +94,30 @@
 		8AFFD26E2A6027C90058829C /* PTZStatus+toPanTiltZoomStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFD25D2A6027C90058829C /* PTZStatus+toPanTiltZoomStatus.swift */; };
 		8AFFD26F2A6027C90058829C /* ImagingOptions+toCameraSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFD25E2A6027C90058829C /* ImagingOptions+toCameraSettings.swift */; };
 		8AFFD2712A6027FC0058829C /* AirCameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFD2702A6027FC0058829C /* AirCameraController.swift */; };
+		8AFFD3D02A613D1C0058829C /* libLVICameraControl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AFFD3CD2A613CD90058829C /* libLVICameraControl.a */; };
+		8AFFD3D42A614AE30058829C /* EUCModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFD3D32A614AE30058829C /* EUCModel.swift */; };
+		8AFFD3D72A614B420058829C /* ColorModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFD3D62A614B420058829C /* ColorModels.swift */; };
+		8AFFD3D92A614B7C0058829C /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFD3D82A614B7C0058829C /* CameraModel.swift */; };
+		8AFFD3DB2A614BE30058829C /* SpeechModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFD3DA2A614BE30058829C /* SpeechModel.swift */; };
+		8AFFD3DD2A614D840058829C /* ReflineCurtain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFD3DC2A614D840058829C /* ReflineCurtain.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8AFFD3CC2A613CD90058829C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AFFD3C72A613CD90058829C /* LVICameraControl.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = LVICameraControl;
+		};
+		8AFFD3CE2A613CD90058829C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AFFD3C72A613CD90058829C /* LVICameraControl.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E6C62BD91133BF0E00D0CE1B;
+			remoteInfo = UnitTests;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8AC1F1F12A40749C0011CE3F /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
@@ -188,6 +211,12 @@
 		8AFFD25D2A6027C90058829C /* PTZStatus+toPanTiltZoomStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PTZStatus+toPanTiltZoomStatus.swift"; sourceTree = "<group>"; };
 		8AFFD25E2A6027C90058829C /* ImagingOptions+toCameraSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ImagingOptions+toCameraSettings.swift"; sourceTree = "<group>"; };
 		8AFFD2702A6027FC0058829C /* AirCameraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirCameraController.swift; sourceTree = "<group>"; };
+		8AFFD3C72A613CD90058829C /* LVICameraControl.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LVICameraControl.xcodeproj; path = LVICameraControl/LVICameraControl.xcodeproj; sourceTree = "<group>"; };
+		8AFFD3D32A614AE30058829C /* EUCModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EUCModel.swift; sourceTree = "<group>"; };
+		8AFFD3D62A614B420058829C /* ColorModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorModels.swift; sourceTree = "<group>"; };
+		8AFFD3D82A614B7C0058829C /* CameraModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraModel.swift; sourceTree = "<group>"; };
+		8AFFD3DA2A614BE30058829C /* SpeechModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechModel.swift; sourceTree = "<group>"; };
+		8AFFD3DC2A614D840058829C /* ReflineCurtain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReflineCurtain.swift; sourceTree = "<group>"; };
 		B2C6B1818EEBBC5B1A1C823D /* Pods_MagniLink_MacViewer_4_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MagniLink_MacViewer_4_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C7EC9C8FF1422E0CF875B0 /* Pods-MagniLink MacViewer 4.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagniLink MacViewer 4.0.debug.xcconfig"; path = "Target Support Files/Pods-MagniLink MacViewer 4.0/Pods-MagniLink MacViewer 4.0.debug.xcconfig"; sourceTree = "<group>"; };
 		CBD8FCBBA90F7A999E8DCC86 /* Pods-MagniLink MacViewer 4.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagniLink MacViewer 4.0.release.xcconfig"; path = "Target Support Files/Pods-MagniLink MacViewer 4.0/Pods-MagniLink MacViewer 4.0.release.xcconfig"; sourceTree = "<group>"; };
@@ -198,6 +227,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AFFD3D02A613D1C0058829C /* libLVICameraControl.a in Frameworks */,
 				8AFFD2452A60165E0058829C /* GStreamer.framework in Frameworks */,
 				8AFFD2482A601D5B0058829C /* Pods_MagniLink_MacViewer_4_0.framework in Frameworks */,
 			);
@@ -388,6 +418,7 @@
 				8AC1F2832A41A7C10011CE3F /* Shader.metal */,
 				8AC1F2812A41A7B00011CE3F /* MetalView.swift */,
 				8AC1F2852A41A9590011CE3F /* MetalViewHelper.swift */,
+				8AFFD3DC2A614D840058829C /* ReflineCurtain.swift */,
 			);
 			path = Metal;
 			sourceTree = "<group>";
@@ -395,6 +426,7 @@
 		8AD21B8D2A405BA60040BC64 = {
 			isa = PBXGroup;
 			children = (
+				8AFFD3C72A613CD90058829C /* LVICameraControl.xcodeproj */,
 				8AFFD24C2A6027C90058829C /* CameraController */,
 				8AC1F2122A4083A70011CE3F /* Onvif */,
 				8AD21BAE2A405F6A0040BC64 /* ToDo.rtf */,
@@ -416,6 +448,7 @@
 		8AD21B982A405BA60040BC64 /* MagniLink MacViewer 4.0 */ = {
 			isa = PBXGroup;
 			children = (
+				8AFFD3D12A614ACA0058829C /* GUI */,
 				8AC1F2802A41A7950011CE3F /* Metal */,
 				8AC1F2772A40942E0011CE3F /* KeyHandler */,
 				8AC1F20F2A407E770011CE3F /* Preferences */,
@@ -521,6 +554,42 @@
 			path = Errors;
 			sourceTree = "<group>";
 		};
+		8AFFD3C82A613CD90058829C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8AFFD3CD2A613CD90058829C /* libLVICameraControl.a */,
+				8AFFD3CF2A613CD90058829C /* UnitTests.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8AFFD3D12A614ACA0058829C /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				8AFFD3D52A614B1C0058829C /* SwiftUI */,
+				8AFFD3D22A614AD50058829C /* Models */,
+			);
+			path = GUI;
+			sourceTree = "<group>";
+		};
+		8AFFD3D22A614AD50058829C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8AFFD3DA2A614BE30058829C /* SpeechModel.swift */,
+				8AFFD3D82A614B7C0058829C /* CameraModel.swift */,
+				8AFFD3D62A614B420058829C /* ColorModels.swift */,
+				8AFFD3D32A614AE30058829C /* EUCModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8AFFD3D52A614B1C0058829C /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
 		F7237ADD12CBD1074B3526C1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -579,12 +648,35 @@
 			mainGroup = 8AD21B8D2A405BA60040BC64;
 			productRefGroup = 8AD21B972A405BA60040BC64 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 8AFFD3C82A613CD90058829C /* Products */;
+					ProjectRef = 8AFFD3C72A613CD90058829C /* LVICameraControl.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8AD21B952A405BA60040BC64 /* MagniLink MacViewer 4.0 */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		8AFFD3CD2A613CD90058829C /* libLVICameraControl.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libLVICameraControl.a;
+			remoteRef = 8AFFD3CC2A613CD90058829C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8AFFD3CF2A613CD90058829C /* UnitTests.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = UnitTests.app;
+			remoteRef = 8AFFD3CE2A613CD90058829C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8AD21B942A405BA60040BC64 /* Resources */ = {
@@ -668,17 +760,20 @@
 				8AC1F1FF2A4076290011CE3F /* CameraAirViewController.swift in Sources */,
 				8AC1F2582A4086750011CE3F /* ImagingOptions.swift in Sources */,
 				8AC1F2862A41A9590011CE3F /* MetalViewHelper.swift in Sources */,
+				8AFFD3D42A614AE30058829C /* EUCModel.swift in Sources */,
 				8AC1F24B2A4086750011CE3F /* Space2DDescription.swift in Sources */,
 				8AC1F2512A4086750011CE3F /* PTZVector.swift in Sources */,
 				8AC1F27F2A41A4F70011CE3F /* CameraUSBViewController.swift in Sources */,
 				8AD21B9A2A405BA60040BC64 /* AppDelegate.swift in Sources */,
 				8AFFD2642A6027C90058829C /* ZoomDirection.swift in Sources */,
 				8AC1F24C2A4086750011CE3F /* FloatRange.swift in Sources */,
+				8AFFD3DD2A614D840058829C /* ReflineCurtain.swift in Sources */,
 				8AFFD2712A6027FC0058829C /* AirCameraController.swift in Sources */,
 				8AC1F2602A4086750011CE3F /* VideoEncoderConfiguration.swift in Sources */,
 				8AC1F2092A4078B40011CE3F /* CameraAirReadingViewController.swift in Sources */,
 				8AFFD2602A6027C90058829C /* CameraController.swift in Sources */,
 				8AC1F26E2A4086860011CE3F /* Errors.swift in Sources */,
+				8AFFD3D72A614B420058829C /* ColorModels.swift in Sources */,
 				8AC1F2532A4086750011CE3F /* FocusConfiguration.swift in Sources */,
 				8AFFD26E2A6027C90058829C /* PTZStatus+toPanTiltZoomStatus.swift in Sources */,
 				8AFFD2652A6027C90058829C /* PanTiltZoomDirections.swift in Sources */,
@@ -697,6 +792,7 @@
 				8AC1F20D2A407D530011CE3F /* Extension.swift in Sources */,
 				8AC1F25C2A4086750011CE3F /* SoapFault.swift in Sources */,
 				8AC1F2562A4086750011CE3F /* MoveOptions.swift in Sources */,
+				8AFFD3DB2A614BE30058829C /* SpeechModel.swift in Sources */,
 				8AFFD2632A6027C90058829C /* PanDirection.swift in Sources */,
 				8AFFD26C2A6027C90058829C /* String+CameraController.swift in Sources */,
 				8AC1F2542A4086750011CE3F /* ImagingSettingsExtension.swift in Sources */,
@@ -707,6 +803,7 @@
 				8AC1F2442A4086750011CE3F /* Bounds.swift in Sources */,
 				8AC1F2572A4086750011CE3F /* ImagingSettings.swift in Sources */,
 				8AC1F2522A4086750011CE3F /* H264Configuration.swift in Sources */,
+				8AFFD3D92A614B7C0058829C /* CameraModel.swift in Sources */,
 				8AD21BAA2A405DDF0040BC64 /* CamerasViewController.swift in Sources */,
 				8AC1F2412A4086750011CE3F /* VideoRateControl.swift in Sources */,
 				8AFFD26A2A6027C90058829C /* TiltDirection.swift in Sources */,
@@ -880,6 +977,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/**",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/SWXMLHash/SWXMLHash.framework/Headers\"",
 					/Library/Frameworks/GStreamer.framework/Versions/1.0/Headers,
 				);

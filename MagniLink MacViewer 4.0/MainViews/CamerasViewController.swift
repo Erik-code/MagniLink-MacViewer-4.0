@@ -14,7 +14,7 @@ class CamerasViewController: NSViewController, CameraFinderDelegate {
     var mCameraViewController : CamerasViewController?
     var mCameraFinder : CameraFinder?
     var mCameraManager = CameraManager()
-    var mVideoCapture : VideoCapture?
+    var mVideoCapture = VideoCapture()
     
     override func loadView() {
         self.view = NSView()
@@ -45,11 +45,21 @@ class CamerasViewController: NSViewController, CameraFinderDelegate {
         }
     }
     
+    override func viewDidLayout() {
+        updateViews()
+    }
+    
     func performAction(action :Actions)
     {
         switch action {
         case .switchSplit:
             changeSplit(direction: true)
+        case .nextNatural:
+            mCameraManager.currentCamera.nextNatural()
+        case .nextPositive:
+            mCameraManager.currentCamera.nextPositive()
+        case .nextNegative:
+            mCameraManager.currentCamera.nextNegative()
         default:
             break
         }
@@ -86,7 +96,7 @@ class CamerasViewController: NSViewController, CameraFinderDelegate {
     func cameraFinder(_ cameraFinder: CameraFinder, didFindReadingCamera readingCamera: ReadingCamera) {
         let cameraController = CameraAirReadingViewController()
 
-        cameraController.setup(videoCapture: mVideoCapture!, manufacturer: readingCamera.manufacturer)
+        cameraController.setup(videoCapture: mVideoCapture, manufacturer: readingCamera.manufacturer)
 //        cameraController.delegate = self
 //        cameraController.loadSettings()
         
@@ -96,7 +106,7 @@ class CamerasViewController: NSViewController, CameraFinderDelegate {
     func cameraFinder(_ cameraFinder: CameraFinder, didFindDistanceCamera distanceCamera: DistanceCamera) {
         let cameraController = CameraAirDistanceViewController()
         
-        cameraController.setup(videoCapture: mVideoCapture!, manufacturer: distanceCamera.manufacturer)
+        cameraController.setup(videoCapture: mVideoCapture, manufacturer: distanceCamera.manufacturer)
 //        cameraController.delegate = self
         
         addCameraView(cameraView: cameraController)
@@ -109,27 +119,36 @@ class CamerasViewController: NSViewController, CameraFinderDelegate {
     }
     
     func cameraFinderDidFindLVICamera(_ cameraFinder: CameraFinder, delay: Double) {
+        let cameraController = LVICameraViewController()
+        
+        cameraController.setup(videoCapture: mVideoCapture);
+        
+        addCameraView(cameraView: cameraController)
+        
+        mVideoCapture.setup(){ success in
+            if success {
+                self.mVideoCapture.start()
+            }
+        }
     }
     
     func cameraFinderDidFindTwigaCamera(_ cameraFinder: CameraFinder, delay: Double)
     {
         let cameraController = TwigaCameraViewController()
         
-        mVideoCapture = VideoCapture()
-        cameraController.setup(videoCapture: mVideoCapture!);
+        cameraController.setup(videoCapture: mVideoCapture);
         
         addCameraView(cameraView: cameraController)
         
-        mVideoCapture?.setup(){ success in
+        mVideoCapture.setup(){ success in
             if success {
-                self.mVideoCapture?.start()
+                self.mVideoCapture.start()
             }
         }
         
 //        cameraController.setup(videoCapture: mVideoCapture!, manufacturer: readingCamera.manufacturer)
 //        cameraController.delegate = self
 //        cameraController.loadSettings()
-        
         
     }
     

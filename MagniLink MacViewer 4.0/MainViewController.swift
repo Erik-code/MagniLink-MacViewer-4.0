@@ -27,7 +27,8 @@ class MainViewController: NSViewController, KeyHandlerDelegate {
     override func viewDidAppear() {
         self.addChild(mCameraViewController!)
         self.view.addSubview(mCameraViewController!.view)
-                
+        view.translatesAutoresizingMaskIntoConstraints = false
+        
         mCameraViewController?.view.frame = self.view.bounds
         
         NSEvent.addLocalMonitorForEvents(matching: .keyDown) {
@@ -48,6 +49,10 @@ class MainViewController: NSViewController, KeyHandlerDelegate {
             return true
         }
     }
+    
+    override func viewDidLayout() {
+        mCameraViewController?.view.frame = self.view.bounds
+    }
 
     override var representedObject: Any? {
         didSet {
@@ -57,11 +62,14 @@ class MainViewController: NSViewController, KeyHandlerDelegate {
     
     override func keyDown(with event: NSEvent) {
         mKeyhandler.handleKeyDown(key: event)
+        
+        super.keyDown(with: event)
         //mCameraViewController?.mCameraManager.currentCamera.mMetalView.updateUniformsRender()
     }
     
     override func keyUp(with event: NSEvent) {
         mKeyhandler.handleKeyUp(key: event)
+        super.keyDown(with: event)
     }
     
     func performAction(action: Actions) {

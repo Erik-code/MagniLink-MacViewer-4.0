@@ -10,6 +10,7 @@ import MetalKit
 import AVFoundation
 import GLKit
 import simd
+import SwiftUI
 
 class MetalView: MTKView
 {
@@ -221,4 +222,20 @@ class MetalView: MTKView
         self.inputTexture = nil
     }
     
+    func setNatural(grayscale : Bool)
+    {
+        //mUniformsRenderToTexture.grayscale = grayscale
+        //mUniformsRenderToTexture.artificial = false
+        //mUniformsRenderToTexture.reflineColor = simd_float3(x: 0.0, y: 0.0, z: 0.0)
+        updateUniforms()
+    }
+    
+    func setArtificial(backColor : Color, foreColor : Color)
+    {
+//        mUniformsRenderToTexture.artificial = true
+//        mUniformsRenderToTexture.foreColor = simd_float3(Float(foreColor.components.red),Float(foreColor.components.green),Float(foreColor.components.blue))
+//        mUniformsRenderToTexture.backColor = simd_float3(Float(backColor.components.red),Float(backColor.components.green),Float(backColor.components.blue))
+//        mUniformsRenderToTexture.reflineColor = mUniformsRenderToTexture.foreColor
+        updateUniforms()
+    }
 }
