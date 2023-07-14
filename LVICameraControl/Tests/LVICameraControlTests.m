@@ -1,0 +1,89 @@
+//
+//  LVICameraControlTests.m
+//  LVICameraControl
+//
+//  Created by Torbjörn Näslund on 2/25/10.
+//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//
+
+#import "LVICameraControlTests.h"
+#import "StubControlChannelFactory.h"
+#import "SetKeepAliveTime.h"
+#import "VersionRegisterFileQuery.h"
+#import "LockCamera.h"
+#import "ProductConfigurationQuery.h"
+
+@interface LVICameraControlTests() 
+- (void) assertCommand:(Command*) command isWrittenAsIndex:(int) index onChannel:(StubControlChannel*) channel;
+- (void) assertQuery:(Query*) query isWrittenAsIndex:(int) index onChannel:(StubControlChannel*) channel;
+@end
+
+
+@implementation LVICameraControlTests
+
+- (void) setUp {
+	controlChannel = [[[StubControlChannel alloc] init] autorelease];
+	UInt8 responseData[] = {' ', ' ', ' ', 'A', 'B', 'C', 'D', 'E'};
+	ByteBuffer* response = [[[ByteBuffer alloc] init] autorelease];
+	[response addUInt8Array:responseData ofLength:8];
+	[controlChannel addReadBuffer:response];
+	
+	StubControlChannelFactory* factory = [[[StubControlChannelFactory alloc] init] autorelease];
+	[factory setChannelToReturn:controlChannel];
+	
+	control = [[[LVICameraControl alloc] initWithControlChannelFactory:factory] autorelease];
+	
+	[control connectWithKeepAliveTime:0];
+}
+
+- (void) test_connectWithKeepAliveTime_TimeZero {
+	UInt8 keepAliveTime = 0;
+	
+	// connect is done in set up
+	
+	int numberOfWriteMessages = [controlChannel getNumberOfWriteBuffers];
+	GHAssertEquals(numberOfWriteMessages, 2, nil);
+	
+	SetKeepAliveTime* firstExpected = [[[SetKeepAliveTime alloc] initWithKeepAliveTimeInSeconds:keepAliveTime] autorelease];
+	[self assertCommand:firstExpected isWrittenAsIndex:0 onChannel:controlChannel];
+		
+	VersionRegisterFileQuery* secondExpected = [[[VersionRegisterFileQuery alloc] init] autorelease];
+	[self assertQuery:secondExpected isWrittenAsIndex:1 onChannel:controlChannel];
+	
+	GHAssertEqualStrings([control getRegisterFileVersion], @"ABCDE", nil);
+}
+
+- (void) test_disconnect {
+	[controlChannel resetWriteBuffers];
+	[control disconnect];
+
+	int numberOfWriteMessages = [controlChannel getNumberOfWriteBuffers];
+	GHAssertEquals(numberOfWriteMessages, 1, nil);
+	
+	LockCamera* expected = [[[LockCamera alloc] init] autorelease];
+	[self assertCommand:expected isWrittenAsIndex:0 onChannel:controlChannel];
+}
+
+- (void) test_getProductConfiguration {
+	[controlChannel resetWriteBuffers];
+	
+	(void) [control getProductConfiguration];
+	
+	ProductConfigurationQuery* firstExpected = [[[ProductConfigurationQuery alloc] init] autorelease];
+	[self assertQuery:firstExpected isWrittenAsIndex:0 onChannel:controlChannel];
+	
+}
+
+- (void) assertCommand:(Command*) command isWrittenAsIndex:(int) index onChannel:(StubControlChannel*) channel {
+	ByteBuffer* commandBuffer = [command encode];
+	ByteBuffer* channelBuffer = [channel getWriteBufferAtIndex:index];
+	GHAssertTrue([channelBuffer isEqualTo:commandBuffer], nil);
+}
+
+- (void) assertQuery:(Query*) query  isWrittenAsIndex:(int) index onChannel:(StubControlChannel*) channel {
+	ByteBuffer* queryBuffer = [query encode];
+	ByteBuffer* channelBuffer = [channel getWriteBufferAtIndex:index];
+	GHAssertTrue([channelBuffer isEqualTo:queryBuffer], nil);
+}
+	 
+@end

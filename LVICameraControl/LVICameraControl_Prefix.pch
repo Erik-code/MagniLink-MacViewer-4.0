@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'LVICameraControl' target in the 'LVICameraControl' project.
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

@@ -1,0 +1,1279 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		035B8142234B57EA00359618 /* ColorPairQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 035B8140234B57EA00359618 /* ColorPairQuery.h */; };
+		035B8143234B57EA00359618 /* ColorPairQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 035B8141234B57EA00359618 /* ColorPairQuery.m */; };
+		035B8146234B7F2A00359618 /* SetRegFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 035B8144234B7F2A00359618 /* SetRegFile.h */; };
+		035B8147234B7F2A00359618 /* SetRegFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 035B8145234B7F2A00359618 /* SetRegFile.m */; };
+		035B814A234C7D1F00359618 /* ColorPairCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 035B8148234C7D1F00359618 /* ColorPairCommand.h */; };
+		035B814B234C7D1F00359618 /* ColorPairCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 035B8149234C7D1F00359618 /* ColorPairCommand.m */; };
+		035B814E234CD81400359618 /* ActivatedFunctionsQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 035B814C234CD81400359618 /* ActivatedFunctionsQuery.h */; };
+		035B814F234CD81400359618 /* ActivatedFunctionsQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 035B814D234CD81400359618 /* ActivatedFunctionsQuery.m */; };
+		035B8152234CD84500359618 /* ActivatedFunctionsCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 035B8150234CD84500359618 /* ActivatedFunctionsCommand.h */; };
+		035B8153234CD84500359618 /* ActivatedFunctionsCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 035B8151234CD84500359618 /* ActivatedFunctionsCommand.m */; };
+		035B8156234CDA9800359618 /* ReferenceLineWidthQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 035B8154234CDA9800359618 /* ReferenceLineWidthQuery.h */; };
+		035B8157234CDA9800359618 /* ReferenceLineWidthQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 035B8155234CDA9800359618 /* ReferenceLineWidthQuery.m */; };
+		035B815A234CDB0700359618 /* ReferenceLineWidthCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 035B8158234CDB0700359618 /* ReferenceLineWidthCommand.h */; };
+		035B815B234CDB0700359618 /* ReferenceLineWidthCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 035B8159234CDB0700359618 /* ReferenceLineWidthCommand.m */; };
+		035B815E234E0EAB00359618 /* GeneralQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 035B815C234E0EAB00359618 /* GeneralQuery.h */; };
+		035B815F234E0EAB00359618 /* GeneralQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 035B815D234E0EAB00359618 /* GeneralQuery.m */; };
+		035B8162234E138700359618 /* GeneralCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 035B8160234E138700359618 /* GeneralCommand.h */; };
+		035B8163234E138700359618 /* GeneralCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 035B8161234E138700359618 /* GeneralCommand.m */; };
+		035B8165234E206500359618 /* regFileDef_D39419A.h in Headers */ = {isa = PBXBuildFile; fileRef = 035B8164234E206500359618 /* regFileDef_D39419A.h */; };
+		035B8168234E25E800359618 /* CameraMap.h in Headers */ = {isa = PBXBuildFile; fileRef = 035B8166234E25E800359618 /* CameraMap.h */; };
+		035B8169234E25E800359618 /* CameraMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 035B8167234E25E800359618 /* CameraMap.m */; };
+		03ADFB82232FE9B7001FFE00 /* IsZoomingQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 03ADFB80232FE9B7001FFE00 /* IsZoomingQuery.h */; };
+		03ADFB83232FE9B7001FFE00 /* IsZoomingQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 03ADFB81232FE9B7001FFE00 /* IsZoomingQuery.m */; };
+		4606BF9E19409898003A68BE /* SetControlCurrentColorPal.h in Headers */ = {isa = PBXBuildFile; fileRef = 4606BF9C19409896003A68BE /* SetControlCurrentColorPal.h */; };
+		4606BF9F19409898003A68BE /* SetControlCurrentColorPal.m in Sources */ = {isa = PBXBuildFile; fileRef = 4606BF9D19409897003A68BE /* SetControlCurrentColorPal.m */; };
+		461EA6621A12004900FD5BA7 /* ReferenceLineOrientationQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 461EA65E1A12004900FD5BA7 /* ReferenceLineOrientationQuery.h */; };
+		461EA6631A12004900FD5BA7 /* ReferenceLineOrientationQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 461EA65F1A12004900FD5BA7 /* ReferenceLineOrientationQuery.m */; };
+		461EA6641A12004900FD5BA7 /* ReferenceLineQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 461EA6601A12004900FD5BA7 /* ReferenceLineQuery.h */; };
+		461EA6651A12004900FD5BA7 /* ReferenceLineQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 461EA6611A12004900FD5BA7 /* ReferenceLineQuery.m */; };
+		461EA6681A12007800FD5BA7 /* SetControlReferenceLine.h in Headers */ = {isa = PBXBuildFile; fileRef = 461EA6661A12007800FD5BA7 /* SetControlReferenceLine.h */; };
+		461EA6691A12007800FD5BA7 /* SetControlReferenceLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 461EA6671A12007800FD5BA7 /* SetControlReferenceLine.m */; };
+		461EA66C1A12090300FD5BA7 /* SetControlReferenceLineOrientation.h in Headers */ = {isa = PBXBuildFile; fileRef = 461EA66A1A12090300FD5BA7 /* SetControlReferenceLineOrientation.h */; };
+		461EA66D1A12090300FD5BA7 /* SetControlReferenceLineOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 461EA66B1A12090300FD5BA7 /* SetControlReferenceLineOrientation.m */; };
+		4621ED601581FF2500955C57 /* SetPanAndTilt.h in Headers */ = {isa = PBXBuildFile; fileRef = 4621ED5E1581FF2500955C57 /* SetPanAndTilt.h */; };
+		4621ED611581FF2500955C57 /* SetPanAndTilt.m in Sources */ = {isa = PBXBuildFile; fileRef = 4621ED5F1581FF2500955C57 /* SetPanAndTilt.m */; };
+		4621ED681582475100955C57 /* PanAndTiltQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 4621ED661582475100955C57 /* PanAndTiltQuery.h */; };
+		4621ED691582475100955C57 /* PanAndTiltQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 4621ED671582475100955C57 /* PanAndTiltQuery.m */; };
+		4648BDB81588BCE200EE00EC /* CameraTypeQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 4648BDB61588BCE200EE00EC /* CameraTypeQuery.h */; };
+		4648BDB91588BCE200EE00EC /* CameraTypeQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 4648BDB71588BCE200EE00EC /* CameraTypeQuery.m */; };
+		464F8558155A7C3D00E17105 /* SetAutoFocus.h in Headers */ = {isa = PBXBuildFile; fileRef = 464F8556155A7C3D00E17105 /* SetAutoFocus.h */; };
+		464F8559155A7C3D00E17105 /* SetAutoFocus.m in Sources */ = {isa = PBXBuildFile; fileRef = 464F8557155A7C3D00E17105 /* SetAutoFocus.m */; };
+		464F85F3155AAFC400E17105 /* AutofocusQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 464F85F1155AAFC400E17105 /* AutofocusQuery.h */; };
+		464F85F4155AAFC400E17105 /* AutofocusQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 464F85F2155AAFC400E17105 /* AutofocusQuery.m */; };
+		4652FC29192F7B8E00209783 /* ShownObjectsQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 4652FC27192F7B8B00209783 /* ShownObjectsQuery.h */; };
+		4652FC2A192F7B8E00209783 /* ShownObjectsQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 4652FC28192F7B8C00209783 /* ShownObjectsQuery.m */; };
+		4652FC2D192F7DEC00209783 /* SetShownObjects.h in Headers */ = {isa = PBXBuildFile; fileRef = 4652FC2B192F7DEA00209783 /* SetShownObjects.h */; };
+		4652FC2E192F7DEC00209783 /* SetShownObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 4652FC2C192F7DEB00209783 /* SetShownObjects.m */; };
+		4672AEA31B70AE2600A0DD31 /* SetFocus.h in Headers */ = {isa = PBXBuildFile; fileRef = 4672AEA11B70AE2600A0DD31 /* SetFocus.h */; };
+		4672AEA41B70AE2600A0DD31 /* SetFocus.m in Sources */ = {isa = PBXBuildFile; fileRef = 4672AEA21B70AE2600A0DD31 /* SetFocus.m */; };
+		4672AEAD1B70D71400A0DD31 /* UserPanelStateQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 4672AEAB1B70D71400A0DD31 /* UserPanelStateQuery.h */; };
+		4672AEAE1B70D71400A0DD31 /* UserPanelStateQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 4672AEAC1B70D71400A0DD31 /* UserPanelStateQuery.m */; };
+		4697958A19F65A4A004BCB3F /* ZoomPositionQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 4697958819F65A4A004BCB3F /* ZoomPositionQuery.h */; };
+		4697958B19F65A4A004BCB3F /* ZoomPositionQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 4697958919F65A4A004BCB3F /* ZoomPositionQuery.m */; };
+		4697959319FA9775004BCB3F /* SetControlZoomPosition.h in Headers */ = {isa = PBXBuildFile; fileRef = 4697959119FA9773004BCB3F /* SetControlZoomPosition.h */; };
+		4697959419FA9775004BCB3F /* SetControlZoomPosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 4697959219FA9774004BCB3F /* SetControlZoomPosition.m */; };
+		4697959719FE50B2004BCB3F /* MinZoomPositionQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 4697959519FE50AF004BCB3F /* MinZoomPositionQuery.h */; };
+		4697959819FE50B2004BCB3F /* MinZoomPositionQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 4697959619FE50B0004BCB3F /* MinZoomPositionQuery.m */; };
+		46D4E089191D1272005DF53C /* CurrentColorPalQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 46D4E087191D126F005DF53C /* CurrentColorPalQuery.h */; };
+		46D4E08A191D1272005DF53C /* CurrentColorPalQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D4E088191D1271005DF53C /* CurrentColorPalQuery.m */; };
+		46D4E08D191D1BF9005DF53C /* BackColorQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 46D4E08B191D1BF5005DF53C /* BackColorQuery.h */; };
+		46D4E08E191D1BF9005DF53C /* BackColorQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D4E08C191D1BF7005DF53C /* BackColorQuery.m */; };
+		46D4E0911920A32D005DF53C /* ForeColorQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 46D4E08F1920A326005DF53C /* ForeColorQuery.h */; };
+		46D4E0921920A32D005DF53C /* ForeColorQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D4E0901920A32A005DF53C /* ForeColorQuery.m */; };
+		46DAAF461AD7C0A1003CE6EE /* VideoGenQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 46DAAF441AD7C0A1003CE6EE /* VideoGenQuery.h */; };
+		46DAAF471AD7C0A1003CE6EE /* VideoGenQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DAAF451AD7C0A1003CE6EE /* VideoGenQuery.m */; };
+		46DAAF4A1AD7CDEA003CE6EE /* VideoWidthQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 46DAAF481AD7CDE9003CE6EE /* VideoWidthQuery.h */; };
+		46DAAF4B1AD7CDEA003CE6EE /* VideoWidthQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DAAF491AD7CDE9003CE6EE /* VideoWidthQuery.m */; };
+		46DAAF4E1AD7CE16003CE6EE /* VideoHeightQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 46DAAF4C1AD7CE14003CE6EE /* VideoHeightQuery.h */; };
+		46DAAF4F1AD7CE16003CE6EE /* VideoHeightQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DAAF4D1AD7CE15003CE6EE /* VideoHeightQuery.m */; };
+		D2AAC088055469A000DB518D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
+		E675F73812F44BBB00D175C4 /* SetUserAreaControl.h in Headers */ = {isa = PBXBuildFile; fileRef = E675F73612F44BBB00D175C4 /* SetUserAreaControl.h */; };
+		E675F73912F44BBB00D175C4 /* SetUserAreaControl.m in Sources */ = {isa = PBXBuildFile; fileRef = E675F73712F44BBB00D175C4 /* SetUserAreaControl.m */; };
+		E675F74E12F45CFB00D175C4 /* SetLicenseKey.h in Headers */ = {isa = PBXBuildFile; fileRef = E675F74C12F45CFB00D175C4 /* SetLicenseKey.h */; };
+		E675F74F12F45CFB00D175C4 /* SetLicenseKey.m in Sources */ = {isa = PBXBuildFile; fileRef = E675F74D12F45CFB00D175C4 /* SetLicenseKey.m */; };
+		E6982B1F12AC084E00C8E177 /* SerialNumberQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = E6982B1D12AC084E00C8E177 /* SerialNumberQuery.h */; };
+		E6982B2012AC084E00C8E177 /* SerialNumberQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = E6982B1E12AC084E00C8E177 /* SerialNumberQuery.m */; };
+		E6982C8012B4BCFA00C8E177 /* LicenseKeyQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = E6982C7E12B4BCFA00C8E177 /* LicenseKeyQuery.h */; };
+		E6982C8112B4BCFA00C8E177 /* LicenseKeyQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = E6982C7F12B4BCFA00C8E177 /* LicenseKeyQuery.m */; };
+		E6982E0012B4DE1000C8E177 /* CryptoKeyQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = E6982DFE12B4DE1000C8E177 /* CryptoKeyQuery.h */; };
+		E6982E0112B4DE1000C8E177 /* CryptoKeyQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = E6982DFF12B4DE1000C8E177 /* CryptoKeyQuery.m */; };
+		E6C629071132C9D500D0CE1B /* SetZoom.h in Headers */ = {isa = PBXBuildFile; fileRef = E6C629051132C9D500D0CE1B /* SetZoom.h */; };
+		E6C629081132C9D500D0CE1B /* SetZoom.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C629061132C9D500D0CE1B /* SetZoom.m */; };
+		E6C62BE01133BF1A00D0CE1B /* GHUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6C62BDF1133BF1A00D0CE1B /* GHUnit.framework */; };
+		E6C62BE31133BF1F00D0CE1B /* libLVICameraControl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libLVICameraControl.a */; };
+		E6C62BE91133BF9E00D0CE1B /* GHUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C62BE81133BF9E00D0CE1B /* GHUnitTestMain.m */; };
+		E6C62C041133C00F00D0CE1B /* MaskingOperationsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C62C031133C00F00D0CE1B /* MaskingOperationsTests.m */; };
+		E6C62C2C1133C38C00D0CE1B /* ByteBufferTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C62C2B1133C38C00D0CE1B /* ByteBufferTests.m */; };
+		E6C62D121133DD1D00D0CE1B /* MessageReferenceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C62D111133DD1D00D0CE1B /* MessageReferenceTests.m */; };
+		E6C62D501133E0A000D0CE1B /* QueryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C62D4F1133E0A000D0CE1B /* QueryTests.m */; };
+		E6C62D571133E22700D0CE1B /* StubControlChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C62D561133E22700D0CE1B /* StubControlChannel.m */; };
+		E6C62D6A1133E3F700D0CE1B /* InternalQueryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C62D691133E3F700D0CE1B /* InternalQueryTests.m */; };
+		E6C62D731133E51500D0CE1B /* RegisterFileQueryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C62D721133E51500D0CE1B /* RegisterFileQueryTests.m */; };
+		E6C62D7F1133E5ED00D0CE1B /* VersionRegisterFileQueryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C62D7E1133E5ED00D0CE1B /* VersionRegisterFileQueryTests.m */; };
+		E6C62E2511340B7200D0CE1B /* CIFCardStatusQueryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C62E2411340B7200D0CE1B /* CIFCardStatusQueryTests.m */; };
+		E6C62E6E1134150700D0CE1B /* ProductConfigurationQueryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C62E6D1134150700D0CE1B /* ProductConfigurationQueryTests.m */; };
+		E6C62E85113418CD00D0CE1B /* TiltStateQueryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C62E84113418CD00D0CE1B /* TiltStateQueryTests.m */; };
+		E6C62ED411341C5D00D0CE1B /* CommandTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C62ED311341C5D00D0CE1B /* CommandTests.m */; };
+		E6C62EF711341F7B00D0CE1B /* InternalCommandTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C62EF611341F7B00D0CE1B /* InternalCommandTests.m */; };
+		E6C62EFE1134201C00D0CE1B /* RegisterFileCommandTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C62EFD1134201C00D0CE1B /* RegisterFileCommandTests.m */; };
+		E6C62F08113420A300D0CE1B /* LockCameraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C62F07113420A300D0CE1B /* LockCameraTests.m */; };
+		E6C62F331134235A00D0CE1B /* SetKeepAliveTimeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C62F321134235A00D0CE1B /* SetKeepAliveTimeTests.m */; };
+		E6C62F5E1134377300D0CE1B /* SetApplicationStatusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C62F5D1134377300D0CE1B /* SetApplicationStatusTests.m */; };
+		E6C62F991134447E00D0CE1B /* SetApplicationVersionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C62F981134447E00D0CE1B /* SetApplicationVersionTests.m */; };
+		E6C62FD611345C9500D0CE1B /* SetImageHeightTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C62FD511345C9500D0CE1B /* SetImageHeightTests.m */; };
+		E6C62FF211345F3100D0CE1B /* SetImageWidthTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C62FF111345F3100D0CE1B /* SetImageWidthTests.m */; };
+		E6C630051134FA3700D0CE1B /* SetVideoFrequencyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C630041134FA3700D0CE1B /* SetVideoFrequencyTests.m */; };
+		E6C630241134FC9400D0CE1B /* SetZoomTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C630231134FC9400D0CE1B /* SetZoomTests.m */; };
+		E6C631431135459600D0CE1B /* KeepAlive.h in Headers */ = {isa = PBXBuildFile; fileRef = E6C631411135459600D0CE1B /* KeepAlive.h */; };
+		E6C631441135459600D0CE1B /* KeepAlive.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C631421135459600D0CE1B /* KeepAlive.m */; };
+		E6C631471135460100D0CE1B /* KeepAliveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C631461135460100D0CE1B /* KeepAliveTests.m */; };
+		E6C63216113552B900D0CE1B /* SetContrast.h in Headers */ = {isa = PBXBuildFile; fileRef = E6C63214113552B900D0CE1B /* SetContrast.h */; };
+		E6C63217113552B900D0CE1B /* SetContrast.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C63215113552B900D0CE1B /* SetContrast.m */; };
+		E6C632301135589600D0CE1B /* SetContrastTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C6322F1135589600D0CE1B /* SetContrastTests.m */; };
+		E6C632601135669000D0CE1B /* SetColorPalette.h in Headers */ = {isa = PBXBuildFile; fileRef = E6C6325E1135669000D0CE1B /* SetColorPalette.h */; };
+		E6C632611135669000D0CE1B /* SetColorPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C6325F1135669000D0CE1B /* SetColorPalette.m */; };
+		E6C6326A113569A600D0CE1B /* SetColorPaletteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C63269113569A600D0CE1B /* SetColorPaletteTests.m */; };
+		E6C634F31136825900D0CE1B /* LVICameraControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C634F21136825900D0CE1B /* LVICameraControlTests.m */; };
+		E6C6351D113685A900D0CE1B /* StubControlChannelFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C6351C113685A900D0CE1B /* StubControlChannelFactory.m */; };
+		E6C63522113685C600D0CE1B /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6EAD50D11327AE7009F1A5B /* IOKit.framework */; };
+		E6C637261136CE4C00D0CE1B /* SetTiltState.h in Headers */ = {isa = PBXBuildFile; fileRef = E6C637241136CE4C00D0CE1B /* SetTiltState.h */; };
+		E6C637271136CE4C00D0CE1B /* SetTiltState.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C637251136CE4C00D0CE1B /* SetTiltState.m */; };
+		E6C637441137AF6000D0CE1B /* SetTiltStateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C637431137AF6000D0CE1B /* SetTiltStateTests.m */; };
+		E6C637781137C50000D0CE1B /* SetReferenceLine.h in Headers */ = {isa = PBXBuildFile; fileRef = E6C637761137C50000D0CE1B /* SetReferenceLine.h */; };
+		E6C637791137C50000D0CE1B /* SetReferenceLine.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C637771137C50000D0CE1B /* SetReferenceLine.m */; };
+		E6C637951137CB8900D0CE1B /* SetReferenceLineTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C637941137CB8900D0CE1B /* SetReferenceLineTest.m */; };
+		E6EAD40511326CF5009F1A5B /* MaskingOperations.h in Headers */ = {isa = PBXBuildFile; fileRef = E6EAD40311326CF5009F1A5B /* MaskingOperations.h */; };
+		E6EAD40611326CF5009F1A5B /* MaskingOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EAD40411326CF5009F1A5B /* MaskingOperations.m */; };
+		E6EAD40F11326D8B009F1A5B /* ControlChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = E6EAD40811326D8B009F1A5B /* ControlChannel.h */; };
+		E6EAD41011326D8B009F1A5B /* ControlChannelFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = E6EAD40911326D8B009F1A5B /* ControlChannelFactory.h */; };
+		E6EAD41111326D8B009F1A5B /* ControlChannelFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EAD40A11326D8B009F1A5B /* ControlChannelFactory.m */; };
+		E6EAD41211326D8B009F1A5B /* MessageReference.h in Headers */ = {isa = PBXBuildFile; fileRef = E6EAD40B11326D8B009F1A5B /* MessageReference.h */; };
+		E6EAD41311326D8B009F1A5B /* MessageReference.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EAD40C11326D8B009F1A5B /* MessageReference.m */; };
+		E6EAD41411326D8B009F1A5B /* USBControlChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = E6EAD40D11326D8B009F1A5B /* USBControlChannel.h */; };
+		E6EAD41511326D8B009F1A5B /* USBControlChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EAD40E11326D8B009F1A5B /* USBControlChannel.m */; };
+		E6EAD41811326DB6009F1A5B /* ByteBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = E6EAD41611326DB6009F1A5B /* ByteBuffer.h */; };
+		E6EAD41911326DB6009F1A5B /* ByteBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EAD41711326DB6009F1A5B /* ByteBuffer.m */; };
+		E6EAD42911326ED6009F1A5B /* CameraControlException.h in Headers */ = {isa = PBXBuildFile; fileRef = E6EAD42711326ED6009F1A5B /* CameraControlException.h */; };
+		E6EAD42A11326ED6009F1A5B /* CameraControlException.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EAD42811326ED6009F1A5B /* CameraControlException.m */; };
+		E6EAD44711327320009F1A5B /* Command.h in Headers */ = {isa = PBXBuildFile; fileRef = E6EAD44511327320009F1A5B /* Command.h */; };
+		E6EAD44811327320009F1A5B /* Command.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EAD44611327320009F1A5B /* Command.m */; };
+		E6EAD44E11327542009F1A5B /* InternalCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = E6EAD44A11327542009F1A5B /* InternalCommand.h */; };
+		E6EAD44F11327542009F1A5B /* InternalCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EAD44B11327542009F1A5B /* InternalCommand.m */; };
+		E6EAD45011327542009F1A5B /* RegisterFileCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = E6EAD44C11327542009F1A5B /* RegisterFileCommand.h */; };
+		E6EAD45111327542009F1A5B /* RegisterFileCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EAD44D11327542009F1A5B /* RegisterFileCommand.m */; };
+		E6EAD46211327608009F1A5B /* LockCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = E6EAD45E11327608009F1A5B /* LockCamera.h */; };
+		E6EAD46311327608009F1A5B /* LockCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EAD45F11327608009F1A5B /* LockCamera.m */; };
+		E6EAD46411327608009F1A5B /* SetKeepAliveTime.h in Headers */ = {isa = PBXBuildFile; fileRef = E6EAD46011327608009F1A5B /* SetKeepAliveTime.h */; };
+		E6EAD46511327608009F1A5B /* SetKeepAliveTime.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EAD46111327608009F1A5B /* SetKeepAliveTime.m */; };
+		E6EAD47211327658009F1A5B /* SetApplicationStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = E6EAD46811327658009F1A5B /* SetApplicationStatus.h */; };
+		E6EAD47311327658009F1A5B /* SetApplicationStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EAD46911327658009F1A5B /* SetApplicationStatus.m */; };
+		E6EAD47411327658009F1A5B /* SetApplicationVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = E6EAD46A11327658009F1A5B /* SetApplicationVersion.h */; };
+		E6EAD47511327658009F1A5B /* SetApplicationVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EAD46B11327658009F1A5B /* SetApplicationVersion.m */; };
+		E6EAD47611327658009F1A5B /* SetImageHeight.h in Headers */ = {isa = PBXBuildFile; fileRef = E6EAD46C11327658009F1A5B /* SetImageHeight.h */; };
+		E6EAD47711327658009F1A5B /* SetImageHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EAD46D11327658009F1A5B /* SetImageHeight.m */; };
+		E6EAD47811327658009F1A5B /* SetImageWidth.h in Headers */ = {isa = PBXBuildFile; fileRef = E6EAD46E11327658009F1A5B /* SetImageWidth.h */; };
+		E6EAD47911327658009F1A5B /* SetImageWidth.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EAD46F11327658009F1A5B /* SetImageWidth.m */; };
+		E6EAD47A11327658009F1A5B /* SetVideoFrequency.h in Headers */ = {isa = PBXBuildFile; fileRef = E6EAD47011327658009F1A5B /* SetVideoFrequency.h */; };
+		E6EAD47B11327658009F1A5B /* SetVideoFrequency.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EAD47111327658009F1A5B /* SetVideoFrequency.m */; };
+		E6EAD48E113276E3009F1A5B /* InternalQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = E6EAD488113276E3009F1A5B /* InternalQuery.h */; };
+		E6EAD48F113276E3009F1A5B /* InternalQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EAD489113276E3009F1A5B /* InternalQuery.m */; };
+		E6EAD490113276E3009F1A5B /* Query.h in Headers */ = {isa = PBXBuildFile; fileRef = E6EAD48A113276E3009F1A5B /* Query.h */; };
+		E6EAD491113276E3009F1A5B /* Query.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EAD48B113276E3009F1A5B /* Query.m */; };
+		E6EAD492113276E3009F1A5B /* RegisterFileQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = E6EAD48C113276E3009F1A5B /* RegisterFileQuery.h */; };
+		E6EAD493113276E3009F1A5B /* RegisterFileQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EAD48D113276E3009F1A5B /* RegisterFileQuery.m */; };
+		E6EAD4A511327836009F1A5B /* CIFCardStatusQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = E6EAD49D11327836009F1A5B /* CIFCardStatusQuery.h */; };
+		E6EAD4A611327836009F1A5B /* CIFCardStatusQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EAD49E11327836009F1A5B /* CIFCardStatusQuery.m */; };
+		E6EAD4A711327836009F1A5B /* ProductConfigurationQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = E6EAD49F11327836009F1A5B /* ProductConfigurationQuery.h */; };
+		E6EAD4A811327836009F1A5B /* ProductConfigurationQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EAD4A011327836009F1A5B /* ProductConfigurationQuery.m */; };
+		E6EAD4AB11327836009F1A5B /* TiltStateQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = E6EAD4A311327836009F1A5B /* TiltStateQuery.h */; };
+		E6EAD4AC11327836009F1A5B /* TiltStateQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EAD4A411327836009F1A5B /* TiltStateQuery.m */; };
+		E6EAD4AF11327852009F1A5B /* VersionRegisterFileQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = E6EAD4AD11327852009F1A5B /* VersionRegisterFileQuery.h */; };
+		E6EAD4B011327852009F1A5B /* VersionRegisterFileQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EAD4AE11327852009F1A5B /* VersionRegisterFileQuery.m */; };
+		E6EAD4B4113278D6009F1A5B /* CameraControlTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = E6EAD4B3113278D6009F1A5B /* CameraControlTypes.h */; };
+		E6EAD4B911327909009F1A5B /* LVICameraControl.h in Headers */ = {isa = PBXBuildFile; fileRef = E6EAD4B711327909009F1A5B /* LVICameraControl.h */; };
+		E6EAD4BA11327909009F1A5B /* LVICameraControl.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EAD4B811327909009F1A5B /* LVICameraControl.m */; };
+		E6EAD4C91132798F009F1A5B /* CameraControl.h in Headers */ = {isa = PBXBuildFile; fileRef = E6EAD4C81132798F009F1A5B /* CameraControl.h */; };
+		E6EAD50E11327AE7009F1A5B /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6EAD50D11327AE7009F1A5B /* IOKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E6C62BE41133BF2300D0CE1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = LVICameraControl;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		035B8140234B57EA00359618 /* ColorPairQuery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorPairQuery.h; sourceTree = "<group>"; };
+		035B8141234B57EA00359618 /* ColorPairQuery.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorPairQuery.m; sourceTree = "<group>"; };
+		035B8144234B7F2A00359618 /* SetRegFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetRegFile.h; sourceTree = "<group>"; };
+		035B8145234B7F2A00359618 /* SetRegFile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetRegFile.m; sourceTree = "<group>"; };
+		035B8148234C7D1F00359618 /* ColorPairCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorPairCommand.h; sourceTree = "<group>"; };
+		035B8149234C7D1F00359618 /* ColorPairCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorPairCommand.m; sourceTree = "<group>"; };
+		035B814C234CD81400359618 /* ActivatedFunctionsQuery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivatedFunctionsQuery.h; sourceTree = "<group>"; };
+		035B814D234CD81400359618 /* ActivatedFunctionsQuery.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActivatedFunctionsQuery.m; sourceTree = "<group>"; };
+		035B8150234CD84500359618 /* ActivatedFunctionsCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivatedFunctionsCommand.h; sourceTree = "<group>"; };
+		035B8151234CD84500359618 /* ActivatedFunctionsCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActivatedFunctionsCommand.m; sourceTree = "<group>"; };
+		035B8154234CDA9800359618 /* ReferenceLineWidthQuery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReferenceLineWidthQuery.h; sourceTree = "<group>"; };
+		035B8155234CDA9800359618 /* ReferenceLineWidthQuery.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReferenceLineWidthQuery.m; sourceTree = "<group>"; };
+		035B8158234CDB0700359618 /* ReferenceLineWidthCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReferenceLineWidthCommand.h; sourceTree = "<group>"; };
+		035B8159234CDB0700359618 /* ReferenceLineWidthCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReferenceLineWidthCommand.m; sourceTree = "<group>"; };
+		035B815C234E0EAB00359618 /* GeneralQuery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneralQuery.h; sourceTree = "<group>"; };
+		035B815D234E0EAB00359618 /* GeneralQuery.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneralQuery.m; sourceTree = "<group>"; };
+		035B8160234E138700359618 /* GeneralCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneralCommand.h; sourceTree = "<group>"; };
+		035B8161234E138700359618 /* GeneralCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneralCommand.m; sourceTree = "<group>"; };
+		035B8164234E206500359618 /* regFileDef_D39419A.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = regFileDef_D39419A.h; sourceTree = "<group>"; };
+		035B8166234E25E800359618 /* CameraMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraMap.h; sourceTree = "<group>"; };
+		035B8167234E25E800359618 /* CameraMap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraMap.m; sourceTree = "<group>"; };
+		03ADFB80232FE9B7001FFE00 /* IsZoomingQuery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IsZoomingQuery.h; sourceTree = "<group>"; };
+		03ADFB81232FE9B7001FFE00 /* IsZoomingQuery.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IsZoomingQuery.m; sourceTree = "<group>"; };
+		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		32DBCF5E0370ADEE00C91783 /* LVICameraControl_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LVICameraControl_Prefix.pch; sourceTree = "<group>"; };
+		4606BF9C19409896003A68BE /* SetControlCurrentColorPal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetControlCurrentColorPal.h; sourceTree = "<group>"; };
+		4606BF9D19409897003A68BE /* SetControlCurrentColorPal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetControlCurrentColorPal.m; sourceTree = "<group>"; };
+		461EA65E1A12004900FD5BA7 /* ReferenceLineOrientationQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReferenceLineOrientationQuery.h; sourceTree = "<group>"; };
+		461EA65F1A12004900FD5BA7 /* ReferenceLineOrientationQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReferenceLineOrientationQuery.m; sourceTree = "<group>"; };
+		461EA6601A12004900FD5BA7 /* ReferenceLineQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReferenceLineQuery.h; sourceTree = "<group>"; };
+		461EA6611A12004900FD5BA7 /* ReferenceLineQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReferenceLineQuery.m; sourceTree = "<group>"; };
+		461EA6661A12007800FD5BA7 /* SetControlReferenceLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetControlReferenceLine.h; sourceTree = "<group>"; };
+		461EA6671A12007800FD5BA7 /* SetControlReferenceLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetControlReferenceLine.m; sourceTree = "<group>"; };
+		461EA66A1A12090300FD5BA7 /* SetControlReferenceLineOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetControlReferenceLineOrientation.h; sourceTree = "<group>"; };
+		461EA66B1A12090300FD5BA7 /* SetControlReferenceLineOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetControlReferenceLineOrientation.m; sourceTree = "<group>"; };
+		4621ED5E1581FF2500955C57 /* SetPanAndTilt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetPanAndTilt.h; sourceTree = "<group>"; };
+		4621ED5F1581FF2500955C57 /* SetPanAndTilt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetPanAndTilt.m; sourceTree = "<group>"; };
+		4621ED661582475100955C57 /* PanAndTiltQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanAndTiltQuery.h; sourceTree = "<group>"; };
+		4621ED671582475100955C57 /* PanAndTiltQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanAndTiltQuery.m; sourceTree = "<group>"; };
+		4648BDB61588BCE200EE00EC /* CameraTypeQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraTypeQuery.h; sourceTree = "<group>"; };
+		4648BDB71588BCE200EE00EC /* CameraTypeQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraTypeQuery.m; sourceTree = "<group>"; };
+		464F8556155A7C3D00E17105 /* SetAutoFocus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetAutoFocus.h; sourceTree = "<group>"; };
+		464F8557155A7C3D00E17105 /* SetAutoFocus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetAutoFocus.m; sourceTree = "<group>"; };
+		464F85F1155AAFC400E17105 /* AutofocusQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutofocusQuery.h; sourceTree = "<group>"; };
+		464F85F2155AAFC400E17105 /* AutofocusQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutofocusQuery.m; sourceTree = "<group>"; };
+		4652FC27192F7B8B00209783 /* ShownObjectsQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShownObjectsQuery.h; sourceTree = "<group>"; };
+		4652FC28192F7B8C00209783 /* ShownObjectsQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShownObjectsQuery.m; sourceTree = "<group>"; };
+		4652FC2B192F7DEA00209783 /* SetShownObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetShownObjects.h; sourceTree = "<group>"; };
+		4652FC2C192F7DEB00209783 /* SetShownObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetShownObjects.m; sourceTree = "<group>"; };
+		4672AEA11B70AE2600A0DD31 /* SetFocus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetFocus.h; sourceTree = "<group>"; };
+		4672AEA21B70AE2600A0DD31 /* SetFocus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetFocus.m; sourceTree = "<group>"; };
+		4672AEAB1B70D71400A0DD31 /* UserPanelStateQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserPanelStateQuery.h; sourceTree = "<group>"; };
+		4672AEAC1B70D71400A0DD31 /* UserPanelStateQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserPanelStateQuery.m; sourceTree = "<group>"; };
+		4697958819F65A4A004BCB3F /* ZoomPositionQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomPositionQuery.h; sourceTree = "<group>"; };
+		4697958919F65A4A004BCB3F /* ZoomPositionQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomPositionQuery.m; sourceTree = "<group>"; };
+		4697959119FA9773004BCB3F /* SetControlZoomPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetControlZoomPosition.h; sourceTree = "<group>"; };
+		4697959219FA9774004BCB3F /* SetControlZoomPosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetControlZoomPosition.m; sourceTree = "<group>"; };
+		4697959519FE50AF004BCB3F /* MinZoomPositionQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinZoomPositionQuery.h; sourceTree = "<group>"; };
+		4697959619FE50B0004BCB3F /* MinZoomPositionQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MinZoomPositionQuery.m; sourceTree = "<group>"; };
+		46D4E087191D126F005DF53C /* CurrentColorPalQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentColorPalQuery.h; sourceTree = "<group>"; };
+		46D4E088191D1271005DF53C /* CurrentColorPalQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentColorPalQuery.m; sourceTree = "<group>"; };
+		46D4E08B191D1BF5005DF53C /* BackColorQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BackColorQuery.h; path = ../BackColorQuery.h; sourceTree = "<group>"; };
+		46D4E08C191D1BF7005DF53C /* BackColorQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BackColorQuery.m; path = ../BackColorQuery.m; sourceTree = "<group>"; };
+		46D4E08F1920A326005DF53C /* ForeColorQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForeColorQuery.h; sourceTree = "<group>"; };
+		46D4E0901920A32A005DF53C /* ForeColorQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForeColorQuery.m; sourceTree = "<group>"; };
+		46DAAF441AD7C0A1003CE6EE /* VideoGenQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoGenQuery.h; sourceTree = "<group>"; };
+		46DAAF451AD7C0A1003CE6EE /* VideoGenQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoGenQuery.m; sourceTree = "<group>"; };
+		46DAAF481AD7CDE9003CE6EE /* VideoWidthQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoWidthQuery.h; path = ../VideoWidthQuery.h; sourceTree = "<group>"; };
+		46DAAF491AD7CDE9003CE6EE /* VideoWidthQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoWidthQuery.m; path = ../VideoWidthQuery.m; sourceTree = "<group>"; };
+		46DAAF4C1AD7CE14003CE6EE /* VideoHeightQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoHeightQuery.h; sourceTree = "<group>"; };
+		46DAAF4D1AD7CE15003CE6EE /* VideoHeightQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoHeightQuery.m; sourceTree = "<group>"; };
+		D2AAC07E0554694100DB518D /* libLVICameraControl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLVICameraControl.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2F7E8BE07B2D77200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		E675F73612F44BBB00D175C4 /* SetUserAreaControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetUserAreaControl.h; sourceTree = "<group>"; };
+		E675F73712F44BBB00D175C4 /* SetUserAreaControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetUserAreaControl.m; sourceTree = "<group>"; };
+		E675F74C12F45CFB00D175C4 /* SetLicenseKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetLicenseKey.h; sourceTree = "<group>"; };
+		E675F74D12F45CFB00D175C4 /* SetLicenseKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetLicenseKey.m; sourceTree = "<group>"; };
+		E6982B1D12AC084E00C8E177 /* SerialNumberQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SerialNumberQuery.h; sourceTree = "<group>"; };
+		E6982B1E12AC084E00C8E177 /* SerialNumberQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SerialNumberQuery.m; sourceTree = "<group>"; };
+		E6982C7E12B4BCFA00C8E177 /* LicenseKeyQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LicenseKeyQuery.h; sourceTree = "<group>"; };
+		E6982C7F12B4BCFA00C8E177 /* LicenseKeyQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LicenseKeyQuery.m; sourceTree = "<group>"; };
+		E6982DFE12B4DE1000C8E177 /* CryptoKeyQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CryptoKeyQuery.h; sourceTree = "<group>"; };
+		E6982DFF12B4DE1000C8E177 /* CryptoKeyQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CryptoKeyQuery.m; sourceTree = "<group>"; };
+		E6C629051132C9D500D0CE1B /* SetZoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetZoom.h; sourceTree = "<group>"; };
+		E6C629061132C9D500D0CE1B /* SetZoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetZoom.m; sourceTree = "<group>"; };
+		E6C62BD91133BF0E00D0CE1B /* UnitTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnitTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6C62BDB1133BF0E00D0CE1B /* UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
+		E6C62BDF1133BF1A00D0CE1B /* GHUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnit.framework; path = Library/Frameworks/GHUnit.framework; sourceTree = SDKROOT; };
+		E6C62BE81133BF9E00D0CE1B /* GHUnitTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHUnitTestMain.m; sourceTree = "<group>"; };
+		E6C62C021133C00F00D0CE1B /* MaskingOperationsTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaskingOperationsTests.h; sourceTree = "<group>"; };
+		E6C62C031133C00F00D0CE1B /* MaskingOperationsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaskingOperationsTests.m; sourceTree = "<group>"; };
+		E6C62C2A1133C38C00D0CE1B /* ByteBufferTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ByteBufferTests.h; sourceTree = "<group>"; };
+		E6C62C2B1133C38C00D0CE1B /* ByteBufferTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ByteBufferTests.m; sourceTree = "<group>"; };
+		E6C62D101133DD1D00D0CE1B /* MessageReferenceTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageReferenceTests.h; sourceTree = "<group>"; };
+		E6C62D111133DD1D00D0CE1B /* MessageReferenceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageReferenceTests.m; sourceTree = "<group>"; };
+		E6C62D4E1133E0A000D0CE1B /* QueryTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryTests.h; sourceTree = "<group>"; };
+		E6C62D4F1133E0A000D0CE1B /* QueryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryTests.m; sourceTree = "<group>"; };
+		E6C62D551133E22700D0CE1B /* StubControlChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StubControlChannel.h; sourceTree = "<group>"; };
+		E6C62D561133E22700D0CE1B /* StubControlChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StubControlChannel.m; sourceTree = "<group>"; };
+		E6C62D681133E3F700D0CE1B /* InternalQueryTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InternalQueryTests.h; sourceTree = "<group>"; };
+		E6C62D691133E3F700D0CE1B /* InternalQueryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InternalQueryTests.m; sourceTree = "<group>"; };
+		E6C62D711133E51500D0CE1B /* RegisterFileQueryTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterFileQueryTests.h; sourceTree = "<group>"; };
+		E6C62D721133E51500D0CE1B /* RegisterFileQueryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterFileQueryTests.m; sourceTree = "<group>"; };
+		E6C62D7D1133E5ED00D0CE1B /* VersionRegisterFileQueryTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VersionRegisterFileQueryTests.h; sourceTree = "<group>"; };
+		E6C62D7E1133E5ED00D0CE1B /* VersionRegisterFileQueryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VersionRegisterFileQueryTests.m; sourceTree = "<group>"; };
+		E6C62E2311340B7200D0CE1B /* CIFCardStatusQueryTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIFCardStatusQueryTests.h; sourceTree = "<group>"; };
+		E6C62E2411340B7200D0CE1B /* CIFCardStatusQueryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIFCardStatusQueryTests.m; sourceTree = "<group>"; };
+		E6C62E6C1134150700D0CE1B /* ProductConfigurationQueryTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductConfigurationQueryTests.h; sourceTree = "<group>"; };
+		E6C62E6D1134150700D0CE1B /* ProductConfigurationQueryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductConfigurationQueryTests.m; sourceTree = "<group>"; };
+		E6C62E83113418CD00D0CE1B /* TiltStateQueryTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiltStateQueryTests.h; sourceTree = "<group>"; };
+		E6C62E84113418CD00D0CE1B /* TiltStateQueryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiltStateQueryTests.m; sourceTree = "<group>"; };
+		E6C62ED211341C5D00D0CE1B /* CommandTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommandTests.h; sourceTree = "<group>"; };
+		E6C62ED311341C5D00D0CE1B /* CommandTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommandTests.m; sourceTree = "<group>"; };
+		E6C62EF511341F7B00D0CE1B /* InternalCommandTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InternalCommandTests.h; sourceTree = "<group>"; };
+		E6C62EF611341F7B00D0CE1B /* InternalCommandTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InternalCommandTests.m; sourceTree = "<group>"; };
+		E6C62EFC1134201C00D0CE1B /* RegisterFileCommandTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterFileCommandTests.h; sourceTree = "<group>"; };
+		E6C62EFD1134201C00D0CE1B /* RegisterFileCommandTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterFileCommandTests.m; sourceTree = "<group>"; };
+		E6C62F06113420A300D0CE1B /* LockCameraTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LockCameraTests.h; sourceTree = "<group>"; };
+		E6C62F07113420A300D0CE1B /* LockCameraTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LockCameraTests.m; sourceTree = "<group>"; };
+		E6C62F311134235A00D0CE1B /* SetKeepAliveTimeTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetKeepAliveTimeTests.h; sourceTree = "<group>"; };
+		E6C62F321134235A00D0CE1B /* SetKeepAliveTimeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetKeepAliveTimeTests.m; sourceTree = "<group>"; };
+		E6C62F5C1134377300D0CE1B /* SetApplicationStatusTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetApplicationStatusTests.h; sourceTree = "<group>"; };
+		E6C62F5D1134377300D0CE1B /* SetApplicationStatusTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetApplicationStatusTests.m; sourceTree = "<group>"; };
+		E6C62F971134447E00D0CE1B /* SetApplicationVersionTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetApplicationVersionTests.h; sourceTree = "<group>"; };
+		E6C62F981134447E00D0CE1B /* SetApplicationVersionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetApplicationVersionTests.m; sourceTree = "<group>"; };
+		E6C62FD411345C9500D0CE1B /* SetImageHeightTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetImageHeightTests.h; sourceTree = "<group>"; };
+		E6C62FD511345C9500D0CE1B /* SetImageHeightTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetImageHeightTests.m; sourceTree = "<group>"; };
+		E6C62FF011345F3100D0CE1B /* SetImageWidthTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetImageWidthTests.h; sourceTree = "<group>"; };
+		E6C62FF111345F3100D0CE1B /* SetImageWidthTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetImageWidthTests.m; sourceTree = "<group>"; };
+		E6C630031134FA3700D0CE1B /* SetVideoFrequencyTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetVideoFrequencyTests.h; sourceTree = "<group>"; };
+		E6C630041134FA3700D0CE1B /* SetVideoFrequencyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetVideoFrequencyTests.m; sourceTree = "<group>"; };
+		E6C630221134FC9400D0CE1B /* SetZoomTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetZoomTests.h; sourceTree = "<group>"; };
+		E6C630231134FC9400D0CE1B /* SetZoomTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetZoomTests.m; sourceTree = "<group>"; };
+		E6C631411135459600D0CE1B /* KeepAlive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeepAlive.h; sourceTree = "<group>"; };
+		E6C631421135459600D0CE1B /* KeepAlive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeepAlive.m; sourceTree = "<group>"; };
+		E6C631451135460100D0CE1B /* KeepAliveTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeepAliveTests.h; sourceTree = "<group>"; };
+		E6C631461135460100D0CE1B /* KeepAliveTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeepAliveTests.m; sourceTree = "<group>"; };
+		E6C63214113552B900D0CE1B /* SetContrast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetContrast.h; sourceTree = "<group>"; };
+		E6C63215113552B900D0CE1B /* SetContrast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetContrast.m; sourceTree = "<group>"; };
+		E6C6322E1135589600D0CE1B /* SetContrastTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetContrastTests.h; sourceTree = "<group>"; };
+		E6C6322F1135589600D0CE1B /* SetContrastTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetContrastTests.m; sourceTree = "<group>"; };
+		E6C6325E1135669000D0CE1B /* SetColorPalette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetColorPalette.h; sourceTree = "<group>"; };
+		E6C6325F1135669000D0CE1B /* SetColorPalette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetColorPalette.m; sourceTree = "<group>"; };
+		E6C63268113569A600D0CE1B /* SetColorPaletteTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetColorPaletteTests.h; sourceTree = "<group>"; };
+		E6C63269113569A600D0CE1B /* SetColorPaletteTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetColorPaletteTests.m; sourceTree = "<group>"; };
+		E6C634F11136825900D0CE1B /* LVICameraControlTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LVICameraControlTests.h; sourceTree = "<group>"; };
+		E6C634F21136825900D0CE1B /* LVICameraControlTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LVICameraControlTests.m; sourceTree = "<group>"; };
+		E6C6351B113685A900D0CE1B /* StubControlChannelFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StubControlChannelFactory.h; sourceTree = "<group>"; };
+		E6C6351C113685A900D0CE1B /* StubControlChannelFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StubControlChannelFactory.m; sourceTree = "<group>"; };
+		E6C637241136CE4C00D0CE1B /* SetTiltState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetTiltState.h; sourceTree = "<group>"; };
+		E6C637251136CE4C00D0CE1B /* SetTiltState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetTiltState.m; sourceTree = "<group>"; };
+		E6C637421137AF6000D0CE1B /* SetTiltStateTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetTiltStateTests.h; sourceTree = "<group>"; };
+		E6C637431137AF6000D0CE1B /* SetTiltStateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetTiltStateTests.m; sourceTree = "<group>"; };
+		E6C637761137C50000D0CE1B /* SetReferenceLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetReferenceLine.h; sourceTree = "<group>"; };
+		E6C637771137C50000D0CE1B /* SetReferenceLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetReferenceLine.m; sourceTree = "<group>"; };
+		E6C637931137CB8900D0CE1B /* SetReferenceLineTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetReferenceLineTest.h; sourceTree = "<group>"; };
+		E6C637941137CB8900D0CE1B /* SetReferenceLineTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetReferenceLineTest.m; sourceTree = "<group>"; };
+		E6EAD40311326CF5009F1A5B /* MaskingOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaskingOperations.h; sourceTree = "<group>"; };
+		E6EAD40411326CF5009F1A5B /* MaskingOperations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaskingOperations.m; sourceTree = "<group>"; };
+		E6EAD40811326D8B009F1A5B /* ControlChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlChannel.h; sourceTree = "<group>"; };
+		E6EAD40911326D8B009F1A5B /* ControlChannelFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlChannelFactory.h; sourceTree = "<group>"; };
+		E6EAD40A11326D8B009F1A5B /* ControlChannelFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlChannelFactory.m; sourceTree = "<group>"; };
+		E6EAD40B11326D8B009F1A5B /* MessageReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageReference.h; sourceTree = "<group>"; };
+		E6EAD40C11326D8B009F1A5B /* MessageReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageReference.m; sourceTree = "<group>"; };
+		E6EAD40D11326D8B009F1A5B /* USBControlChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USBControlChannel.h; sourceTree = "<group>"; };
+		E6EAD40E11326D8B009F1A5B /* USBControlChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USBControlChannel.m; sourceTree = "<group>"; };
+		E6EAD41611326DB6009F1A5B /* ByteBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ByteBuffer.h; sourceTree = "<group>"; };
+		E6EAD41711326DB6009F1A5B /* ByteBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ByteBuffer.m; sourceTree = "<group>"; };
+		E6EAD42711326ED6009F1A5B /* CameraControlException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraControlException.h; sourceTree = "<group>"; };
+		E6EAD42811326ED6009F1A5B /* CameraControlException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraControlException.m; sourceTree = "<group>"; };
+		E6EAD44511327320009F1A5B /* Command.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Command.h; sourceTree = "<group>"; };
+		E6EAD44611327320009F1A5B /* Command.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Command.m; sourceTree = "<group>"; };
+		E6EAD44A11327542009F1A5B /* InternalCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InternalCommand.h; sourceTree = "<group>"; };
+		E6EAD44B11327542009F1A5B /* InternalCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InternalCommand.m; sourceTree = "<group>"; };
+		E6EAD44C11327542009F1A5B /* RegisterFileCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterFileCommand.h; sourceTree = "<group>"; };
+		E6EAD44D11327542009F1A5B /* RegisterFileCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterFileCommand.m; sourceTree = "<group>"; };
+		E6EAD45E11327608009F1A5B /* LockCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LockCamera.h; sourceTree = "<group>"; };
+		E6EAD45F11327608009F1A5B /* LockCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LockCamera.m; sourceTree = "<group>"; };
+		E6EAD46011327608009F1A5B /* SetKeepAliveTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetKeepAliveTime.h; sourceTree = "<group>"; };
+		E6EAD46111327608009F1A5B /* SetKeepAliveTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetKeepAliveTime.m; sourceTree = "<group>"; };
+		E6EAD46811327658009F1A5B /* SetApplicationStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetApplicationStatus.h; sourceTree = "<group>"; };
+		E6EAD46911327658009F1A5B /* SetApplicationStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetApplicationStatus.m; sourceTree = "<group>"; };
+		E6EAD46A11327658009F1A5B /* SetApplicationVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetApplicationVersion.h; sourceTree = "<group>"; };
+		E6EAD46B11327658009F1A5B /* SetApplicationVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetApplicationVersion.m; sourceTree = "<group>"; };
+		E6EAD46C11327658009F1A5B /* SetImageHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetImageHeight.h; sourceTree = "<group>"; };
+		E6EAD46D11327658009F1A5B /* SetImageHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetImageHeight.m; sourceTree = "<group>"; };
+		E6EAD46E11327658009F1A5B /* SetImageWidth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetImageWidth.h; sourceTree = "<group>"; };
+		E6EAD46F11327658009F1A5B /* SetImageWidth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetImageWidth.m; sourceTree = "<group>"; };
+		E6EAD47011327658009F1A5B /* SetVideoFrequency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetVideoFrequency.h; sourceTree = "<group>"; };
+		E6EAD47111327658009F1A5B /* SetVideoFrequency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetVideoFrequency.m; sourceTree = "<group>"; };
+		E6EAD488113276E3009F1A5B /* InternalQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InternalQuery.h; sourceTree = "<group>"; };
+		E6EAD489113276E3009F1A5B /* InternalQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InternalQuery.m; sourceTree = "<group>"; };
+		E6EAD48A113276E3009F1A5B /* Query.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Query.h; sourceTree = "<group>"; };
+		E6EAD48B113276E3009F1A5B /* Query.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Query.m; sourceTree = "<group>"; };
+		E6EAD48C113276E3009F1A5B /* RegisterFileQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterFileQuery.h; sourceTree = "<group>"; };
+		E6EAD48D113276E3009F1A5B /* RegisterFileQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterFileQuery.m; sourceTree = "<group>"; };
+		E6EAD49D11327836009F1A5B /* CIFCardStatusQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIFCardStatusQuery.h; sourceTree = "<group>"; };
+		E6EAD49E11327836009F1A5B /* CIFCardStatusQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIFCardStatusQuery.m; sourceTree = "<group>"; };
+		E6EAD49F11327836009F1A5B /* ProductConfigurationQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductConfigurationQuery.h; sourceTree = "<group>"; };
+		E6EAD4A011327836009F1A5B /* ProductConfigurationQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductConfigurationQuery.m; sourceTree = "<group>"; };
+		E6EAD4A311327836009F1A5B /* TiltStateQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiltStateQuery.h; sourceTree = "<group>"; };
+		E6EAD4A411327836009F1A5B /* TiltStateQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiltStateQuery.m; sourceTree = "<group>"; };
+		E6EAD4AD11327852009F1A5B /* VersionRegisterFileQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VersionRegisterFileQuery.h; sourceTree = "<group>"; };
+		E6EAD4AE11327852009F1A5B /* VersionRegisterFileQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VersionRegisterFileQuery.m; sourceTree = "<group>"; };
+		E6EAD4B3113278D6009F1A5B /* CameraControlTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraControlTypes.h; sourceTree = "<group>"; };
+		E6EAD4B711327909009F1A5B /* LVICameraControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LVICameraControl.h; sourceTree = "<group>"; };
+		E6EAD4B811327909009F1A5B /* LVICameraControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LVICameraControl.m; sourceTree = "<group>"; };
+		E6EAD4C81132798F009F1A5B /* CameraControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraControl.h; sourceTree = "<group>"; };
+		E6EAD50D11327AE7009F1A5B /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2AAC088055469A000DB518D /* Cocoa.framework in Frameworks */,
+				E6EAD50E11327AE7009F1A5B /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6C62BD71133BF0E00D0CE1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6C62BE01133BF1A00D0CE1B /* GHUnit.framework in Frameworks */,
+				E6C62BE31133BF1F00D0CE1B /* libLVICameraControl.a in Frameworks */,
+				E6C63522113685C600D0CE1B /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libLVICameraControl.a */,
+				E6C62BD91133BF0E00D0CE1B /* UnitTests.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* LVICameraControl */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
+				E6C62BDF1133BF1A00D0CE1B /* GHUnit.framework */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				034768DFFF38A50411DB9C8B /* Products */,
+				E6C62BDB1133BF0E00D0CE1B /* UnitTests-Info.plist */,
+			);
+			name = LVICameraControl;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */,
+				1058C7B2FEA5585E11CA2CBB /* Other Frameworks */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				035B8164234E206500359618 /* regFileDef_D39419A.h */,
+				E6EAD4C81132798F009F1A5B /* CameraControl.h */,
+				E6EAD4B711327909009F1A5B /* LVICameraControl.h */,
+				E6EAD4B811327909009F1A5B /* LVICameraControl.m */,
+				E6EAD4B3113278D6009F1A5B /* CameraControlTypes.h */,
+				E6EAD42711326ED6009F1A5B /* CameraControlException.h */,
+				E6EAD42811326ED6009F1A5B /* CameraControlException.m */,
+				035B8166234E25E800359618 /* CameraMap.h */,
+				035B8167234E25E800359618 /* CameraMap.m */,
+				E6EAD43B1132725F009F1A5B /* CommandQuery */,
+				E6EAD40711326D28009F1A5B /* ControlChannel */,
+				E6EAD3F811326C0C009F1A5B /* Utility */,
+				E6C62BE71133BF4800D0CE1B /* Tests */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */,
+				E6EAD50D11327AE7009F1A5B /* IOKit.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7B2FEA5585E11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0867D6A5FE840307C02AAC07 /* AppKit.framework */,
+				D2F7E8BE07B2D77200F64583 /* CoreData.framework */,
+				0867D69BFE84028FC02AAC07 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF5E0370ADEE00C91783 /* LVICameraControl_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		E6C62BE71133BF4800D0CE1B /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E6C634F11136825900D0CE1B /* LVICameraControlTests.h */,
+				E6C634F21136825900D0CE1B /* LVICameraControlTests.m */,
+				E6C62BE81133BF9E00D0CE1B /* GHUnitTestMain.m */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		E6C62C011133BFCD00D0CE1B /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E6C62C021133C00F00D0CE1B /* MaskingOperationsTests.h */,
+				E6C62C031133C00F00D0CE1B /* MaskingOperationsTests.m */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		E6C62C291133C36100D0CE1B /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E6C6351B113685A900D0CE1B /* StubControlChannelFactory.h */,
+				E6C6351C113685A900D0CE1B /* StubControlChannelFactory.m */,
+				E6C62C2A1133C38C00D0CE1B /* ByteBufferTests.h */,
+				E6C62C2B1133C38C00D0CE1B /* ByteBufferTests.m */,
+				E6C62D101133DD1D00D0CE1B /* MessageReferenceTests.h */,
+				E6C62D111133DD1D00D0CE1B /* MessageReferenceTests.m */,
+				E6C62D551133E22700D0CE1B /* StubControlChannel.h */,
+				E6C62D561133E22700D0CE1B /* StubControlChannel.m */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		E6C62D4D1133E06B00D0CE1B /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E6C62D4E1133E0A000D0CE1B /* QueryTests.h */,
+				E6C62D4F1133E0A000D0CE1B /* QueryTests.m */,
+				E6C62D681133E3F700D0CE1B /* InternalQueryTests.h */,
+				E6C62D691133E3F700D0CE1B /* InternalQueryTests.m */,
+				E6C62D711133E51500D0CE1B /* RegisterFileQueryTests.h */,
+				E6C62D721133E51500D0CE1B /* RegisterFileQueryTests.m */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		E6C62D7C1133E5BD00D0CE1B /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E6C62D7D1133E5ED00D0CE1B /* VersionRegisterFileQueryTests.h */,
+				E6C62D7E1133E5ED00D0CE1B /* VersionRegisterFileQueryTests.m */,
+				E6C62E2311340B7200D0CE1B /* CIFCardStatusQueryTests.h */,
+				E6C62E2411340B7200D0CE1B /* CIFCardStatusQueryTests.m */,
+				E6C62E6C1134150700D0CE1B /* ProductConfigurationQueryTests.h */,
+				E6C62E6D1134150700D0CE1B /* ProductConfigurationQueryTests.m */,
+				E6C62E83113418CD00D0CE1B /* TiltStateQueryTests.h */,
+				E6C62E84113418CD00D0CE1B /* TiltStateQueryTests.m */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		E6C62ED111341C2D00D0CE1B /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E6C62ED211341C5D00D0CE1B /* CommandTests.h */,
+				E6C62ED311341C5D00D0CE1B /* CommandTests.m */,
+				E6C62EF511341F7B00D0CE1B /* InternalCommandTests.h */,
+				E6C62EF611341F7B00D0CE1B /* InternalCommandTests.m */,
+				E6C62EFC1134201C00D0CE1B /* RegisterFileCommandTests.h */,
+				E6C62EFD1134201C00D0CE1B /* RegisterFileCommandTests.m */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		E6C62F051134207C00D0CE1B /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E6C62F06113420A300D0CE1B /* LockCameraTests.h */,
+				E6C62F07113420A300D0CE1B /* LockCameraTests.m */,
+				E6C62F311134235A00D0CE1B /* SetKeepAliveTimeTests.h */,
+				E6C62F321134235A00D0CE1B /* SetKeepAliveTimeTests.m */,
+				E6C631451135460100D0CE1B /* KeepAliveTests.h */,
+				E6C631461135460100D0CE1B /* KeepAliveTests.m */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		E6C62F5B1134374200D0CE1B /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E6C62F5C1134377300D0CE1B /* SetApplicationStatusTests.h */,
+				E6C62F5D1134377300D0CE1B /* SetApplicationStatusTests.m */,
+				E6C62F971134447E00D0CE1B /* SetApplicationVersionTests.h */,
+				E6C62F981134447E00D0CE1B /* SetApplicationVersionTests.m */,
+				E6C62FD411345C9500D0CE1B /* SetImageHeightTests.h */,
+				E6C62FD511345C9500D0CE1B /* SetImageHeightTests.m */,
+				E6C62FF011345F3100D0CE1B /* SetImageWidthTests.h */,
+				E6C62FF111345F3100D0CE1B /* SetImageWidthTests.m */,
+				E6C630031134FA3700D0CE1B /* SetVideoFrequencyTests.h */,
+				E6C630041134FA3700D0CE1B /* SetVideoFrequencyTests.m */,
+				E6C630221134FC9400D0CE1B /* SetZoomTests.h */,
+				E6C630231134FC9400D0CE1B /* SetZoomTests.m */,
+				E6C6322E1135589600D0CE1B /* SetContrastTests.h */,
+				E6C6322F1135589600D0CE1B /* SetContrastTests.m */,
+				E6C63268113569A600D0CE1B /* SetColorPaletteTests.h */,
+				E6C63269113569A600D0CE1B /* SetColorPaletteTests.m */,
+				E6C637421137AF6000D0CE1B /* SetTiltStateTests.h */,
+				E6C637431137AF6000D0CE1B /* SetTiltStateTests.m */,
+				E6C637931137CB8900D0CE1B /* SetReferenceLineTest.h */,
+				E6C637941137CB8900D0CE1B /* SetReferenceLineTest.m */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		E6EAD3F811326C0C009F1A5B /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				E6EAD40311326CF5009F1A5B /* MaskingOperations.h */,
+				E6EAD40411326CF5009F1A5B /* MaskingOperations.m */,
+				E6C62C011133BFCD00D0CE1B /* Tests */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		E6EAD40711326D28009F1A5B /* ControlChannel */ = {
+			isa = PBXGroup;
+			children = (
+				E6EAD41611326DB6009F1A5B /* ByteBuffer.h */,
+				E6EAD41711326DB6009F1A5B /* ByteBuffer.m */,
+				E6EAD40811326D8B009F1A5B /* ControlChannel.h */,
+				E6EAD40911326D8B009F1A5B /* ControlChannelFactory.h */,
+				E6EAD40A11326D8B009F1A5B /* ControlChannelFactory.m */,
+				E6EAD40B11326D8B009F1A5B /* MessageReference.h */,
+				E6EAD40C11326D8B009F1A5B /* MessageReference.m */,
+				E6EAD40D11326D8B009F1A5B /* USBControlChannel.h */,
+				E6EAD40E11326D8B009F1A5B /* USBControlChannel.m */,
+				E6C62C291133C36100D0CE1B /* Tests */,
+			);
+			path = ControlChannel;
+			sourceTree = "<group>";
+		};
+		E6EAD43B1132725F009F1A5B /* CommandQuery */ = {
+			isa = PBXGroup;
+			children = (
+				E6EAD441113272DC009F1A5B /* Command */,
+				E6EAD4871132769E009F1A5B /* Query */,
+			);
+			path = CommandQuery;
+			sourceTree = "<group>";
+		};
+		E6EAD441113272DC009F1A5B /* Command */ = {
+			isa = PBXGroup;
+			children = (
+				E6EAD44511327320009F1A5B /* Command.h */,
+				E6EAD44611327320009F1A5B /* Command.m */,
+				E6EAD45211327551009F1A5B /* InternalCommand */,
+				E6EAD44A11327542009F1A5B /* InternalCommand.h */,
+				E6EAD44B11327542009F1A5B /* InternalCommand.m */,
+				E6EAD44911327354009F1A5B /* RegisterFileCommand */,
+				E6EAD44C11327542009F1A5B /* RegisterFileCommand.h */,
+				E6EAD44D11327542009F1A5B /* RegisterFileCommand.m */,
+				E6C62ED111341C2D00D0CE1B /* Tests */,
+			);
+			path = Command;
+			sourceTree = "<group>";
+		};
+		E6EAD44911327354009F1A5B /* RegisterFileCommand */ = {
+			isa = PBXGroup;
+			children = (
+				E6EAD46811327658009F1A5B /* SetApplicationStatus.h */,
+				E6EAD46911327658009F1A5B /* SetApplicationStatus.m */,
+				E6EAD46A11327658009F1A5B /* SetApplicationVersion.h */,
+				E6EAD46B11327658009F1A5B /* SetApplicationVersion.m */,
+				464F8556155A7C3D00E17105 /* SetAutoFocus.h */,
+				464F8557155A7C3D00E17105 /* SetAutoFocus.m */,
+				E6C6325E1135669000D0CE1B /* SetColorPalette.h */,
+				E6C6325F1135669000D0CE1B /* SetColorPalette.m */,
+				E6C63214113552B900D0CE1B /* SetContrast.h */,
+				E6C63215113552B900D0CE1B /* SetContrast.m */,
+				E6EAD46C11327658009F1A5B /* SetImageHeight.h */,
+				E6EAD46D11327658009F1A5B /* SetImageHeight.m */,
+				E6EAD46E11327658009F1A5B /* SetImageWidth.h */,
+				E6EAD46F11327658009F1A5B /* SetImageWidth.m */,
+				E675F74C12F45CFB00D175C4 /* SetLicenseKey.h */,
+				E675F74D12F45CFB00D175C4 /* SetLicenseKey.m */,
+				E6C637761137C50000D0CE1B /* SetReferenceLine.h */,
+				E6C637771137C50000D0CE1B /* SetReferenceLine.m */,
+				E6C637241136CE4C00D0CE1B /* SetTiltState.h */,
+				E6C637251136CE4C00D0CE1B /* SetTiltState.m */,
+				E675F73612F44BBB00D175C4 /* SetUserAreaControl.h */,
+				E675F73712F44BBB00D175C4 /* SetUserAreaControl.m */,
+				E6EAD47011327658009F1A5B /* SetVideoFrequency.h */,
+				E6EAD47111327658009F1A5B /* SetVideoFrequency.m */,
+				E6C629051132C9D500D0CE1B /* SetZoom.h */,
+				E6C629061132C9D500D0CE1B /* SetZoom.m */,
+				E6C62F5B1134374200D0CE1B /* Tests */,
+				4621ED5E1581FF2500955C57 /* SetPanAndTilt.h */,
+				4621ED5F1581FF2500955C57 /* SetPanAndTilt.m */,
+				4652FC2B192F7DEA00209783 /* SetShownObjects.h */,
+				4652FC2C192F7DEB00209783 /* SetShownObjects.m */,
+				4606BF9C19409896003A68BE /* SetControlCurrentColorPal.h */,
+				4606BF9D19409897003A68BE /* SetControlCurrentColorPal.m */,
+				4697959119FA9773004BCB3F /* SetControlZoomPosition.h */,
+				4697959219FA9774004BCB3F /* SetControlZoomPosition.m */,
+				461EA6661A12007800FD5BA7 /* SetControlReferenceLine.h */,
+				461EA6671A12007800FD5BA7 /* SetControlReferenceLine.m */,
+				461EA66A1A12090300FD5BA7 /* SetControlReferenceLineOrientation.h */,
+				461EA66B1A12090300FD5BA7 /* SetControlReferenceLineOrientation.m */,
+				4672AEA11B70AE2600A0DD31 /* SetFocus.h */,
+				4672AEA21B70AE2600A0DD31 /* SetFocus.m */,
+				035B8144234B7F2A00359618 /* SetRegFile.h */,
+				035B8145234B7F2A00359618 /* SetRegFile.m */,
+				035B8148234C7D1F00359618 /* ColorPairCommand.h */,
+				035B8149234C7D1F00359618 /* ColorPairCommand.m */,
+				035B8150234CD84500359618 /* ActivatedFunctionsCommand.h */,
+				035B8151234CD84500359618 /* ActivatedFunctionsCommand.m */,
+				035B8158234CDB0700359618 /* ReferenceLineWidthCommand.h */,
+				035B8159234CDB0700359618 /* ReferenceLineWidthCommand.m */,
+				035B8160234E138700359618 /* GeneralCommand.h */,
+				035B8161234E138700359618 /* GeneralCommand.m */,
+			);
+			path = RegisterFileCommand;
+			sourceTree = "<group>";
+		};
+		E6EAD45211327551009F1A5B /* InternalCommand */ = {
+			isa = PBXGroup;
+			children = (
+				E6EAD45E11327608009F1A5B /* LockCamera.h */,
+				E6EAD45F11327608009F1A5B /* LockCamera.m */,
+				E6EAD46011327608009F1A5B /* SetKeepAliveTime.h */,
+				E6EAD46111327608009F1A5B /* SetKeepAliveTime.m */,
+				E6C631411135459600D0CE1B /* KeepAlive.h */,
+				E6C631421135459600D0CE1B /* KeepAlive.m */,
+				E6C62F051134207C00D0CE1B /* Tests */,
+			);
+			path = InternalCommand;
+			sourceTree = "<group>";
+		};
+		E6EAD4871132769E009F1A5B /* Query */ = {
+			isa = PBXGroup;
+			children = (
+				E6EAD488113276E3009F1A5B /* InternalQuery.h */,
+				E6EAD489113276E3009F1A5B /* InternalQuery.m */,
+				E6EAD48A113276E3009F1A5B /* Query.h */,
+				E6EAD48B113276E3009F1A5B /* Query.m */,
+				E6EAD48C113276E3009F1A5B /* RegisterFileQuery.h */,
+				E6EAD48D113276E3009F1A5B /* RegisterFileQuery.m */,
+				E6EAD49C113277B2009F1A5B /* RegisterFileQuery */,
+				E6C62D4D1133E06B00D0CE1B /* Tests */,
+			);
+			path = Query;
+			sourceTree = "<group>";
+		};
+		E6EAD49C113277B2009F1A5B /* RegisterFileQuery */ = {
+			isa = PBXGroup;
+			children = (
+				46D4E08B191D1BF5005DF53C /* BackColorQuery.h */,
+				46D4E08C191D1BF7005DF53C /* BackColorQuery.m */,
+				E6EAD4AD11327852009F1A5B /* VersionRegisterFileQuery.h */,
+				E6EAD4AE11327852009F1A5B /* VersionRegisterFileQuery.m */,
+				E6EAD49D11327836009F1A5B /* CIFCardStatusQuery.h */,
+				E6EAD49E11327836009F1A5B /* CIFCardStatusQuery.m */,
+				E6EAD49F11327836009F1A5B /* ProductConfigurationQuery.h */,
+				E6EAD4A011327836009F1A5B /* ProductConfigurationQuery.m */,
+				E6EAD4A311327836009F1A5B /* TiltStateQuery.h */,
+				E6EAD4A411327836009F1A5B /* TiltStateQuery.m */,
+				E6982B1D12AC084E00C8E177 /* SerialNumberQuery.h */,
+				E6982B1E12AC084E00C8E177 /* SerialNumberQuery.m */,
+				E6982C7E12B4BCFA00C8E177 /* LicenseKeyQuery.h */,
+				E6982C7F12B4BCFA00C8E177 /* LicenseKeyQuery.m */,
+				E6982DFE12B4DE1000C8E177 /* CryptoKeyQuery.h */,
+				E6982DFF12B4DE1000C8E177 /* CryptoKeyQuery.m */,
+				E6C62D7C1133E5BD00D0CE1B /* Tests */,
+				464F85F1155AAFC400E17105 /* AutofocusQuery.h */,
+				464F85F2155AAFC400E17105 /* AutofocusQuery.m */,
+				4621ED661582475100955C57 /* PanAndTiltQuery.h */,
+				4621ED671582475100955C57 /* PanAndTiltQuery.m */,
+				4648BDB61588BCE200EE00EC /* CameraTypeQuery.h */,
+				4648BDB71588BCE200EE00EC /* CameraTypeQuery.m */,
+				46D4E087191D126F005DF53C /* CurrentColorPalQuery.h */,
+				46D4E088191D1271005DF53C /* CurrentColorPalQuery.m */,
+				46D4E08F1920A326005DF53C /* ForeColorQuery.h */,
+				46D4E0901920A32A005DF53C /* ForeColorQuery.m */,
+				4652FC27192F7B8B00209783 /* ShownObjectsQuery.h */,
+				4652FC28192F7B8C00209783 /* ShownObjectsQuery.m */,
+				4697958819F65A4A004BCB3F /* ZoomPositionQuery.h */,
+				4697958919F65A4A004BCB3F /* ZoomPositionQuery.m */,
+				4697959519FE50AF004BCB3F /* MinZoomPositionQuery.h */,
+				4697959619FE50B0004BCB3F /* MinZoomPositionQuery.m */,
+				461EA65E1A12004900FD5BA7 /* ReferenceLineOrientationQuery.h */,
+				461EA65F1A12004900FD5BA7 /* ReferenceLineOrientationQuery.m */,
+				461EA6601A12004900FD5BA7 /* ReferenceLineQuery.h */,
+				461EA6611A12004900FD5BA7 /* ReferenceLineQuery.m */,
+				46DAAF441AD7C0A1003CE6EE /* VideoGenQuery.h */,
+				46DAAF451AD7C0A1003CE6EE /* VideoGenQuery.m */,
+				46DAAF481AD7CDE9003CE6EE /* VideoWidthQuery.h */,
+				46DAAF491AD7CDE9003CE6EE /* VideoWidthQuery.m */,
+				46DAAF4C1AD7CE14003CE6EE /* VideoHeightQuery.h */,
+				46DAAF4D1AD7CE15003CE6EE /* VideoHeightQuery.m */,
+				4672AEAB1B70D71400A0DD31 /* UserPanelStateQuery.h */,
+				4672AEAC1B70D71400A0DD31 /* UserPanelStateQuery.m */,
+				03ADFB80232FE9B7001FFE00 /* IsZoomingQuery.h */,
+				03ADFB81232FE9B7001FFE00 /* IsZoomingQuery.m */,
+				035B8140234B57EA00359618 /* ColorPairQuery.h */,
+				035B8141234B57EA00359618 /* ColorPairQuery.m */,
+				035B814C234CD81400359618 /* ActivatedFunctionsQuery.h */,
+				035B814D234CD81400359618 /* ActivatedFunctionsQuery.m */,
+				035B8154234CDA9800359618 /* ReferenceLineWidthQuery.h */,
+				035B8155234CDA9800359618 /* ReferenceLineWidthQuery.m */,
+				035B815C234E0EAB00359618 /* GeneralQuery.h */,
+				035B815D234E0EAB00359618 /* GeneralQuery.m */,
+			);
+			path = RegisterFileQuery;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				035B8162234E138700359618 /* GeneralCommand.h in Headers */,
+				E6EAD40511326CF5009F1A5B /* MaskingOperations.h in Headers */,
+				E6EAD40F11326D8B009F1A5B /* ControlChannel.h in Headers */,
+				E6EAD41011326D8B009F1A5B /* ControlChannelFactory.h in Headers */,
+				E6EAD41211326D8B009F1A5B /* MessageReference.h in Headers */,
+				035B8165234E206500359618 /* regFileDef_D39419A.h in Headers */,
+				E6EAD41411326D8B009F1A5B /* USBControlChannel.h in Headers */,
+				E6EAD41811326DB6009F1A5B /* ByteBuffer.h in Headers */,
+				E6EAD42911326ED6009F1A5B /* CameraControlException.h in Headers */,
+				E6EAD44711327320009F1A5B /* Command.h in Headers */,
+				E6EAD44E11327542009F1A5B /* InternalCommand.h in Headers */,
+				035B8142234B57EA00359618 /* ColorPairQuery.h in Headers */,
+				E6EAD45011327542009F1A5B /* RegisterFileCommand.h in Headers */,
+				E6EAD46211327608009F1A5B /* LockCamera.h in Headers */,
+				E6EAD46411327608009F1A5B /* SetKeepAliveTime.h in Headers */,
+				E6EAD47211327658009F1A5B /* SetApplicationStatus.h in Headers */,
+				E6EAD47411327658009F1A5B /* SetApplicationVersion.h in Headers */,
+				E6EAD47611327658009F1A5B /* SetImageHeight.h in Headers */,
+				035B815A234CDB0700359618 /* ReferenceLineWidthCommand.h in Headers */,
+				E6EAD47811327658009F1A5B /* SetImageWidth.h in Headers */,
+				E6EAD47A11327658009F1A5B /* SetVideoFrequency.h in Headers */,
+				E6EAD48E113276E3009F1A5B /* InternalQuery.h in Headers */,
+				E6EAD490113276E3009F1A5B /* Query.h in Headers */,
+				E6EAD492113276E3009F1A5B /* RegisterFileQuery.h in Headers */,
+				035B8152234CD84500359618 /* ActivatedFunctionsCommand.h in Headers */,
+				E6EAD4A511327836009F1A5B /* CIFCardStatusQuery.h in Headers */,
+				E6EAD4A711327836009F1A5B /* ProductConfigurationQuery.h in Headers */,
+				035B8156234CDA9800359618 /* ReferenceLineWidthQuery.h in Headers */,
+				E6EAD4AB11327836009F1A5B /* TiltStateQuery.h in Headers */,
+				E6EAD4AF11327852009F1A5B /* VersionRegisterFileQuery.h in Headers */,
+				E6EAD4B4113278D6009F1A5B /* CameraControlTypes.h in Headers */,
+				E6EAD4B911327909009F1A5B /* LVICameraControl.h in Headers */,
+				035B815E234E0EAB00359618 /* GeneralQuery.h in Headers */,
+				E6EAD4C91132798F009F1A5B /* CameraControl.h in Headers */,
+				E6C629071132C9D500D0CE1B /* SetZoom.h in Headers */,
+				E6C631431135459600D0CE1B /* KeepAlive.h in Headers */,
+				E6C63216113552B900D0CE1B /* SetContrast.h in Headers */,
+				E6C632601135669000D0CE1B /* SetColorPalette.h in Headers */,
+				E6C637261136CE4C00D0CE1B /* SetTiltState.h in Headers */,
+				E6C637781137C50000D0CE1B /* SetReferenceLine.h in Headers */,
+				E6982B1F12AC084E00C8E177 /* SerialNumberQuery.h in Headers */,
+				E6982C8012B4BCFA00C8E177 /* LicenseKeyQuery.h in Headers */,
+				E6982E0012B4DE1000C8E177 /* CryptoKeyQuery.h in Headers */,
+				E675F73812F44BBB00D175C4 /* SetUserAreaControl.h in Headers */,
+				E675F74E12F45CFB00D175C4 /* SetLicenseKey.h in Headers */,
+				464F8558155A7C3D00E17105 /* SetAutoFocus.h in Headers */,
+				464F85F3155AAFC400E17105 /* AutofocusQuery.h in Headers */,
+				035B8168234E25E800359618 /* CameraMap.h in Headers */,
+				4621ED601581FF2500955C57 /* SetPanAndTilt.h in Headers */,
+				4621ED681582475100955C57 /* PanAndTiltQuery.h in Headers */,
+				4648BDB81588BCE200EE00EC /* CameraTypeQuery.h in Headers */,
+				035B8146234B7F2A00359618 /* SetRegFile.h in Headers */,
+				035B814E234CD81400359618 /* ActivatedFunctionsQuery.h in Headers */,
+				03ADFB82232FE9B7001FFE00 /* IsZoomingQuery.h in Headers */,
+				46D4E089191D1272005DF53C /* CurrentColorPalQuery.h in Headers */,
+				46D4E08D191D1BF9005DF53C /* BackColorQuery.h in Headers */,
+				46D4E0911920A32D005DF53C /* ForeColorQuery.h in Headers */,
+				4652FC29192F7B8E00209783 /* ShownObjectsQuery.h in Headers */,
+				4652FC2D192F7DEC00209783 /* SetShownObjects.h in Headers */,
+				4606BF9E19409898003A68BE /* SetControlCurrentColorPal.h in Headers */,
+				4697958A19F65A4A004BCB3F /* ZoomPositionQuery.h in Headers */,
+				035B814A234C7D1F00359618 /* ColorPairCommand.h in Headers */,
+				4697959319FA9775004BCB3F /* SetControlZoomPosition.h in Headers */,
+				4697959719FE50B2004BCB3F /* MinZoomPositionQuery.h in Headers */,
+				461EA6621A12004900FD5BA7 /* ReferenceLineOrientationQuery.h in Headers */,
+				461EA6641A12004900FD5BA7 /* ReferenceLineQuery.h in Headers */,
+				461EA6681A12007800FD5BA7 /* SetControlReferenceLine.h in Headers */,
+				461EA66C1A12090300FD5BA7 /* SetControlReferenceLineOrientation.h in Headers */,
+				46DAAF461AD7C0A1003CE6EE /* VideoGenQuery.h in Headers */,
+				46DAAF4A1AD7CDEA003CE6EE /* VideoWidthQuery.h in Headers */,
+				46DAAF4E1AD7CE16003CE6EE /* VideoHeightQuery.h in Headers */,
+				4672AEA31B70AE2600A0DD31 /* SetFocus.h in Headers */,
+				4672AEAD1B70D71400A0DD31 /* UserPanelStateQuery.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC07D0554694100DB518D /* LVICameraControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "LVICameraControl" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LVICameraControl;
+			productName = LVICameraControl;
+			productReference = D2AAC07E0554694100DB518D /* libLVICameraControl.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E6C62BD81133BF0E00D0CE1B /* UnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6C62BDE1133BF0F00D0CE1B /* Build configuration list for PBXNativeTarget "UnitTests" */;
+			buildPhases = (
+				E6C62BD51133BF0E00D0CE1B /* Resources */,
+				E6C62BD61133BF0E00D0CE1B /* Sources */,
+				E6C62BD71133BF0E00D0CE1B /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E6C62BE51133BF2300D0CE1B /* PBXTargetDependency */,
+			);
+			name = UnitTests;
+			productName = UnitTests;
+			productReference = E6C62BD91133BF0E00D0CE1B /* UnitTests.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Prevas AB";
+			};
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "LVICameraControl" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* LVICameraControl */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* LVICameraControl */,
+				E6C62BD81133BF0E00D0CE1B /* UnitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E6C62BD51133BF0E00D0CE1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6EAD40611326CF5009F1A5B /* MaskingOperations.m in Sources */,
+				E6EAD41111326D8B009F1A5B /* ControlChannelFactory.m in Sources */,
+				E6EAD41311326D8B009F1A5B /* MessageReference.m in Sources */,
+				035B8153234CD84500359618 /* ActivatedFunctionsCommand.m in Sources */,
+				E6EAD41511326D8B009F1A5B /* USBControlChannel.m in Sources */,
+				E6EAD41911326DB6009F1A5B /* ByteBuffer.m in Sources */,
+				E6EAD42A11326ED6009F1A5B /* CameraControlException.m in Sources */,
+				E6EAD44811327320009F1A5B /* Command.m in Sources */,
+				E6EAD44F11327542009F1A5B /* InternalCommand.m in Sources */,
+				E6EAD45111327542009F1A5B /* RegisterFileCommand.m in Sources */,
+				E6EAD46311327608009F1A5B /* LockCamera.m in Sources */,
+				E6EAD46511327608009F1A5B /* SetKeepAliveTime.m in Sources */,
+				E6EAD47311327658009F1A5B /* SetApplicationStatus.m in Sources */,
+				E6EAD47511327658009F1A5B /* SetApplicationVersion.m in Sources */,
+				E6EAD47711327658009F1A5B /* SetImageHeight.m in Sources */,
+				E6EAD47911327658009F1A5B /* SetImageWidth.m in Sources */,
+				E6EAD47B11327658009F1A5B /* SetVideoFrequency.m in Sources */,
+				E6EAD48F113276E3009F1A5B /* InternalQuery.m in Sources */,
+				E6EAD491113276E3009F1A5B /* Query.m in Sources */,
+				E6EAD493113276E3009F1A5B /* RegisterFileQuery.m in Sources */,
+				E6EAD4A611327836009F1A5B /* CIFCardStatusQuery.m in Sources */,
+				E6EAD4A811327836009F1A5B /* ProductConfigurationQuery.m in Sources */,
+				E6EAD4AC11327836009F1A5B /* TiltStateQuery.m in Sources */,
+				E6EAD4B011327852009F1A5B /* VersionRegisterFileQuery.m in Sources */,
+				E6EAD4BA11327909009F1A5B /* LVICameraControl.m in Sources */,
+				E6C629081132C9D500D0CE1B /* SetZoom.m in Sources */,
+				E6C631441135459600D0CE1B /* KeepAlive.m in Sources */,
+				E6C63217113552B900D0CE1B /* SetContrast.m in Sources */,
+				035B815B234CDB0700359618 /* ReferenceLineWidthCommand.m in Sources */,
+				E6C632611135669000D0CE1B /* SetColorPalette.m in Sources */,
+				035B8143234B57EA00359618 /* ColorPairQuery.m in Sources */,
+				E6C637271136CE4C00D0CE1B /* SetTiltState.m in Sources */,
+				E6C637791137C50000D0CE1B /* SetReferenceLine.m in Sources */,
+				E6982B2012AC084E00C8E177 /* SerialNumberQuery.m in Sources */,
+				E6982C8112B4BCFA00C8E177 /* LicenseKeyQuery.m in Sources */,
+				E6982E0112B4DE1000C8E177 /* CryptoKeyQuery.m in Sources */,
+				E675F73912F44BBB00D175C4 /* SetUserAreaControl.m in Sources */,
+				E675F74F12F45CFB00D175C4 /* SetLicenseKey.m in Sources */,
+				464F8559155A7C3D00E17105 /* SetAutoFocus.m in Sources */,
+				03ADFB83232FE9B7001FFE00 /* IsZoomingQuery.m in Sources */,
+				464F85F4155AAFC400E17105 /* AutofocusQuery.m in Sources */,
+				4621ED611581FF2500955C57 /* SetPanAndTilt.m in Sources */,
+				4621ED691582475100955C57 /* PanAndTiltQuery.m in Sources */,
+				4648BDB91588BCE200EE00EC /* CameraTypeQuery.m in Sources */,
+				46D4E08A191D1272005DF53C /* CurrentColorPalQuery.m in Sources */,
+				46D4E08E191D1BF9005DF53C /* BackColorQuery.m in Sources */,
+				46D4E0921920A32D005DF53C /* ForeColorQuery.m in Sources */,
+				035B814B234C7D1F00359618 /* ColorPairCommand.m in Sources */,
+				4652FC2A192F7B8E00209783 /* ShownObjectsQuery.m in Sources */,
+				4652FC2E192F7DEC00209783 /* SetShownObjects.m in Sources */,
+				035B8147234B7F2A00359618 /* SetRegFile.m in Sources */,
+				4606BF9F19409898003A68BE /* SetControlCurrentColorPal.m in Sources */,
+				035B8169234E25E800359618 /* CameraMap.m in Sources */,
+				4697958B19F65A4A004BCB3F /* ZoomPositionQuery.m in Sources */,
+				4697959419FA9775004BCB3F /* SetControlZoomPosition.m in Sources */,
+				4697959819FE50B2004BCB3F /* MinZoomPositionQuery.m in Sources */,
+				461EA6631A12004900FD5BA7 /* ReferenceLineOrientationQuery.m in Sources */,
+				035B814F234CD81400359618 /* ActivatedFunctionsQuery.m in Sources */,
+				461EA6651A12004900FD5BA7 /* ReferenceLineQuery.m in Sources */,
+				461EA6691A12007800FD5BA7 /* SetControlReferenceLine.m in Sources */,
+				461EA66D1A12090300FD5BA7 /* SetControlReferenceLineOrientation.m in Sources */,
+				46DAAF471AD7C0A1003CE6EE /* VideoGenQuery.m in Sources */,
+				035B8157234CDA9800359618 /* ReferenceLineWidthQuery.m in Sources */,
+				46DAAF4B1AD7CDEA003CE6EE /* VideoWidthQuery.m in Sources */,
+				46DAAF4F1AD7CE16003CE6EE /* VideoHeightQuery.m in Sources */,
+				035B8163234E138700359618 /* GeneralCommand.m in Sources */,
+				4672AEA41B70AE2600A0DD31 /* SetFocus.m in Sources */,
+				4672AEAE1B70D71400A0DD31 /* UserPanelStateQuery.m in Sources */,
+				035B815F234E0EAB00359618 /* GeneralQuery.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6C62BD61133BF0E00D0CE1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6C62BE91133BF9E00D0CE1B /* GHUnitTestMain.m in Sources */,
+				E6C62C041133C00F00D0CE1B /* MaskingOperationsTests.m in Sources */,
+				E6C62C2C1133C38C00D0CE1B /* ByteBufferTests.m in Sources */,
+				E6C62D121133DD1D00D0CE1B /* MessageReferenceTests.m in Sources */,
+				E6C62D501133E0A000D0CE1B /* QueryTests.m in Sources */,
+				E6C62D571133E22700D0CE1B /* StubControlChannel.m in Sources */,
+				E6C62D6A1133E3F700D0CE1B /* InternalQueryTests.m in Sources */,
+				E6C62D731133E51500D0CE1B /* RegisterFileQueryTests.m in Sources */,
+				E6C62D7F1133E5ED00D0CE1B /* VersionRegisterFileQueryTests.m in Sources */,
+				E6C62E2511340B7200D0CE1B /* CIFCardStatusQueryTests.m in Sources */,
+				E6C62E6E1134150700D0CE1B /* ProductConfigurationQueryTests.m in Sources */,
+				E6C62E85113418CD00D0CE1B /* TiltStateQueryTests.m in Sources */,
+				E6C62ED411341C5D00D0CE1B /* CommandTests.m in Sources */,
+				E6C62EF711341F7B00D0CE1B /* InternalCommandTests.m in Sources */,
+				E6C62EFE1134201C00D0CE1B /* RegisterFileCommandTests.m in Sources */,
+				E6C62F08113420A300D0CE1B /* LockCameraTests.m in Sources */,
+				E6C62F331134235A00D0CE1B /* SetKeepAliveTimeTests.m in Sources */,
+				E6C62F5E1134377300D0CE1B /* SetApplicationStatusTests.m in Sources */,
+				E6C62F991134447E00D0CE1B /* SetApplicationVersionTests.m in Sources */,
+				E6C62FD611345C9500D0CE1B /* SetImageHeightTests.m in Sources */,
+				E6C62FF211345F3100D0CE1B /* SetImageWidthTests.m in Sources */,
+				E6C630051134FA3700D0CE1B /* SetVideoFrequencyTests.m in Sources */,
+				E6C630241134FC9400D0CE1B /* SetZoomTests.m in Sources */,
+				E6C631471135460100D0CE1B /* KeepAliveTests.m in Sources */,
+				E6C632301135589600D0CE1B /* SetContrastTests.m in Sources */,
+				E6C6326A113569A600D0CE1B /* SetColorPaletteTests.m in Sources */,
+				E6C634F31136825900D0CE1B /* LVICameraControlTests.m in Sources */,
+				E6C6351D113685A900D0CE1B /* StubControlChannelFactory.m in Sources */,
+				E6C637441137AF6000D0CE1B /* SetTiltStateTests.m in Sources */,
+				E6C637951137CB8900D0CE1B /* SetReferenceLineTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E6C62BE51133BF2300D0CE1B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AAC07D0554694100DB518D /* LVICameraControl */;
+			targetProxy = E6C62BE41133BF2300D0CE1B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = LVICameraControl_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = LVICameraControl;
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = YES;
+				VALID_ARCHS = x86_64;
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = LVICameraControl_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_NAME = LVICameraControl;
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = YES;
+				VALID_ARCHS = x86_64;
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = NO;
+				PREBINDING = NO;
+				SDKROOT = macosx;
+				VALID_ARCHS = "i386 ppc ppc64 ppc7400 ppc970 x86_64";
+			};
+			name = Release;
+		};
+		E6C62BDC1133BF0F00D0CE1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "UnitTests-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = UnitTests;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		E6C62BDD1133BF0F00D0CE1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "UnitTests-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = UnitTests;
+				SDKROOT = macosx10.6;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "LVICameraControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "LVICameraControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6C62BDE1133BF0F00D0CE1B /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6C62BDC1133BF0F00D0CE1B /* Debug */,
+				E6C62BDD1133BF0F00D0CE1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}
