@@ -8,7 +8,7 @@
 import Foundation
 import SWXMLHash
 
-public struct MoveOptions : XMLIndexerDeserializable {
+public struct MoveOptions : XMLObjectDeserialization {
     public let continuous: ContinuousFocusOptions?
     
     public static func deserialize(_ node: XMLIndexer) throws -> MoveOptions {
@@ -18,7 +18,7 @@ public struct MoveOptions : XMLIndexerDeserializable {
     }
 }
 
-public struct ContinuousFocusOptions : XMLIndexerDeserializable {
+public struct ContinuousFocusOptions : XMLObjectDeserialization {
     public let speed: FloatRange
     
     public static func deserialize(_ node: XMLIndexer) throws -> ContinuousFocusOptions {

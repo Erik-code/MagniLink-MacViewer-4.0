@@ -8,7 +8,7 @@
 import Foundation
 import SWXMLHash
 
-public struct PTZStatus : XMLIndexerDeserializable {
+public struct PTZStatus : XMLObjectDeserialization {
     public let position: PTZVector?
     public let moveStatus: PTZMoveStatus?
     public let error: String?

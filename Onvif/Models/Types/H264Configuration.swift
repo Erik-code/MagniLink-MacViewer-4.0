@@ -8,7 +8,7 @@
 import Foundation
 import SWXMLHash
 
-public struct H264Configuration : XMLIndexerDeserializable {
+public struct H264Configuration : XMLObjectDeserialization {
     public let govLength: Int
     public let h264Profile: H264Profile
     

@@ -7,7 +7,7 @@
 import Foundation
 import SWXMLHash
 
-public struct PTZNode : XMLIndexerDeserializable {
+public struct PTZNode : XMLObjectDeserialization {
     public let token: String
     public let name: String
     public let maximumNumberOfPresets : Int

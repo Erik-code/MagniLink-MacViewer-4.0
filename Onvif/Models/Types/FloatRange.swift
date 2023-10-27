@@ -8,7 +8,7 @@
 import Foundation
 import SWXMLHash
 
-public struct FloatRange : XMLIndexerDeserializable {
+public struct FloatRange : XMLObjectDeserialization {
     public let min: Float
     public let max: Float
     

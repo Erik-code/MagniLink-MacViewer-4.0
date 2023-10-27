@@ -8,7 +8,7 @@
 import Foundation
 import SWXMLHash
 
-public struct MediaProfile : XMLIndexerDeserializable {
+public struct MediaProfile : XMLObjectDeserialization {
     public let token: String
     public let name: String
     public let fixed: Bool

@@ -8,7 +8,7 @@
 import Foundation
 import SWXMLHash
 
-public struct PTZConfiguration : XMLIndexerDeserializable {
+public struct PTZConfiguration : XMLObjectDeserialization {
     public let token: String
     public let name: String
     public let useCount: Int

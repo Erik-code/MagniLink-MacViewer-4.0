@@ -8,7 +8,7 @@
 import Foundation
 import SWXMLHash
 
-public struct VideoSourceConfiguration : XMLIndexerDeserializable {
+public struct VideoSourceConfiguration : XMLObjectDeserialization {
     public let token: String
     public let name: String
     public let useCount: Int

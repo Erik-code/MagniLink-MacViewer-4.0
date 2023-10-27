@@ -8,7 +8,7 @@
 import Foundation
 import SWXMLHash
 
-public struct FocusConfiguration : XMLIndexerDeserializable {
+public struct FocusConfiguration : XMLObjectDeserialization {
     public let focusMode: String
     public let defaultSpeed: Float?
     public let nearLimit: Float?

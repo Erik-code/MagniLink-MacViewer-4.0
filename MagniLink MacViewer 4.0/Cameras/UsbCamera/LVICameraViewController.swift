@@ -40,7 +40,22 @@ class LVICameraViewController: CameraUSBViewController {
     override func nextNegative()
     {
         control?.increaseNegativeColors()
-
     }
     
+    override func zoom(aDirection: CameraControlZoomDirection)
+    {
+        switch aDirection {
+        case .inn:
+            control?.startZoomIn()
+        case .out:
+            control?.startZoomOut()
+        case .stop:
+            control?.stopZoom()
+        }
+    }
+    
+    func setFramerate(frameRate : UInt8)
+    {
+        control?.setVideoFrequency(frameRate)
+    }    
 }

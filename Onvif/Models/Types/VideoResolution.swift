@@ -8,7 +8,7 @@
 import Foundation
 import SWXMLHash
 
-public struct VideoResolution : XMLIndexerDeserializable {
+public struct VideoResolution : XMLObjectDeserialization {
     public let width: Int
     public let height: Int
     

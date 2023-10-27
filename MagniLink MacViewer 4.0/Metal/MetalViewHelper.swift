@@ -9,11 +9,51 @@ import Foundation
 import Cocoa
 import simd
 
+struct UniformsFrame {
+    init() {
+        projectionMatrix = simd_float4x4(1.0)
+        frameColor = simd_float3(1.0, 0.5, 0.0)
+    }
+    var projectionMatrix:simd_float4x4
+    var frameColor:simd_float3
+}
+
 struct UniformsRender {
     init() {
         projectionMatrix = simd_float4x4(1.0)
     }
     var projectionMatrix:simd_float4x4
+}
+
+struct UniformsRenderToTexture {
+    init() {
+        projectionMatrix = simd_float4x4(1.0)
+        gain = 4.0
+        pn = (1 - 1 / gain) * 0.5
+        contrast = 0.0
+        brightness = 0.0
+        backColor = simd_float3(1.0, 1.0, 1.0)
+        foreColor = simd_float3(0.0, 0.0, 0.0)
+        artificial = false
+        grayscale = false
+        reflineWidth = 0.01
+        reflinePosition = 0
+        reflineType = 0
+        reflineColor = simd_float3(0.0, 0.0, 0.0)
+    }
+    var projectionMatrix:simd_float4x4
+    var backColor:simd_float3
+    var gain:simd_float1
+    var foreColor:simd_float3
+    var pn:simd_float1
+    var brightness:simd_float1
+    var contrast:simd_float1
+    var artificial:simd_bool
+    var grayscale:simd_bool
+    var reflineWidth:simd_float1
+    var reflinePosition:simd_float1
+    var reflineType:simd_int1
+    var reflineColor:simd_float3
 }
 
 class MetalViewHelper
@@ -44,7 +84,6 @@ class MetalViewHelper
         let textureDescriptor = MTLTextureDescriptor()
 
         textureDescriptor.pixelFormat = MTLPixelFormat.bgra8Unorm
-
         textureDescriptor.width = Int(aVideo.width)
         textureDescriptor.height = Int(aVideo.height)
 
@@ -73,6 +112,22 @@ class MetalViewHelper
         
         let texture = CVMetalTextureGetTexture(cvTexture)
         
+        return texture!
+    }
+    
+    func createTexture(size : CGSize) -> MTLTexture
+    {
+        let textureDescriptor = MTLTextureDescriptor()
+
+        textureDescriptor.pixelFormat = .bgra8Unorm
+        textureDescriptor.textureType = .type2D
+        // Set the pixel dimensions of the texture
+        textureDescriptor.width = Int(size.width)
+        textureDescriptor.height = Int(size.height)
+
+        //textureDescriptor.usage = MTLTextureUsage(rawValue: MTLTextureUsage.shaderWrite)
+        
+        let texture = mDevice.makeTexture(descriptor: textureDescriptor)
         return texture!
     }
     
@@ -146,6 +201,113 @@ class MetalViewHelper
         let renderPipeline = createPipeline(vertex: vertexProgram!, fragment: fragmentProgram!)!
         
         return renderPipeline
+    }
+    
+    func createRenderToTexturePipeline() -> MTLRenderPipelineState
+    {
+        let vertexProgram = mLibrary?.makeFunction(name: "render_to_texture_vertex")!
+        
+        let fragmentProgram = mLibrary?.makeFunction(name: "render_to_texture_fragment")!
+        fragmentProgram!.label = "render to texture"
+        
+        let fragmentPipeline = createPipeline(vertex: vertexProgram!, fragment: fragmentProgram!)!
+        
+        return fragmentPipeline
+    }
+    
+    func createFramePipeline() -> MTLRenderPipelineState
+    {
+        let vertexProgram = mLibrary?.makeFunction(name: "color_vertex")!
+        vertexProgram!.label = "vertex"
+        
+        
+        let colorProgram = mLibrary?.makeFunction(name: "color_fragment")!
+        colorProgram!.label = "color"
+        
+        let colorPipeline = createPipeline(vertex: vertexProgram!, fragment: colorProgram!)!
+        
+        return colorPipeline
+    }
+    
+    func createRenderTexture(width : Int, height : Int, count : Int) -> ([MTLTexture], MTLRenderPassDescriptor)
+    {
+        let textureDescriptor = MTLTextureDescriptor();
+
+        // Indicate that each pixel has a blue, green, red, and alpha channel, where each channel is
+        // an 8-bit unsigned normalized value (i.e. 0 maps to 0.0 and 255 maps to 1.0)
+        //textureDescriptor.pixelFormat = MTLPixelFormatBGRA8Unorm;
+        textureDescriptor.pixelFormat = .bgra8Unorm
+        textureDescriptor.textureType = .type2D
+        // Set the pixel dimensions of the texture
+        textureDescriptor.width = width
+        textureDescriptor.height = height
+        textureDescriptor.usage = MTLTextureUsage(rawValue: MTLTextureUsage.renderTarget.rawValue | MTLTextureUsage.shaderRead.rawValue)
+
+        var textures = [MTLTexture]()
+        
+        for _ in 0..<count 
+        {
+            textures.append(mDevice.makeTexture(descriptor: textureDescriptor)!)
+        }
+        // Create the texture from the device by using the descriptor
+        
+        var renderToTextureRenderPassDescriptor = MTLRenderPassDescriptor()
+        renderToTextureRenderPassDescriptor.colorAttachments[0].texture = textures[0]
+        
+        renderToTextureRenderPassDescriptor.colorAttachments[0].clearColor = MTLClearColorMake(1, 1, 1, 1)
+
+        renderToTextureRenderPassDescriptor.colorAttachments[0].storeAction = .store
+        
+        return (textures, renderToTextureRenderPassDescriptor)
+    }
+    
+    func createFrame(aWidth : Float, aHeight : Float, aFrameThickness : Float) -> (MTLBuffer, MTLBuffer)
+    {
+        let frameData = createFramePositions(width: aWidth, height: aHeight, thickness: aFrameThickness)
+
+//        let frameData = createFramePositionsTest(width: aWidth, height: aHeight)
+
+        // Layout memory and set up vertex buffers
+        var dataSize = frameData.count * MemoryLayout<Float>.stride
+        var framePositionsBuffer = mDevice.makeBuffer(bytes: frameData, length: dataSize, options: [])
+//        framePositionsBuffer?.label = "vertices"
+        print("CREATE frame")
+        
+        let frameIndices = createFrameIndices()
+        
+        dataSize = frameIndices.count * MemoryLayout<UInt32>.stride
+        var frameIndexBuffer = mDevice.makeBuffer(bytes: frameIndices, length: dataSize, options: [])
+//        frameIndexBuffer?.label = "indices"
+        print("CREATE indices")
+
+        return (framePositionsBuffer!, frameIndexBuffer!)
+    }
+    
+    func createRenderTexture(width : Int, height : Int) -> (MTLTexture, MTLRenderPassDescriptor)
+    {
+        let textureDescriptor = MTLTextureDescriptor();
+
+        // Indicate that each pixel has a blue, green, red, and alpha channel, where each channel is
+        // an 8-bit unsigned normalized value (i.e. 0 maps to 0.0 and 255 maps to 1.0)
+        //textureDescriptor.pixelFormat = MTLPixelFormatBGRA8Unorm;
+        textureDescriptor.pixelFormat = .bgra8Unorm
+        textureDescriptor.textureType = .type2D
+        // Set the pixel dimensions of the texture
+        textureDescriptor.width = width
+        textureDescriptor.height = height
+        textureDescriptor.usage = MTLTextureUsage(rawValue: MTLTextureUsage.renderTarget.rawValue | MTLTextureUsage.shaderRead.rawValue)
+
+        // Create the texture from the device by using the descriptor
+        var renderTargetTexture = mDevice.makeTexture(descriptor: textureDescriptor);
+        
+        var renderToTextureRenderPassDescriptor = MTLRenderPassDescriptor()
+        renderToTextureRenderPassDescriptor.colorAttachments[0].texture = renderTargetTexture
+        
+        renderToTextureRenderPassDescriptor.colorAttachments[0].clearColor = MTLClearColorMake(1, 1, 1, 1)
+
+        renderToTextureRenderPassDescriptor.colorAttachments[0].storeAction = .store
+        
+        return (renderTargetTexture!, renderToTextureRenderPassDescriptor)
     }
     
     

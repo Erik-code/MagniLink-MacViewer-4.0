@@ -8,7 +8,7 @@
 import Foundation
 import SWXMLHash
 
-public struct VideoEncoderOptionsExtension : XMLIndexerDeserializable {
+public struct VideoEncoderOptionsExtension : XMLObjectDeserialization {
     public let h264: H264Options2?
     
     public static func deserialize(_ node: XMLIndexer) throws -> VideoEncoderOptionsExtension {

@@ -8,7 +8,7 @@
 import Foundation
 import SWXMLHash
 
-public struct Vector1D : XMLIndexerDeserializable {
+public struct Vector1D : XMLObjectDeserialization {
     public let space: String?
     public let x: Float
     

@@ -18,7 +18,7 @@ public enum CapabilitiesCategory: String {
     case ptz = "PTZ"
 }
 
-public struct Capabilities : XMLIndexerDeserializable {
+public struct Capabilities : XMLObjectDeserialization {
     public let device: Device?
     public let media: Media?
     public let ptz: PTZ?
@@ -34,7 +34,7 @@ public struct Capabilities : XMLIndexerDeserializable {
     }
 }
 
-public struct Device : XMLIndexerDeserializable {
+public struct Device : XMLObjectDeserialization {
     public let xAddr: String
 
     public static func deserialize(_ node: XMLIndexer) throws -> Device {
@@ -42,7 +42,7 @@ public struct Device : XMLIndexerDeserializable {
     }
 }
 
-public struct Media : XMLIndexerDeserializable {
+public struct Media : XMLObjectDeserialization {
     public let xAddr: String
     
     public static func deserialize(_ node: XMLIndexer) throws -> Media {
@@ -50,7 +50,7 @@ public struct Media : XMLIndexerDeserializable {
     }
 }
 
-public struct PTZ : XMLIndexerDeserializable {
+public struct PTZ : XMLObjectDeserialization {
     public let xAddr: String
     
     public static func deserialize(_ node: XMLIndexer) throws -> PTZ {
@@ -58,7 +58,7 @@ public struct PTZ : XMLIndexerDeserializable {
     }
 }
 
-public struct Imaging : XMLIndexerDeserializable {
+public struct Imaging : XMLObjectDeserialization {
     public let xAddr: String
     
     public static func deserialize(_ node: XMLIndexer) throws -> Imaging {

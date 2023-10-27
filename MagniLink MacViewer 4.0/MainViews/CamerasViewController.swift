@@ -8,13 +8,14 @@
 import Foundation
 import Cocoa
 
-class CamerasViewController: NSViewController, CameraFinderDelegate {
+class CamerasViewController: NSViewController, CameraFinderDelegate, CameraBaseViewControllerDelegate {
     
     private let mAnimationTime = 0.15
     var mCameraViewController : CamerasViewController?
     var mCameraFinder : CameraFinder?
     var mCameraManager = CameraManager()
     var mVideoCapture = VideoCapture()
+    var mMainViewController : MainViewController?
     
     override func loadView() {
         self.view = NSView()
@@ -38,6 +39,12 @@ class CamerasViewController: NSViewController, CameraFinderDelegate {
             mCameraFinder?.search()
         }
     }
+    
+    override var acceptsFirstResponder: Bool{
+        get{
+            return false
+        }
+    }
 
     override var representedObject: Any? {
         didSet {
@@ -54,14 +61,51 @@ class CamerasViewController: NSViewController, CameraFinderDelegate {
         switch action {
         case .switchSplit:
             changeSplit(direction: true)
+        case .switchCamera:
+            changeCamera()
         case .nextNatural:
             mCameraManager.currentCamera.nextNatural()
         case .nextPositive:
             mCameraManager.currentCamera.nextPositive()
         case .nextNegative:
             mCameraManager.currentCamera.nextNegative()
+        case .nextArtificial:
+            mCameraManager.currentCamera.nextArtificial()
+        case .zoomIn:
+            mCameraManager.currentCamera.zoom(aDirection: .inn)
+        case .zoomOut:
+            mCameraManager.currentCamera.zoom(aDirection: .out)
+        case .zoomStop:
+            mCameraManager.currentCamera.zoom(aDirection: .stop)
+        case .record:
+            toggleVideoRecording()
+        case .takePicture:
+            mCameraManager.currentCamera.takePicture()
+        case .panLeft:
+            mMainViewController?.scaleRibbon(scale: 1.0)
+        case .panRight:
+            if let cc = mCameraManager.currentCamera as? LVICameraViewController {
+                cc.setFramerate(frameRate: 60)
+            }
+        case .panUp:
+            mMainViewController?.scaleRibbon(scale: 1.5)
+        case .panDown:
+            mMainViewController?.scaleRibbon(scale: 0.75)
+
         default:
             break
+        }
+    }
+    
+    func toggleVideoRecording()
+    {
+        mCameraManager.toggleVideoRecording()
+    }
+    
+    func changeCamera()
+    {
+        if mCameraManager.switchCamera() {
+            updateViews()
         }
     }
     
@@ -122,6 +166,7 @@ class CamerasViewController: NSViewController, CameraFinderDelegate {
         let cameraController = LVICameraViewController()
         
         cameraController.setup(videoCapture: mVideoCapture);
+        mVideoCapture.mCameraViewController = self
         
         addCameraView(cameraView: cameraController)
         
@@ -156,6 +201,7 @@ class CamerasViewController: NSViewController, CameraFinderDelegate {
     {
         mCameraManager.addController(controller: cameraView)
         cameraView.view.frame = self.view.bounds
+        cameraView.delegate = self
         mCameraManager.mSplit.videos.append(mCameraManager.mVideoControllers.count-1)
         
         self.addChild(cameraView)
@@ -163,6 +209,36 @@ class CamerasViewController: NSViewController, CameraFinderDelegate {
         updateViews()
     }
     
+    func imageTaken(aImage: NSImage, pixels: [UInt8]?) 
+    {
+        DispatchQueue.main.async 
+        {
+            let savePanel = NSSavePanel()
+            savePanel.title = "Save File"
+            savePanel.showsResizeIndicator = true
+            savePanel.showsHiddenFiles = false
+            savePanel.canCreateDirectories = true
+            savePanel.allowedFileTypes = ["png", "jpeg"] // Specify the allowed file types
+
+            savePanel.begin { (result) in
+                if result == NSApplication.ModalResponse.OK {
+                    if let selectedFileURL = savePanel.url {
+                        // Handle the selected file URL here
+                        print("Selected file: \(selectedFileURL.path)")
+
+                        // Example: Write content to the selected file
+                        do {
+                            try aImage.tiffRepresentation?.write(to: selectedFileURL, options: .atomic)
+                        } catch {
+                            print("Error writing to file: \(error)")
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    //Flytta till CameraManager
     func updateViews(updateScale : Bool = true)
     {
         guard mCameraManager.mVideoControllers.count > 0 else {
@@ -186,16 +262,19 @@ class CamerasViewController: NSViewController, CameraFinderDelegate {
         }
                 
         for vc in mCameraManager.mVideoControllers {
-            
+            if let metal = vc.view as? MetalView {
+                metal.mDrawFrame = false
+            }
             vc.view.isHidden = true;
         }
+        
         if mCameraManager.mSplit.active >= mCameraManager.mVideoControllers.count {
             mCameraManager.mSplit.active = mCameraManager.mVideoControllers.count - 1
         }
 //
-//        if let metal = mCameraManager.currentCamera.view as? MetalView {
-//            metal.mDrawFrame = true
-//        }
+        if let metal = mCameraManager.currentCamera.view as? MetalView {
+            metal.mDrawFrame = true
+        }
         
         var r = self.view.bounds
 

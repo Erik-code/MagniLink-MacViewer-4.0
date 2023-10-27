@@ -8,7 +8,7 @@
 import Foundation
 import SWXMLHash
 
-public struct VideoRateControl : XMLIndexerDeserializable {
+public struct VideoRateControl : XMLObjectDeserialization {
     public let frameRateLimit: Int
     public let encodingInterval: Int
     public let bitrateLimit: Int

@@ -24,4 +24,6 @@ class TwigaCameraViewController: CameraUSBViewController {
         mVideoCapture = videoCapture
         mVideoCapture?.mCameraVideoController = self
     }
+    
+    
 }

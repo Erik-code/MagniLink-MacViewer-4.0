@@ -8,7 +8,7 @@
 import Foundation
 import SWXMLHash
 
-public struct SoapFault  : XMLIndexerDeserializable{
+public struct SoapFault  : XMLObjectDeserialization{
     public let code: String
     public let subcode: String
     public let detail: String?

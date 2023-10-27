@@ -8,7 +8,7 @@
 import Foundation
 import SWXMLHash
 
-public struct Space1DDescription : XMLIndexerDeserializable {
+public struct Space1DDescription : XMLObjectDeserialization {
     public let uri: String
     public let xRange: FloatRange
     

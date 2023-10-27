@@ -22,4 +22,8 @@ class CameraUSBViewController: CameraBaseViewController {
         //mMetalView.waitSemaphore()
         mMetalView.setPixelBuffer(pixelBuffer: imageBuffer!)
     }
+    
+    override func takePicture() {
+        mVideoCapture?.takePhoto()
+    }
 }

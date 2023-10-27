@@ -58,4 +58,49 @@ class CameraAirViewController: CameraBaseViewController {
         print("gstreamerSetUIMessage: \(aMessage)")
     }
     
+    override func zoom(aDirection: CameraControlZoomDirection)
+    {
+        switch aDirection {
+        case .inn:
+            mCameraController?.panTiltZoom(panDirection: .ignore, tiltDirection: .ignore, zoomDirection: .In)
+        case .out:
+            mCameraController?.panTiltZoom(panDirection: .ignore, tiltDirection: .ignore, zoomDirection: .out)
+        case .stop:
+            mCameraController?.panTiltZoom(panDirection: .ignore, tiltDirection: .ignore, zoomDirection: .none)
+        }
+    }
+    
+    override func takePicture()
+    {
+        mCameraController?.getSnapshotUrl(completionHandler: { response in
+            switch response {
+            case .success(let url):
+
+                var request = URLRequest(url: URL(string: url)!)
+
+                request.httpMethod = "GET"
+                request.url = URL(string: url)
+
+                let config = URLSessionConfiguration.default
+                let session = URLSession(configuration: config)
+
+                let dataTask = session.dataTask(with: request as URLRequest) { data, urlresponse, error in
+
+                    if let data = data
+                    {
+                        if let image = NSImage(data: data)
+                        {
+                            self.delegate?.imageTaken(aImage: image, pixels: nil)
+                        }
+                    }
+                }
+
+                dataTask.resume()
+
+                break
+            case .failure(_):
+                break
+            }
+        })
+    }
 }

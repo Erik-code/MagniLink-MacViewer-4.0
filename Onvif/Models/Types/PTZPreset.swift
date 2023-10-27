@@ -8,7 +8,7 @@
 import Foundation
 import SWXMLHash
 
-public struct PTZPreset : XMLIndexerDeserializable {
+public struct PTZPreset : XMLObjectDeserialization {
     public let token: String
     public let name: String
     public let ptzPosition : PTZVector

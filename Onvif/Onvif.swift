@@ -750,7 +750,7 @@ public class Onvif : NSObject, URLSessionTaskDelegate, XMLParserDelegate {
                 return;
             }
             
-            let xml = SWXMLHash.config { config in
+            let xml = XMLHash.config { config in
                 config.shouldProcessNamespaces = true
             }.parse(data!)
             

@@ -8,7 +8,7 @@
 import Foundation
 import SWXMLHash
 
-public struct PTZVector : XMLIndexerDeserializable {
+public struct PTZVector : XMLObjectDeserialization {
     public let panTilt: Vector2D
     public let zoom: Vector1D
     

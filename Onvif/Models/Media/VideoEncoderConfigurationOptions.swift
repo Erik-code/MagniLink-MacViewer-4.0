@@ -8,7 +8,7 @@
 import Foundation
 import SWXMLHash
 
-public struct VideoEncoderConfigurationOptions : XMLIndexerDeserializable {
+public struct VideoEncoderConfigurationOptions : XMLObjectDeserialization {
     public let qualityRange: IntRange
     public let h264: H264Options?
     public let videoEncoderOptionsExtension: VideoEncoderOptionsExtension?

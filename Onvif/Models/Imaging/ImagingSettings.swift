@@ -8,7 +8,7 @@
 import Foundation
 import SWXMLHash
 
-public struct ImagingSettings : XMLIndexerDeserializable {
+public struct ImagingSettings : XMLObjectDeserialization {
     public let brightness: Float?
     public let saturation: Float?
     public let contrast: Float?

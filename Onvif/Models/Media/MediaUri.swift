@@ -8,7 +8,7 @@
 import Foundation
 import SWXMLHash
 
-public struct MediaUri : XMLIndexerDeserializable {
+public struct MediaUri : XMLObjectDeserialization {
     public let uri: String
     public let invalidAfterConnect: Bool
     public let invalidAfterReboot: Bool

@@ -35,3 +35,34 @@ func makeOrthographicMatrix(left: Float, right: Float, bottom: Float, top: Float
         [(left + right) / (left - right), (top + bottom) / (bottom - top), near / (near - far), 1]
     )
 }
+
+func createFramePositions(width: Float, height: Float, thickness: Float) -> [Float]
+{
+    let data : [Float] =
+    [
+    -width, -height, 0.0, 0.0,
+     width, -height, 1.0, 0.0,
+
+     width, height, 1.0, 1.0,
+     -width, height, 0.0, 1.0,
+
+     -width+thickness, -height+thickness, 0.0, 0.0,
+      width-thickness, -height+thickness, 1.0, 0.0,
+     
+      width-thickness, height-thickness, 1.0, 1.0,
+     -width+thickness, height-thickness, 0.0, 1.0
+    ]
+    return data
+}
+
+func createFrameIndices() -> [UInt32]
+{
+    let data : [UInt32] = [
+        0,1,5, 0,5,4,
+        1,2,6, 1,6,5,
+        2,3,7, 2,7,6,
+        3,0,4, 3,4,7,
+    ]
+    return data
+}
+

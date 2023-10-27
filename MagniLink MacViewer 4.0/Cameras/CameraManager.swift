@@ -64,34 +64,39 @@ class CameraManager
         }
     }
     
-    var mRecordingTimer : Timer?
-    func toggleVideoRecording()
+    func switchCamera() -> Bool
     {
-//        if Preferences.shared.limitRecording
-//        {
-//            mRecordingTimer = Timer.scheduledTimer(timeInterval: TimeInterval(Preferences.shared.recordingLength * 60), target: self, selector: #selector(fireRecordingTimer(_:)), userInfo: nil, repeats: false)
-//        }
-//        
-//        for controller in mVideoControllers {
-//            
-//            if controller.isRecording() {
-//                controller.toggleRecording()
-//                mRecordingTimer?.invalidate()
-//                mRecordingTimer = nil
-//                return
-//            }
-//        }
-//        
-//        currentCamera.toggleRecording()
+        guard mVideoControllers.count > 1 else {
+            return false
+        }
+        
+        if mVideoControllers.count == mSplit.videos.count
+        {
+            mSplit.active = (mSplit.active + 1) % mVideoControllers.count
+        }
+        else{
+            if mSplit.active == mSplit.videos[0]
+            {
+                mSplit.active = mSplit.videos[1];
+            }
+            else
+            {
+                mSplit.active = mSplit.videos[0];
+            }
+        }
+        return true
     }
     
-    @objc func fireRecordingTimer(_ timer: Timer)
+    func toggleVideoRecording()
     {
-        if mRecordingTimer != nil {
-            mRecordingTimer?.invalidate()
-            mRecordingTimer = nil
-            toggleVideoRecording()
+        for controller in mVideoControllers 
+        {
+            if controller.isRecording() {
+                controller.toggleRecording()
+                return
+            }
         }
-    }
+        currentCamera.toggleRecording()
+    }    
 }
 

@@ -8,7 +8,7 @@
 import Foundation
 import SWXMLHash
 
-public struct ImagingSettingsExtension : XMLIndexerDeserializable {
+public struct ImagingSettingsExtension : XMLObjectDeserialization {
     public let imageStabilization: ImageStabilization?
     
     public static func deserialize(_ node: XMLIndexer) throws -> ImagingSettingsExtension {
@@ -19,7 +19,7 @@ public struct ImagingSettingsExtension : XMLIndexerDeserializable {
 }
 
 
-public struct ImageStabilization : XMLIndexerDeserializable {
+public struct ImageStabilization : XMLObjectDeserialization {
     public let mode: String
     
     public static func deserialize(_ node: XMLIndexer) throws -> ImageStabilization {

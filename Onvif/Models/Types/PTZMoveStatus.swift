@@ -8,7 +8,7 @@
 import Foundation
 import SWXMLHash
 
-public struct PTZMoveStatus : XMLIndexerDeserializable {
+public struct PTZMoveStatus : XMLObjectDeserialization {
     public let panTilt: String?
     public let zoom: String?
     

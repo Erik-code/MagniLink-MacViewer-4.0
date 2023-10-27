@@ -103,8 +103,28 @@ class KeyHandler
         let cmd = key.modifierFlags.contains(.command)
 
         
-        let characters = key.charactersIgnoringModifiers?.lowercased() ?? ""
+        var characters = key.charactersIgnoringModifiers?.lowercased() ?? ""
         let keyCode = key.keyCode
+        if keyCode == 126 {
+            characters = "NSUpArrowFunctionKey"
+        }
+        else if keyCode == 125 {
+            characters = "NSDownArrowFunctionKey"
+        }
+        else if keyCode == 99 {
+            characters = "NSF3FunctionKey"
+        }
+        else if keyCode == 120 {
+            characters = "NSF2FunctionKey"
+        }
+        else if keyCode == 122 {
+            characters = "NSF1FunctionKey"
+        }
+        else if keyCode == 96 {
+            characters = "NSF5FunctionKey"
+        }
+
+
         
         //let index = characters!.index(characters!.startIndex, offsetBy: 0)
         //let character = characters![index]
@@ -178,7 +198,7 @@ class KeyHandler
         createShortcut(array: &result, action: Actions.previousNegative, string: "NSF3FunctionKey", shift: true)
 
         createShortcut(array: &result, action: .zoomIn, string: "NSUpArrowFunctionKey")
-        createShortcut(array: &result, action: .zoomOut, string: "NSUpArrowFunctionKey")
+        createShortcut(array: &result, action: .zoomOut, string: "NSDownArrowFunctionKey")
 
         createShortcut(array: &result, action: .startDecreaseContrast, string: "NSLeftArrowFunctionKey")
         createShortcut(array: &result, action: .startIncreaseContrast, string: "NSRightArrowFunctionKey")
@@ -322,7 +342,6 @@ class KeyHandler
     
     private func createShortcut(array : inout [Shortcut], action : Actions, string : String, ctrl : Bool = false, alt : Bool = false, cmd : Bool = false, shift : Bool = false , scope : ShortcutScope = .app)
     {
-        return
         let kc = KeyCombo(ctrl: ctrl, option: alt, cmd: cmd, shift: shift, characters: string, keyCode: 0)
         let sc = Shortcut(action: action, combo: kc, scope: scope)
         array.append(sc)

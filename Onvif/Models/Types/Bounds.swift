@@ -8,7 +8,7 @@
 import Foundation
 import SWXMLHash
 
-public struct Bounds : XMLIndexerDeserializable {
+public struct Bounds : XMLObjectDeserialization {
     public let x: Int
     public let y: Int
     public let width: Int

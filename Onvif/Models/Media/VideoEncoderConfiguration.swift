@@ -8,7 +8,7 @@
 import Foundation
 import SWXMLHash
 
-public struct VideoEncoderConfiguration : XMLIndexerDeserializable {
+public struct VideoEncoderConfiguration : XMLObjectDeserialization {
     public let token: String
     public let name: String
     public let useCount: Int
@@ -36,7 +36,7 @@ public struct VideoEncoderConfiguration : XMLIndexerDeserializable {
     }
 }
 
-public struct MulticastConfiguration : XMLIndexerDeserializable {
+public struct MulticastConfiguration : XMLObjectDeserialization {
     public let address: IPAddress
     public let port: Int
     public let ttl: Int
@@ -52,7 +52,7 @@ public struct MulticastConfiguration : XMLIndexerDeserializable {
     }
 }
 
-public struct IPAddress : XMLIndexerDeserializable {
+public struct IPAddress : XMLObjectDeserialization {
     public let type: String
     public let ipV4Address: String?
     public let ipV6Address: String?

@@ -94,6 +94,12 @@ enum ReflineCommand
     case right
 }
 
+enum CameraControlZoomDirection
+{
+    case inn
+    case out
+    case stop
+}
 
 enum DrawMode : CaseIterable
 {

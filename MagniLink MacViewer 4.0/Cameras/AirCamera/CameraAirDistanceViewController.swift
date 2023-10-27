@@ -24,6 +24,8 @@ class CameraAirDistanceViewController: CameraAirViewController {
         guard let metalView = view as? MetalView else {
             return
         }
+        EUCModel.shared.addFromSettings(names: [name])
+        
         mManufacturer = manufacturer
 
         mVideoCapture = videoCapture

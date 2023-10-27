@@ -8,7 +8,7 @@
 import Foundation
 import SWXMLHash
 
-public struct BasicInformation : XMLIndexerDeserializable  {
+public struct BasicInformation : XMLObjectDeserialization  {
     public let manufacturer: String
     public let model: String
     public let firmwareVersion: String
