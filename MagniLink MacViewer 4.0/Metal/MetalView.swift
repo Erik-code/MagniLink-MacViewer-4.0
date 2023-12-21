@@ -62,7 +62,7 @@ class MetalView: MTKView
     var myDelegate: MetalViewDelegate?
     var mDrawFrame = false;
     
-    var mLastFrameTime : Date = Date.now
+    //var mLastFrameTime : Date = Date.now
     var mFrameArrived = false
     private var mRecordImage: NSImageView! = nil
     private var mIsRecording = false
@@ -241,7 +241,7 @@ class MetalView: MTKView
     {
 //        semaphore.wait()
         mFrameArrived = true
-        mLastFrameTime = Date.now
+        //mLastFrameTime = Date.now
         
         mVideoStruct = aVideo
         inputTexture = mMetalViewHelper?.createTextureFromStruct(aVideo: aVideo)

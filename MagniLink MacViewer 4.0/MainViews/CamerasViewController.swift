@@ -16,6 +16,8 @@ class CamerasViewController: NSViewController, CameraFinderDelegate, CameraBaseV
     var mCameraManager = CameraManager()
     var mVideoCapture = VideoCapture()
     var mMainViewController : MainViewController?
+    var mOCR : OCR?
+    private var mImageReason : ImageReason = .none
     
     override func loadView() {
         self.view = NSView()
@@ -25,6 +27,8 @@ class CamerasViewController: NSViewController, CameraFinderDelegate, CameraBaseV
         super.viewDidLoad()
 
         GStreamerBackend.init_gstreamer()
+        
+        mOCR = OCR()
         
         view.wantsLayer = true
         view.layer?.backgroundColor = NSColor.blue.cgColor
@@ -80,6 +84,10 @@ class CamerasViewController: NSViewController, CameraFinderDelegate, CameraBaseV
         case .record:
             toggleVideoRecording()
         case .takePicture:
+            mImageReason = .takePicture
+            mCameraManager.currentCamera.takePicture()
+        case .ocr:
+            mImageReason = .ocr
             mCameraManager.currentCamera.takePicture()
         case .panLeft:
             mMainViewController?.scaleRibbon(scale: 1.0)
@@ -211,7 +219,17 @@ class CamerasViewController: NSViewController, CameraFinderDelegate, CameraBaseV
     
     func imageTaken(aImage: NSImage, pixels: [UInt8]?) 
     {
-        DispatchQueue.main.async 
+        if mImageReason == .takePicture {
+            savePicture(aImage: aImage, pixels: pixels)
+        }
+        else {
+            perfromOCR(aImage: aImage, pixels: pixels)
+        }
+    }
+    
+    private func savePicture(aImage: NSImage, pixels: [UInt8]?)
+    {
+        DispatchQueue.main.async
         {
             let savePanel = NSSavePanel()
             savePanel.title = "Save File"
@@ -236,6 +254,11 @@ class CamerasViewController: NSViewController, CameraFinderDelegate, CameraBaseV
                 }
             }
         }
+    }
+    
+    private func perfromOCR(aImage: NSImage, pixels: [UInt8]?)
+    {
+        mOCR?.perform(image: aImage, append: false)
     }
     
     //Flytta till CameraManager

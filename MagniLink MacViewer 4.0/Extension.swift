@@ -153,3 +153,22 @@ extension Color {
         }
     }
 }
+
+extension Character
+{
+    var isEndOfSentence : Bool
+    {
+        get{
+            return self == "." || self == "?" || self == "!"
+        }
+    }
+}
+
+extension NSColor
+{
+    convenience init(_ color : Color)
+    {
+        self.init(red: color.components.red, green: color.components.green, blue: color.components.blue, alpha: 1.0)
+//        self.init(red: color.components.red, green: color.components.green, blue: color.components.blue)
+    }
+}

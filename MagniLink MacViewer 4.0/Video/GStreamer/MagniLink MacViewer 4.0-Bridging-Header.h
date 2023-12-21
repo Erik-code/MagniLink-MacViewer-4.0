@@ -9,4 +9,8 @@
 #import "LVICameraControl.h"
 #import "MyRibbonView.h"
 #import "MySizes.h"
+#import "OcrBase.h"
+#import "OcrBitmap.h"
+#import "OcrSettings.h"
+#import "OcrParam.h"
 #endif /* MagniLink_MacViewer_Bridging_Header_h */

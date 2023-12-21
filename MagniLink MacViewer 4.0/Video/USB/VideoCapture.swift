@@ -61,8 +61,8 @@ class VideoCapture: NSObject, AVCaptureAudioDataOutputSampleBufferDelegate, AVCa
             }
             
             if let connection = mPreviewLayer?.connection, connection.isVideoMirroringSupported {
-              connection.automaticallyAdjustsVideoMirroring = false
-              connection.isVideoMirrored = true
+                connection.automaticallyAdjustsVideoMirroring = false
+                connection.isVideoMirrored = true
             }
             
             mVideoOutput.videoSettings = [kCVPixelBufferPixelFormatTypeKey as String: Int(kCVPixelFormatType_32BGRA)]

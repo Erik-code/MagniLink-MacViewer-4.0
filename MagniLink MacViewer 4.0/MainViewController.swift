@@ -49,6 +49,7 @@ class MainViewController: NSViewController, KeyHandlerDelegate, RibbonDelegate {
         ribbon.delegate = self
         ribbon.translatesAutoresizingMaskIntoConstraints = false
      
+        downloadFileFromFTP()
 //        NSEvent.addLocalMonitorForEvents(matching: .keyDown) {
 //            self.keyDown(with: $0)
 //            return $0
@@ -57,10 +58,88 @@ class MainViewController: NSViewController, KeyHandlerDelegate, RibbonDelegate {
 //            self.keyUp(with: $0)
 //            return $0
 //        }
-        
+        postRequest()
         becomeFirstResponder()
     }
     
+    func postRequest() {
+        // Replace with your API endpoint URL
+        let apiUrl = URL(string: "https://europe-west1-magnilink-chromeviewer-beta.cloudfunctions.net/getLicense2")!
+        
+        // Replace with your actual JSON payload
+        let jsonPayload: [String: Any] = [
+            "serialNumber": "210912",
+            "productId": 10,
+            "format": "xml"
+        ]
+        
+        do {
+            // Convert JSON data to Data
+            let requestData = try JSONSerialization.data(withJSONObject: jsonPayload, options: [])
+            
+            print("requestData \(requestData.base64EncodedString())")
+            
+            // Create URLRequest
+            var request = URLRequest(url: apiUrl)
+            request.setValue("text/plain", forHTTPHeaderField: "Content-Type")
+            request.httpMethod = "POST"
+//            request.httpBody = Data(
+                
+                
+            let requestBodyString = "{\"serialNumber\":\"210912\",\"productId\":10,\"format\":\"xml\"}"
+
+            request.httpBody = requestBodyString.data(using: .utf8)
+            
+            let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+                // Handle the response here
+                if let error = error {
+                    print("Error: \(error)")
+                } else if let data = data {
+                    // Handle the response data
+                    let responseString = String(data: data, encoding: .utf8)
+                    print("Response: \(responseString ?? "Empty response")")
+                }
+            }
+            
+            // Resume the task to initiate the request
+            task.resume()
+            
+        } catch {
+            print("Error converting JSON data to Data: \(error.localizedDescription)")
+        }
+    }
+    
+    func downloadFileFromFTP() {
+        let ftpURL = URL(string: "ftp://lvi-sw-v8:po9gf3d@ftp.lvi.se/MLS_UNIT_Config.xml")!
+        let applicationSupportURL = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!.appendingPathComponent("MagniLink MacViewer 4.0").appendingPathComponent("MLS_UNIT_Config.xml")
+        
+        let request = URLRequest(url: ftpURL)
+        let downloadTask = URLSession.shared.downloadTask(with: request) { (tempLocalUrl, response, error) in
+            if let tempLocalUrl = tempLocalUrl, error == nil {
+                let fileManager = FileManager.default
+                do {
+                    // Create the app's Application Support folder if it doesn't exist
+                    try fileManager.createDirectory(at: applicationSupportURL.deletingLastPathComponent(), withIntermediateDirectories: true, attributes: nil)
+                    
+                    // Replace the existing file if it exists
+                    if fileManager.fileExists(atPath: applicationSupportURL.path) {
+                        try fileManager.replaceItem(at: applicationSupportURL, withItemAt: tempLocalUrl, backupItemName: nil, options: .usingNewMetadataOnly, resultingItemURL: nil)
+                    } else {
+                        // Move the downloaded file to Application Support folder
+                        try fileManager.moveItem(at: tempLocalUrl, to: applicationSupportURL)
+                    }
+                    
+                    print("File downloaded successfully and saved at: \(applicationSupportURL)")
+                } catch (let writeError) {
+                    print("Error saving file to Application Support folder: \(writeError)")
+                }
+            } else {
+                print("Error downloading file: \(error?.localizedDescription ?? "Unknown error")")
+            }
+        }
+        downloadTask.resume()
+    }
+
     
     
     override var acceptsFirstResponder: Bool

@@ -439,3 +439,18 @@ enum Actions : CaseIterable
     }
 }
 
+enum PNDirection
+{
+    case increase
+    case decrease
+    case stop
+}
+
+enum ImageReason
+{
+    case none
+    case ocr
+    case ocrAppend
+    case takePicture
+    case takeInkPicture
+}

@@ -123,6 +123,9 @@ class KeyHandler
         else if keyCode == 96 {
             characters = "NSF5FunctionKey"
         }
+        else if keyCode == 118 {
+            characters = "NSF4FunctionKey"
+        }
 
 
         
